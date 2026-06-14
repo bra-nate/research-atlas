@@ -1,0 +1,17 @@
+{
+  "name": "research-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Research Atlas — public, read-only directory of the African research ecosystem. Vite SPA + Express API + Postgres, sharing the cross-product data model with ACE Connect (separate repo, separate database).",
+  "packageManager": "pnpm@10.9.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "build:types": "pnpm --filter @research-atlas/types build",
+    "dev:api": "pnpm --filter @research-atlas/api dev",
+    "dev:web": "pnpm --filter @research-atlas/web dev"
+  }
+}
