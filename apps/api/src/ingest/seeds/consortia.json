@@ -1,0 +1,20 @@
+{
+  "programmes": [
+    { "key": "ace", "name": "Africa Centres of Excellence", "short_name": "ACE", "source_url": "https://ace.aau.org" },
+    { "key": "h3africa", "name": "Human Heredity and Health in Africa", "short_name": "H3Africa", "source_url": "https://h3africa.org" },
+    { "key": "deltas", "name": "DELTAS Africa", "short_name": "DELTAS", "source_url": "https://www.aasciences.africa/deltas" }
+  ],
+  "consortia": [
+    { "key": "waccbip", "title": "West African Centre for Cell Biology of Infectious Pathogens", "programme": "ace", "country": "Ghana", "source_url": "https://waccbip.org" },
+    { "key": "sicklegen", "title": "SickleGenAfrica", "programme": "h3africa", "country": "Ghana", "source_url": "https://h3africa.org/index.php/consortium/sicklegenafrica" },
+    { "key": "deltas-wac", "title": "Awandare DELTAS Fellowship", "programme": "deltas", "country": "Ghana", "source_url": "https://www.aasciences.africa/deltas" }
+  ],
+  "people": [
+    { "key": "awandare", "full_name": "Gordon Awandare", "orcid": "0000-0002-8793-3641", "source_url": "https://waccbip.org/team/gordon-awandare" }
+  ],
+  "memberships": [
+    { "person": "awandare", "consortium": "waccbip", "role": "pi" },
+    { "person": "awandare", "consortium": "sicklegen", "role": "co_pi" },
+    { "person": "awandare", "consortium": "deltas-wac", "role": "pi" }
+  ]
+}
