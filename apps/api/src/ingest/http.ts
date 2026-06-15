@@ -2,6 +2,8 @@ import { env } from "../env.js";
 
 const BASE = "https://api.openalex.org";
 
+class NonRetryableError extends Error {}
+
 /** GET one OpenAlex resource by path, with polite-pool mailto + retry/backoff. */
 export async function oaGet<T>(path: string, params: Record<string, string> = {}): Promise<T> {
   const url = new URL(`${BASE}/${path.replace(/^\/+/, "")}`);
@@ -16,9 +18,10 @@ export async function oaGet<T>(path: string, params: Record<string, string> = {}
         await sleep(500 * 2 ** attempt);
         continue;
       }
-      if (!res.ok) throw new Error(`OpenAlex ${res.status} for ${url.pathname}`);
+      if (!res.ok) throw new NonRetryableError(`OpenAlex ${res.status} for ${url.pathname}`);
       return (await res.json()) as T;
     } catch (err) {
+      if (err instanceof NonRetryableError) throw err;
       lastErr = err;
       await sleep(500 * 2 ** attempt);
     }

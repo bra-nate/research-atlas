@@ -21,7 +21,7 @@ psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -f "$ROOT/supabase/mig
 
 psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -c "
 insert into organizations (id,name,short_name,org_type,country) values ('$ORG','WACCBIP','WACCBIP','university','Ghana');
-insert into people (id,full_name,primary_org_id,specializations,skills) values ('$PERSON','Gordon Awandare','$ORG','{genomics}','{malaria}');
+insert into people (id,full_name,primary_org_id,specializations,skills,orcid) values ('$PERSON','Gordon Awandare','$ORG','{genomics}','{malaria}','0000-0002-8793-3641');
 insert into programs (id,name,short_name) values ('$PROG','H3Africa','H3A');
 insert into projects (id,title,program_id,lead_org_id,pi_person_id,country) values ('$PROJ','SickleGenAfrica','$PROG','$ORG','$PERSON','Ghana');
 insert into project_members (project_id,person_id,role) values ('$PROJ','$PERSON','pi');
