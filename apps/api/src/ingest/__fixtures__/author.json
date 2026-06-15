@@ -1,0 +1,24 @@
+{
+  "id": "https://openalex.org/A5023888391",
+  "orcid": "https://orcid.org/0000-0002-8793-3641",
+  "display_name": "Gordon A. Awandare",
+  "works_count": 142,
+  "counts_by_year": [
+    { "year": 2024, "works_count": 9 },
+    { "year": 2023, "works_count": 12 },
+    { "year": 2019, "works_count": 0 }
+  ],
+  "last_known_institutions": [
+    {
+      "id": "https://openalex.org/I154526488",
+      "ror": "https://ror.org/01rxfrp27",
+      "display_name": "University of Ghana"
+    }
+  ],
+  "x_concepts": [
+    { "display_name": "Malaria", "score": 88.1 },
+    { "display_name": "Genomics", "score": 71.4 },
+    { "display_name": "Immunology", "score": 60.2 },
+    { "display_name": "Biology", "score": 41.0 }
+  ]
+}
