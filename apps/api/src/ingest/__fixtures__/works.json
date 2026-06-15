@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "id": "https://openalex.org/W111",
+      "grants": [
+        { "funder": "https://openalex.org/F4320332161", "funder_display_name": "Wellcome Trust", "award_id": "107755/Z/15/Z" },
+        { "funder": "https://openalex.org/F4320306076", "funder_display_name": "NIH", "award_id": null }
+      ]
+    },
+    {
+      "id": "https://openalex.org/W222",
+      "grants": [
+        { "funder": "https://openalex.org/F4320332161", "funder_display_name": "Wellcome Trust", "award_id": "107755/Z/15/Z" }
+      ]
+    },
+    { "id": "https://openalex.org/W333", "grants": [] }
+  ]
+}

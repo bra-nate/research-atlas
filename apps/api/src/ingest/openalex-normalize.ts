@@ -1,4 +1,4 @@
-import type { OrgUpsert, PersonUpsert } from "./types.js";
+import type { GrantUpsert, OrgUpsert, PersonUpsert } from "./types.js";
 
 /** Strip an OpenAlex/ORCID/ROR URL down to its bare id. */
 function bareId(url: string | null | undefined): string | null {
@@ -35,6 +35,36 @@ export function normalizeInstitution(i: OAInstitution): OrgUpsert {
     rorId: bareId(i.ror ?? null),
     sourceUrl: i.id,
   };
+}
+
+interface OAWork {
+  id: string;
+  grants?: { funder: string; funder_display_name: string; award_id: string | null }[];
+}
+
+export function normalizeGrants(works: OAWork[]): GrantUpsert[] {
+  const byKey = new Map<string, GrantUpsert>();
+  for (const w of works) {
+    for (const g of w.grants ?? []) {
+      const key = `${g.funder_display_name.toLowerCase()}|${g.award_id ?? ""}`;
+      if (byKey.has(key)) continue;
+      byKey.set(key, {
+        name: g.award_id ? `${g.funder_display_name} ${g.award_id}` : g.funder_display_name,
+        awardNumber: g.award_id,
+        funder: {
+          name: g.funder_display_name,
+          shortName: null,
+          orgType: "funder",
+          country: null,
+          website: null,
+          rorId: null,
+          sourceUrl: w.id,
+        },
+        sourceUrl: w.id,
+      });
+    }
+  }
+  return [...byKey.values()];
 }
 
 export function normalizeAuthor(a: OAAuthor): PersonUpsert {

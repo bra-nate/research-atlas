@@ -8,6 +8,10 @@ const author = JSON.parse(
   readFileSync(fileURLToPath(new URL("./__fixtures__/author.json", import.meta.url)), "utf8"),
 );
 
+const works = JSON.parse(
+  readFileSync(fileURLToPath(new URL("./__fixtures__/works.json", import.meta.url)), "utf8"),
+);
+
 test("normalizeAuthor extracts bare ids, activity signal, and themes", () => {
   const p = normalizeAuthor(author);
   assert.equal(p.fullName, "Gordon A. Awandare");
@@ -35,7 +39,7 @@ test("normalizeAuthor tolerates missing/empty optional fields", () => {
   assert.equal(p.sourceUrl, "https://openalex.org/A999");
 });
 
-import { normalizeInstitution } from "./openalex-normalize.js";
+import { normalizeInstitution, normalizeGrants } from "./openalex-normalize.js";
 
 test("normalizeInstitution maps an institution to a university org", () => {
   const org = normalizeInstitution({
@@ -51,4 +55,14 @@ test("normalizeInstitution maps an institution to a university org", () => {
   assert.equal(org.country, "GH");
   assert.equal(org.website, "https://www.ug.edu.gh");
   assert.equal(org.sourceUrl, "https://openalex.org/I154526488");
+});
+
+test("normalizeGrants dedupes funder+award across works", () => {
+  const grants = normalizeGrants(works.results);
+  // Wellcome (107755/Z/15/Z) appears twice → one grant; NIH (no award) → one grant.
+  assert.equal(grants.length, 2);
+  const wellcome = grants.find((g) => g.funder.name === "Wellcome Trust");
+  assert.ok(wellcome);
+  assert.equal(wellcome.awardNumber, "107755/Z/15/Z");
+  assert.equal(wellcome.funder.orgType, "funder");
 });
