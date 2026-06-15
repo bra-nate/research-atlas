@@ -40,6 +40,7 @@ export const seedConsortiaAdapter: Adapter = {
     }
 
     const projId = new Map<string, string>();
+    const projSourceUrl = new Map<string, string>();
     for (const c of fx.consortia) {
       const [existing] = await db.select({ id: projects.id }).from(projects).where(sql`lower(title) = lower(${c.title})`).limit(1);
       const values = { title: c.title, programId: progId.get(c.programme) ?? null, country: c.country, ...prov(c.source_url) };
@@ -47,6 +48,7 @@ export const seedConsortiaAdapter: Adapter = {
         ? (await db.update(projects).set(values).where(eq(projects.id, existing.id)), existing.id)
         : (await db.insert(projects).values(values).returning({ id: projects.id }))[0].id;
       projId.set(c.key, id);
+      projSourceUrl.set(c.key, c.source_url);
       summary.upserts.projects++;
     }
 
@@ -71,7 +73,7 @@ export const seedConsortiaAdapter: Adapter = {
         .where(sql`project_id = ${pid} and person_id = ${persId} and role = ${m.role}`)
         .limit(1);
       if (!existing) {
-        await db.insert(projectMembers).values({ projectId: pid, personId: persId, role: m.role as never, ...prov("https://waccbip.org") });
+        await db.insert(projectMembers).values({ projectId: pid, personId: persId, role: m.role as never, ...prov(projSourceUrl.get(m.consortium) ?? "") });
       }
       summary.upserts.project_members++;
     }
