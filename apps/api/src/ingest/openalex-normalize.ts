@@ -3,8 +3,8 @@ import type { PersonUpsert } from "./types.js";
 /** Strip an OpenAlex/ORCID/ROR URL down to its bare id. */
 function bareId(url: string | null | undefined): string | null {
   if (!url) return null;
-  const m = url.trim().replace(/\/+$/, "").split("/").pop();
-  return m && m.length > 0 ? m : null;
+  const m = url.trim().split(/[?#]/)[0].replace(/\/+$/, "").split("/").pop();
+  return m || null;
 }
 
 interface OAAuthor {
@@ -26,6 +26,9 @@ export function normalizeAuthor(a: OAAuthor): PersonUpsert {
     .sort((x, y) => y.score - x.score)
     .slice(0, 3)
     .map((c) => c.display_name);
+  const primaryRor = (a.last_known_institutions ?? [])
+    .map((i) => i.ror)
+    .find((r) => r != null);
   return {
     fullName: a.display_name,
     orcid: bareId(a.orcid),
@@ -33,7 +36,7 @@ export function normalizeAuthor(a: OAAuthor): PersonUpsert {
     specializations: themes,
     worksCount: a.works_count ?? null,
     lastActiveYear: activeYears.length ? Math.max(...activeYears) : null,
-    primaryOrgRor: bareId(a.last_known_institutions?.[0]?.ror ?? null),
+    primaryOrgRor: bareId(primaryRor ?? null),
     sourceUrl: a.id,
   };
 }

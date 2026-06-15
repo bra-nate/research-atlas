@@ -19,3 +19,18 @@ test("normalizeAuthor extracts bare ids, activity signal, and themes", () => {
   assert.deepEqual(p.specializations, ["Malaria", "Genomics", "Immunology"]); // top 3
   assert.equal(p.sourceUrl, "https://openalex.org/A5023888391");
 });
+
+test("normalizeAuthor tolerates missing/empty optional fields", () => {
+  const p = normalizeAuthor({
+    id: "https://openalex.org/A999",
+    orcid: null,
+    display_name: "No Metadata Author",
+  });
+  assert.equal(p.orcid, null);
+  assert.equal(p.openalexAuthorId, "A999");
+  assert.equal(p.worksCount, null);
+  assert.equal(p.lastActiveYear, null); // no counts_by_year
+  assert.deepEqual(p.specializations, []); // no x_concepts
+  assert.equal(p.primaryOrgRor, null); // no last_known_institutions
+  assert.equal(p.sourceUrl, "https://openalex.org/A999");
+});
