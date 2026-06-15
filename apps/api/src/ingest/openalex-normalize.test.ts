@@ -34,3 +34,21 @@ test("normalizeAuthor tolerates missing/empty optional fields", () => {
   assert.equal(p.primaryOrgRor, null); // no last_known_institutions
   assert.equal(p.sourceUrl, "https://openalex.org/A999");
 });
+
+import { normalizeInstitution } from "./openalex-normalize.js";
+
+test("normalizeInstitution maps an institution to a university org", () => {
+  const org = normalizeInstitution({
+    id: "https://openalex.org/I154526488",
+    ror: "https://ror.org/01rxfrp27",
+    display_name: "University of Ghana",
+    country_code: "GH",
+    homepage_url: "https://www.ug.edu.gh",
+  });
+  assert.equal(org.name, "University of Ghana");
+  assert.equal(org.orgType, "university");
+  assert.equal(org.rorId, "01rxfrp27");
+  assert.equal(org.country, "GH");
+  assert.equal(org.website, "https://www.ug.edu.gh");
+  assert.equal(org.sourceUrl, "https://openalex.org/I154526488");
+});

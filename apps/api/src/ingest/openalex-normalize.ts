@@ -1,4 +1,4 @@
-import type { PersonUpsert } from "./types.js";
+import type { OrgUpsert, PersonUpsert } from "./types.js";
 
 /** Strip an OpenAlex/ORCID/ROR URL down to its bare id. */
 function bareId(url: string | null | undefined): string | null {
@@ -15,6 +15,26 @@ interface OAAuthor {
   counts_by_year?: { year: number; works_count: number }[];
   last_known_institutions?: { ror?: string | null }[];
   x_concepts?: { display_name: string; score: number }[];
+}
+
+interface OAInstitution {
+  id: string;
+  ror?: string | null;
+  display_name: string;
+  country_code?: string | null;
+  homepage_url?: string | null;
+}
+
+export function normalizeInstitution(i: OAInstitution): OrgUpsert {
+  return {
+    name: i.display_name,
+    shortName: null,
+    orgType: "university",
+    country: i.country_code ?? null,
+    website: i.homepage_url ?? null,
+    rorId: bareId(i.ror ?? null),
+    sourceUrl: i.id,
+  };
 }
 
 export function normalizeAuthor(a: OAAuthor): PersonUpsert {
