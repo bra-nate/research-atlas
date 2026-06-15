@@ -20,4 +20,5 @@ export const env = {
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean),
+  openalexMailto: process.env.OPENALEX_MAILTO ?? "",
 } as const;
