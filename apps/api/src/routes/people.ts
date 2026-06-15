@@ -1,36 +1,27 @@
 import { Router } from "express";
 import { and, arrayOverlaps, eq, sql } from "drizzle-orm";
-import { AVAILABILITY_BASIS_VALUES } from "@research-atlas/types";
 import { db } from "../db/client.js";
-import { people } from "../db/schema.js";
+import { projectMembers, projects, people } from "../db/schema.js";
 import { asyncHandler, HttpError } from "../http.js";
 import { prefixTsQuery, str, uniqSorted } from "../lib/search.js";
-import { toPerson } from "../serializers.js";
+import { toPerson, toProject } from "../serializers.js";
 
-/** Public, read-only people endpoints (no auth, no contact data in V1). */
 export const peopleRouter = Router();
 
-/** GET /people — search (q, specialization, basis, organizationId). */
+/** GET /people — search (q, specialization, organizationId). */
 peopleRouter.get(
   "/",
   asyncHandler(async (req, res) => {
     const q = str(req.query.q);
     const specialization = str(req.query.specialization);
-    const basis = str(req.query.basis);
     const organizationId = str(req.query.organizationId);
 
     const filters = [eq(people.visible, true)];
-    if (organizationId) filters.push(eq(people.organizationId, organizationId));
+    if (organizationId) filters.push(eq(people.primaryOrgId, organizationId));
     const tsq = q ? prefixTsQuery(q) : null;
     if (tsq) filters.push(sql`search_fts @@ to_tsquery('english', ${tsq})`);
     if (specialization)
       filters.push(arrayOverlaps(people.specializations, [specialization]));
-    if (basis && (AVAILABILITY_BASIS_VALUES as readonly string[]).includes(basis))
-      filters.push(
-        arrayOverlaps(people.availabilityBasis, [
-          basis as (typeof AVAILABILITY_BASIS_VALUES)[number],
-        ]),
-      );
 
     const rows = await db
       .select()
@@ -56,7 +47,7 @@ peopleRouter.get(
   }),
 );
 
-/** GET /people/:id — single person profile. */
+/** GET /people/:id */
 peopleRouter.get(
   "/:id",
   asyncHandler(async (req, res) => {
@@ -67,5 +58,21 @@ peopleRouter.get(
       .limit(1);
     if (!row) throw new HttpError(404, "Person not found");
     res.json(toPerson(row));
+  }),
+);
+
+/**
+ * GET /people/:id/projects — the hero feature: every project (and role) this
+ * person is on, across all programmes/consortia. Joins through project_members.
+ */
+peopleRouter.get(
+  "/:id/projects",
+  asyncHandler(async (req, res) => {
+    const rows = await db
+      .select({ project: projects, role: projectMembers.role })
+      .from(projectMembers)
+      .innerJoin(projects, eq(projects.id, projectMembers.projectId))
+      .where(eq(projectMembers.personId, req.params.id));
+    res.json(rows.map((r) => ({ role: r.role, project: toProject(r.project) })));
   }),
 );

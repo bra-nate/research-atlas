@@ -6,7 +6,7 @@ import { api } from "./api";
 export function useOrganizations(filters: {
   q?: string;
   country?: string;
-  theme?: string;
+  org_type?: string;
 }) {
   return useQuery({
     queryKey: ["organizations", filters],

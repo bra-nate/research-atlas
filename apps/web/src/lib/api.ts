@@ -32,11 +32,11 @@ async function req<T>(path: string): Promise<T> {
  * only ever calls the Express API, never the database.
  */
 export const api = {
-  organizations: (p?: { q?: string; country?: string; theme?: string }) =>
+  organizations: (p?: { q?: string; country?: string; org_type?: string }) =>
     req<Organization[]>(`/organizations${qs(p)}`),
   organization: (id: string) => req<Organization>(`/organizations/${id}`),
   organizationFacets: () =>
-    req<{ countries: string[]; themes: string[] }>("/organizations/facets"),
+    req<{ countries: string[]; orgTypes: string[] }>("/organizations/facets"),
   centreCounts: (ids: string[]) =>
     req<CentreCounts>(`/organizations/counts${qs({ ids: ids.join(",") })}`),
 

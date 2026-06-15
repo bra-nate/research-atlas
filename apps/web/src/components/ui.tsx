@@ -119,14 +119,14 @@ export function StatusPill({
   );
 }
 
-/** The mandated "Illustrative — unverified" badge for seeded data. */
+/** Provenance badge — every ingested, not-yet-claimed record shows "unverified". */
 export function IllustrativeBadge({
   status,
 }: {
   status: string | null | undefined;
 }) {
-  if (status !== "seeded_unverified") return null;
-  return <StatusPill tone="amber">Illustrative — unverified</StatusPill>;
+  if (status === "verified" || status === "claimed") return null;
+  return <StatusPill tone="amber">Unverified</StatusPill>;
 }
 
 export function MonoCode({ children }: { children: ReactNode }) {

@@ -1,18 +1,11 @@
 /**
- * Drizzle schema — the Research Directory's view of its Postgres tables.
- *
- * V1 seeds with the shared model entities inherited from ACE Connect's
- * re-platform (organizations, people, capabilities). The Directory-specific
- * graph (programs, projects, grants, publications, and edge tables) will be
- * added here as DATA.md is finalised — see ARCHITECTURE.md / DATA.md.
- *
- * No accounts/auth tables: V1 is public and read-only.
- *
- * NOTE: the FK column on people/capabilities is exposed generically as
- * `organizationId` (DB column `organization_id` in this product's own schema).
+ * Drizzle schema — the Research Directory's Postgres tables (see migration 0001).
+ * Public read-only graph: entities + edges, every row carrying provenance.
  */
 import {
   boolean,
+  integer,
+  numeric,
   pgEnum,
   pgTable,
   text,
@@ -20,42 +13,41 @@ import {
   uuid,
 } from "drizzle-orm/pg-core";
 
-// --- enums (mirror the Postgres enums) -------------------------------------
+// --- enums -----------------------------------------------------------------
 export const orgTypeEnum = pgEnum("org_type", [
   "ace",
   "university",
-  "research_institute",
+  "research_centre",
+  "consortium",
+  "institute",
+  "funder",
   "company",
-  "ngo",
-  "government",
-  "other",
 ]);
 export const verificationStatusEnum = pgEnum("verification_status", [
-  "seeded_unverified",
+  "ingested_unverified",
+  "claimed",
   "verified",
 ]);
-export const availabilityStatusEnum = pgEnum("availability_status", [
-  "open",
-  "limited",
-  "unavailable",
+export const ingestMethodEnum = pgEnum("ingest_method", [
+  "manual",
+  "csv",
+  "scrape",
+  "api",
+  "enrichment",
 ]);
-export const availabilityBasisEnum = pgEnum("availability_basis", [
-  "collaboration",
-  "co_supervision",
-  "external_examination",
-  "advisory",
-  "mentorship",
-  "secondment",
-  "paid_consulting",
+export const memberRoleEnum = pgEnum("member_role", [
+  "pi",
+  "co_pi",
+  "investigator",
+  "fellow",
+  "student",
+  "collaborator",
 ]);
-export const credentialStatusEnum = pgEnum("credential_status", [
-  "self_declared",
-  "verified",
-]);
-export const accessBasisEnum = pgEnum("access_basis", [
-  "collaboration",
-  "fee_for_service",
-  "shared_use",
+export const partnerRoleEnum = pgEnum("partner_role", [
+  "lead",
+  "hub",
+  "partner",
+  "funder",
 ]);
 export const capabilityKindEnum = pgEnum("capability_kind", [
   "equipment",
@@ -63,72 +55,137 @@ export const capabilityKindEnum = pgEnum("capability_kind", [
   "service",
 ]);
 
-// --- organizations ---------------------------------------------------------
+// Provenance columns shared by every ingested table.
+const provenance = {
+  source: text("source"),
+  sourceUrl: text("source_url"),
+  ingestMethod: ingestMethodEnum("ingest_method"),
+  ingestedAt: timestamp("ingested_at", { withTimezone: true }),
+  verificationStatus: verificationStatusEnum("verification_status")
+    .notNull()
+    .default("ingested_unverified"),
+};
+
 export const organizations = pgTable("organizations", {
   id: uuid("id").primaryKey().defaultRandom(),
-  orgType: orgTypeEnum("org_type").notNull().default("ace"),
   name: text("name").notNull(),
   shortName: text("short_name"),
+  orgType: orgTypeEnum("org_type").notNull().default("university"),
   country: text("country"),
-  thematicAreas: text("thematic_areas").array().notNull().default([]),
   description: text("description"),
   website: text("website"),
   logoUrl: text("logo_url"),
   rorId: text("ror_id"),
-  hostUniversity: text("host_university"),
-  acePhase: text("ace_phase"),
-  source: text("source"),
-  sourceUrl: text("source_url"),
-  ingestedAt: timestamp("ingested_at", { withTimezone: true }),
-  verificationStatus: verificationStatusEnum("verification_status")
-    .notNull()
-    .default("seeded_unverified"),
   lastVerifiedAt: timestamp("last_verified_at", { withTimezone: true }),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  ...provenance,
 });
 
-// --- people ----------------------------------------------------------------
 export const people = pgTable("people", {
   id: uuid("id").primaryKey().defaultRandom(),
-  organizationId: uuid("organization_id").notNull(),
   fullName: text("full_name").notNull(),
   normalisedName: text("normalised_name"),
   title: text("title"),
+  primaryOrgId: uuid("primary_org_id"),
   highestQualification: text("highest_qualification"),
   specializations: text("specializations").array().notNull().default([]),
   skills: text("skills").array().notNull().default([]),
   bio: text("bio"),
-  photoUrl: text("photo_url"),
   orcid: text("orcid"),
   openalexAuthorId: text("openalex_author_id"),
-  mergedInto: uuid("merged_into"),
-  availabilityBasis: availabilityBasisEnum("availability_basis")
-    .array()
-    .notNull()
-    .default([]),
-  availabilityStatus: availabilityStatusEnum("availability_status")
-    .notNull()
-    .default("open"),
-  credentialStatus: credentialStatusEnum("credential_status")
-    .notNull()
-    .default("self_declared"),
+  profileUrl: text("profile_url"),
+  photoUrl: text("photo_url"),
   visible: boolean("visible").notNull().default(true),
-  selfManaged: boolean("self_managed").notNull().default(false),
-  lastVerifiedAt: timestamp("last_verified_at", { withTimezone: true }),
+  mergedInto: uuid("merged_into"),
+  ...provenance,
 });
 
-// --- capabilities ----------------------------------------------------------
+export const programs = pgTable("programs", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  name: text("name").notNull(),
+  shortName: text("short_name"),
+  funders: text("funders").array().notNull().default([]),
+  focusAreas: text("focus_areas").array().notNull().default([]),
+  region: text("region"),
+  website: text("website"),
+  description: text("description"),
+  logoUrl: text("logo_url"),
+  ...provenance,
+});
+
+export const projects = pgTable("projects", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  programId: uuid("program_id"),
+  title: text("title").notNull(),
+  leadOrgId: uuid("lead_org_id"),
+  piPersonId: uuid("pi_person_id"),
+  status: text("status"),
+  themes: text("themes").array().notNull().default([]),
+  fundingNote: text("funding_note"),
+  country: text("country"),
+  description: text("description"),
+  ...provenance,
+});
+
 export const capabilities = pgTable("capabilities", {
   id: uuid("id").primaryKey().defaultRandom(),
-  organizationId: uuid("organization_id").notNull(),
+  orgId: uuid("org_id").notNull(),
   kind: capabilityKindEnum("kind").notNull(),
   name: text("name").notNull(),
   category: text("category"),
   description: text("description"),
-  accessBasis: accessBasisEnum("access_basis").array().notNull().default([]),
-  availabilityNote: text("availability_note"),
-  photoUrl: text("photo_url"),
-  offeredTo: text("offered_to").array().notNull().default([]),
-  lastVerifiedAt: timestamp("last_verified_at", { withTimezone: true }),
+  accessNote: text("access_note"),
+  country: text("country"),
+  city: text("city"),
+  ...provenance,
+});
+
+export const grants = pgTable("grants", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  name: text("name").notNull(),
+  funderOrgId: uuid("funder_org_id"),
+  awardNumber: text("award_number"),
+  amount: numeric("amount"),
+  currency: text("currency"),
+  startDate: text("start_date"),
+  endDate: text("end_date"),
+  description: text("description"),
+  ...provenance,
+});
+
+export const publications = pgTable("publications", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  title: text("title").notNull(),
+  doi: text("doi"),
+  openalexId: text("openalex_id"),
+  journal: text("journal"),
+  publicationDate: text("publication_date"),
+  abstract: text("abstract"),
+  url: text("url"),
+  ...provenance,
+});
+
+export const projectMembers = pgTable("project_members", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  projectId: uuid("project_id").notNull(),
+  personId: uuid("person_id").notNull(),
+  role: memberRoleEnum("role"),
+  ...provenance,
+});
+
+export const projectPartners = pgTable("project_partners", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  projectId: uuid("project_id").notNull(),
+  orgId: uuid("org_id").notNull(),
+  role: partnerRoleEnum("role"),
+  ...provenance,
+});
+
+export const publicationAuthors = pgTable("publication_authors", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  publicationId: uuid("publication_id").notNull(),
+  personId: uuid("person_id").notNull(),
+  authorPosition: integer("author_position"),
+  ...provenance,
 });

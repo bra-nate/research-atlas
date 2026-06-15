@@ -41,10 +41,25 @@ pnpm dev:api      # http://localhost:4000
 pnpm dev:web      # http://localhost:5173
 ```
 
+## Data model (in `@research-atlas/types` + `supabase/migrations/0001_init.sql`)
+Entities: `organizations`, `people`, `capabilities`, `programs`, `projects`,
+`grants`, `publications`. Graph edges: `project_members`, `project_partners`,
+`publication_authors`. Every row carries provenance (`source`, `source_url`,
+`ingest_method`, `ingested_at`, `verification_status`). Entity-resolution keys are
+first-class: `ror_id`, `orcid`, `openalex_author_id`, `doi`, `openalex_id`.
+
+The hero traversal is live: `GET /people/:id/projects` returns every project a
+person is on across all programmes (and `GET /projects/:id/members` the inverse).
+
 ## Status / next
-Seeded from the ACE Connect re-platform as the shared codebase template, then
-stripped of all ACE-private features (auth, connection requests, outcomes, meetings,
-admin writes). The current data model carries `organizations` / `people` /
-`capabilities`; the Directory-specific graph (`programs`, `projects`, `grants`,
-`publications` + edge tables) and the ingestion adapters (`/ingest`) are the next
-build — see `ARCHITECTURE.md` and the (to-be-restored) `DATA.md` / `INGEST.md`.
+Seeded from the ACE Connect re-platform as the shared codebase template, stripped
+of all ACE-private features (auth, connection requests, outcomes, meetings, admin
+writes), then built out to the full Directory model above. Verified: `pnpm -r build`
++ `typecheck` green; the migration applies on Postgres; `apps/api/test/smoke.sh`
+passes (read endpoints + the person→project graph).
+
+**Next:** the ingestion adapters (`/ingest`, one per source — see `INGEST.md` once
+restored), real seed data, and the entity/profile pages in the SPA (programmes,
+projects, person profiles with bidirectional links). `publication_authors` was
+added during scaffolding because DATA.md's edge list was truncated — confirm it
+when `DATA.md` is restored.
