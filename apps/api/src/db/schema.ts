@@ -98,6 +98,8 @@ export const people = pgTable("people", {
   photoUrl: text("photo_url"),
   visible: boolean("visible").notNull().default(true),
   mergedInto: uuid("merged_into"),
+  worksCount: integer("works_count"),
+  lastActiveYear: integer("last_active_year"),
   ...provenance,
 });
 

@@ -78,6 +78,8 @@ export function toPerson(r: typeof people.$inferSelect): Person {
     bio: r.bio,
     orcid: r.orcid,
     openalex_author_id: r.openalexAuthorId,
+    works_count: r.worksCount,
+    last_active_year: r.lastActiveYear,
     profile_url: r.profileUrl,
     photo_url: r.photoUrl,
     visible: r.visible,
