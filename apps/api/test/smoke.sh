@@ -17,16 +17,20 @@ PROJ=44444444-4444-4444-4444-444444444444
 psql -h localhost -p 5432 -d postgres -X -q -c "drop database if exists $DB;"
 psql -h localhost -p 5432 -d postgres -X -q -c "create database $DB;"
 psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -f "$ROOT/supabase/migrations/0001_init.sql" >/dev/null
+psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -f "$ROOT/supabase/migrations/0002_person_activity_signal.sql" >/dev/null
 
 psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -c "
 insert into organizations (id,name,short_name,org_type,country) values ('$ORG','WACCBIP','WACCBIP','university','Ghana');
-insert into people (id,full_name,primary_org_id,specializations,skills) values ('$PERSON','Gordon Awandare','$ORG','{genomics}','{malaria}');
+insert into people (id,full_name,primary_org_id,specializations,skills,orcid) values ('$PERSON','Gordon Awandare','$ORG','{genomics}','{malaria}','0000-0002-8793-3641');
 insert into programs (id,name,short_name) values ('$PROG','H3Africa','H3A');
 insert into projects (id,title,program_id,lead_org_id,pi_person_id,country) values ('$PROJ','SickleGenAfrica','$PROG','$ORG','$PERSON','Ghana');
 insert into project_members (project_id,person_id,role) values ('$PROJ','$PERSON','pi');
 insert into capabilities (org_id,kind,name,category,city,country) values ('$ORG','equipment','Sequencer','genomics','Accra','Ghana');
 insert into grants (name,funder_org_id,amount,currency) values ('Wellcome Award','$ORG',500000,'USD');
 " >/dev/null
+
+# Seed the hero programme→consortium→membership tier through the real adapter.
+( cd "$API" && DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" pnpm ingest seed-consortia >/dev/null )
 
 cd "$API"
 DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" PORT=$PORT WEB_ORIGIN="http://localhost:5173" \
@@ -56,6 +60,11 @@ HERO=$(curl -s "$BASE/people/$PERSON/projects")
 echo "  person→projects payload: $HERO"
 ck "person→projects returns SickleGenAfrica" 1 "$(echo "$HERO" | grep -c 'SickleGenAfrica')"
 ck "project→members returns the PI" 1 "$(curl -s "$BASE/projects/$PROJ/members" | grep -c 'Gordon Awandare')"
+# Real hero check: the orcid-resolved person spans ≥2 programmes via consortia.
+HERO_ID=$(psql -h localhost -p 5432 -d $DB -tAc "select id from people where orcid='0000-0002-8793-3641'")
+HEROJSON=$(curl -s "$BASE/people/$HERO_ID/projects")
+ck "hero person spans WACCBIP" 1 "$(echo "$HEROJSON" | grep -c 'waccbip.org')"
+ck "hero person spans SickleGenAfrica" 1 "$(echo "$HEROJSON" | grep -c 'SickleGenAfrica')"
 ck "search people q=malaria finds 1" 1 "$(jqlen "$BASE/people?q=malaria")"
 ck "provenance label present (ingested_unverified)" 1 "$(curl -s "$BASE/organizations" | grep -c 'ingested_unverified')"
 

@@ -21,4 +21,6 @@ export interface Person extends Provenance {
   photo_url: string | null;
   visible: boolean;
   merged_into: string | null; // when two rows resolve to one, loser → winner
+  works_count: number | null;
+  last_active_year: number | null;
 }

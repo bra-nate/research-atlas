@@ -1,4 +1,4 @@
-/** Project — a funded project / hub / consortium node under a programme. */
+/** Project — a consortium node (funded project / hub) under a programme. */
 import type { Provenance } from "./provenance.js";
 
 export interface Project extends Provenance {
