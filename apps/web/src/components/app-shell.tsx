@@ -1,65 +1,51 @@
-import { Building2, LayoutGrid, Search } from "lucide-react";
-import type { ReactNode } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { cn } from "../lib/cn";
+import { Search } from "lucide-react";
+import { useState, type FormEvent, type ReactNode } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-const NAV = [{ to: "/directory", label: "Directory", icon: Search }];
-
-/** Public app chrome — no account/sign-in (V1 is read-only discovery). */
+/**
+ * Public app chrome — Crunchbase-style top nav (white, sticky, hairline border):
+ * wordmark left, a prominent global search, no account/sign-in (V1 is read-only
+ * discovery). Profile pages render their own breadcrumbs below the nav.
+ */
 export function AppShell({ children }: { children: ReactNode }) {
-  const location = useLocation();
-  const crumb =
-    NAV.find((n) => location.pathname.startsWith(n.to))?.label ?? "Discover";
+  const navigate = useNavigate();
+  const [q, setQ] = useState("");
+
+  function onSearch(e: FormEvent) {
+    e.preventDefault();
+    navigate(`/directory${q.trim() ? `?q=${encodeURIComponent(q.trim())}` : ""}`);
+  }
 
   return (
-    <div className="flex h-full">
-      <aside className="flex w-60 shrink-0 flex-col border-r border-hairline bg-surface">
-        <div className="flex items-center gap-2.5 px-4 py-4">
-          <div className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-accent-fg">
-            <LayoutGrid className="h-4 w-4" />
-          </div>
-          <div>
-            <div className="text-sm font-semibold">Research Atlas</div>
-            <div className="text-[11px] text-gray-500">African research ecosystem</div>
-          </div>
-        </div>
-        <nav className="mt-2 flex-1 space-y-0.5 px-2">
-          <div className="px-2 pb-1 pt-3 text-[10px] font-semibold uppercase tracking-wider text-gray-400">
-            Discover
-          </div>
-          {NAV.map(({ to, label, icon: Icon }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                cn(
-                  "flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium transition-colors",
-                  isActive
-                    ? "bg-brand-subtle text-brand"
-                    : "text-gray-600 hover:bg-gray-100",
-                )
-              }
-            >
-              <Icon className="h-4 w-4" />
-              {label}
-            </NavLink>
-          ))}
-        </nav>
-        <div className="m-2 flex items-center gap-2 rounded-lg px-2.5 py-2 text-xs text-gray-400">
-          <Building2 className="h-3.5 w-3.5" /> Public · read-only
-        </div>
-      </aside>
+    <div className="min-h-full bg-white">
+      <header className="sticky top-0 z-20 border-b border-border bg-white">
+        <div className="mx-auto flex h-14 max-w-[1200px] items-center gap-4 px-4 sm:px-6">
+          <Link to="/directory" className="flex shrink-0 items-center gap-2">
+            <div className="grid h-7 w-7 place-items-center rounded-md bg-brand text-white">
+              <span className="font-semibold">R</span>
+            </div>
+            <span className="text-[15px] font-semibold tracking-tight text-ink">
+              Research Atlas
+            </span>
+          </Link>
 
-      <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex items-center justify-between border-b border-hairline bg-surface px-6 py-3">
-          <div className="text-sm text-gray-500">
-            Discover <span className="text-gray-300">/</span>{" "}
-            <span className="font-medium text-gray-900">{crumb}</span>
-          </div>
-          <div className="text-xs text-gray-400">Sourced from public data · unverified</div>
-        </header>
-        <main className="flex-1 overflow-auto bg-canvas px-6 py-6">{children}</main>
-      </div>
+          <form onSubmit={onSearch} className="relative max-w-md flex-1">
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-secondary" />
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Search organisations, people, capabilities…"
+              className="w-full rounded-lg border border-border bg-surface-alt py-2 pl-9 pr-3 text-sm text-ink outline-none placeholder:text-ink-secondary focus:border-brand focus:bg-white focus:ring-2 focus:ring-brand/20"
+            />
+          </form>
+
+          <span className="ml-auto hidden text-xs text-ink-secondary sm:block">
+            Public · read-only
+          </span>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-[1200px] px-4 py-6 sm:px-6">{children}</main>
     </div>
   );
 }

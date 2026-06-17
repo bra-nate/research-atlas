@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Self-contained Partner Dashboard palette for the SPA (light mode). Mirrors the
- * design tokens from the legacy app's /design system: royal-blue primary, coral
- * accent, near-white canvas, hairline borders.
+ * Crunchbase-style palette for the Directory SPA (see DESIGN.md): white surfaces,
+ * a single vivid blue for links/actions, cool greys, near-black ink. Legacy
+ * aliases (canvas/surface/hairline) are kept so older components keep compiling.
  */
 const config: Config = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
@@ -11,20 +11,31 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: "#2563EB",
-          hover: "#1D4ED8",
+          DEFAULT: "#0A66FF",
+          hover: "#0A4FCC",
           fg: "#FFFFFF",
-          subtle: "#EFF4FF",
+          subtle: "#EAF1FF",
         },
+        ink: {
+          DEFAULT: "#16181D",
+          secondary: "#667085",
+        },
+        border: "#E4E7EC",
+        "surface-alt": "#F5F7FA",
+        tag: {
+          bg: "#EFF1F4",
+          ink: "#344054",
+        },
+        positive: "#067647",
         accent: {
           DEFAULT: "#F97316",
           hover: "#EA580C",
           fg: "#FFFFFF",
           subtle: "#FFF3EA",
         },
-        canvas: "#FCFCFC",
+        canvas: "#FFFFFF",
         surface: "#FFFFFF",
-        hairline: "#EDEDED",
+        hairline: "#E4E7EC",
       },
       fontFamily: {
         sans: [

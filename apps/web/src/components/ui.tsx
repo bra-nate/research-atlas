@@ -5,6 +5,7 @@ import type {
   ReactNode,
   TextareaHTMLAttributes,
 } from "react";
+import { Link } from "react-router-dom";
 import { cn } from "../lib/cn";
 
 /** Primitive set matching the Partner Dashboard design system (light, airy). */
@@ -134,5 +135,210 @@ export function MonoCode({ children }: { children: ReactNode }) {
     <span className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-xs text-gray-600">
       {children}
     </span>
+  );
+}
+
+/* ── Crunchbase-style profile building blocks ──────────────────────────────── */
+
+/** Every entity name is a blue link — this drives the bidirectional graph nav. */
+export function EntityLink({
+  to,
+  children,
+  className,
+}: {
+  to: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <Link
+      to={to}
+      className={cn(
+        "font-medium text-brand hover:underline focus:underline focus:outline-none",
+        className,
+      )}
+    >
+      {children}
+    </Link>
+  );
+}
+
+/** Flat grey pill for themes / skills / roles. */
+export function Tag({ children }: { children: ReactNode }) {
+  return (
+    <span className="inline-flex items-center rounded-full bg-tag-bg px-2 py-0.5 text-xs font-medium text-tag-ink">
+      {children}
+    </span>
+  );
+}
+
+/** Squared logo/avatar; falls back to a monogram of the name. */
+export function Monogram({
+  name,
+  src,
+  size = 56,
+}: {
+  name: string;
+  src?: string | null;
+  size?: number;
+}) {
+  const initials = name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0]?.toUpperCase())
+    .join("");
+  if (src) {
+    return (
+      <img
+        src={src}
+        alt={name}
+        width={size}
+        height={size}
+        className="shrink-0 rounded-md border border-border object-cover"
+        style={{ width: size, height: size }}
+      />
+    );
+  }
+  return (
+    <div
+      className="grid shrink-0 place-items-center rounded-md bg-surface-alt font-semibold text-ink-secondary"
+      style={{ width: size, height: size, fontSize: size * 0.34 }}
+    >
+      {initials || "?"}
+    </div>
+  );
+}
+
+export type Crumb = { label: string; to?: string };
+
+export function Breadcrumbs({ items }: { items: Crumb[] }) {
+  return (
+    <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-[13px] text-ink-secondary">
+      {items.map((c, i) => (
+        <span key={i} className="flex items-center gap-1.5">
+          {c.to ? (
+            <Link to={c.to} className="hover:text-brand hover:underline">
+              {c.label}
+            </Link>
+          ) : (
+            <span className="text-ink">{c.label}</span>
+          )}
+          {i < items.length - 1 && <span className="text-border">/</span>}
+        </span>
+      ))}
+    </nav>
+  );
+}
+
+/** Titled white card with a hairline border — the Crunchbase profile primitive. */
+export function SectionCard({
+  title,
+  count,
+  seeAll,
+  children,
+}: {
+  title: string;
+  count?: number;
+  seeAll?: { to: string; label?: string };
+  children: ReactNode;
+}) {
+  return (
+    <section className="rounded-lg border border-border bg-white">
+      <header className="flex items-center justify-between border-b border-border px-4 py-3">
+        <h2 className="text-[15px] font-semibold text-ink">
+          {title}
+          {count != null && (
+            <span className="ml-1.5 font-normal tabular-nums text-ink-secondary">
+              {count}
+            </span>
+          )}
+        </h2>
+        {seeAll && (
+          <Link
+            to={seeAll.to}
+            className="text-[13px] font-medium text-brand hover:underline"
+          >
+            {seeAll.label ?? "See all"}
+          </Link>
+        )}
+      </header>
+      <div className="p-4">{children}</div>
+    </section>
+  );
+}
+
+/** A horizontal label/value key-facts row (profile header band). */
+export function KeyFacts({
+  facts,
+}: {
+  facts: { label: string; value: ReactNode }[];
+}) {
+  const shown = facts.filter((f) => f.value != null && f.value !== "");
+  if (!shown.length) return null;
+  return (
+    <dl className="flex flex-wrap gap-x-8 gap-y-3">
+      {shown.map((f, i) => (
+        <div key={i} className="min-w-0">
+          <dt className="text-[11px] font-medium uppercase tracking-wide text-ink-secondary">
+            {f.label}
+          </dt>
+          <dd className="mt-0.5 text-sm text-ink">{f.value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+/** Provenance line — "Sourced from [X] · unverified", with link-back. */
+export function ProvenanceLine({
+  source,
+  sourceUrl,
+  status,
+}: {
+  source?: string | null;
+  sourceUrl?: string | null;
+  status?: string | null;
+}) {
+  const verified = status === "verified" || status === "claimed";
+  return (
+    <p className="text-xs text-ink-secondary">
+      Sourced from{" "}
+      {sourceUrl ? (
+        <a
+          href={sourceUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="text-brand hover:underline"
+        >
+          {source || "public data"}
+        </a>
+      ) : (
+        <span className="text-ink">{source || "public data"}</span>
+      )}{" "}
+      · {verified ? "verified" : "unverified"}
+    </p>
+  );
+}
+
+/** Standard loading / error / not-found state for a profile page. */
+export function PageStatus({
+  loading,
+  error,
+  notFound,
+  label,
+}: {
+  loading?: boolean;
+  error?: boolean;
+  notFound?: boolean;
+  label: string;
+}) {
+  let message = `Loading ${label}…`;
+  if (notFound) message = `${label} not found.`;
+  else if (error) message = `Couldn't load ${label}. Please try again.`;
+  return (
+    <div className="rounded-lg border border-border bg-white p-10 text-center text-sm text-ink-secondary">
+      {message}
+    </div>
   );
 }

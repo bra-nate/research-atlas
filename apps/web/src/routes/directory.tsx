@@ -1,4 +1,5 @@
 import { useMemo, useState, type ReactNode } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   CAPABILITY_KIND_LABELS,
   ORG_TYPE_LABELS,
@@ -13,10 +14,11 @@ import {
 } from "../lib/hooks";
 import {
   Card,
+  EntityLink,
   IllustrativeBadge,
   Input,
   MonoCode,
-  StatusPill,
+  Tag,
 } from "../components/ui";
 import { cn } from "../lib/cn";
 
@@ -28,23 +30,41 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "capabilities", label: "Capabilities" },
 ];
 
+const isTab = (v: string | null): v is Tab =>
+  v === "organizations" || v === "people" || v === "capabilities";
+
 export function DirectoryPage() {
-  const [tab, setTab] = useState<Tab>("organizations");
-  const [q, setQ] = useState("");
+  const [params, setParams] = useSearchParams();
+  const tab: Tab = isTab(params.get("tab")) ? (params.get("tab") as Tab) : "organizations";
+  const q = params.get("q") ?? "";
   const [country, setCountry] = useState("");
   const [orgType, setOrgType] = useState("");
+
+  const setTab = (t: Tab) => {
+    const next = new URLSearchParams(params);
+    next.set("tab", t);
+    setParams(next, { replace: true });
+  };
+  const setQ = (v: string) => {
+    const next = new URLSearchParams(params);
+    if (v) next.set("q", v);
+    else next.delete("q");
+    setParams(next, { replace: true });
+  };
 
   return (
     <div className="space-y-5">
       <div>
-        <h1 className="text-xl font-semibold">Research Atlas</h1>
-        <p className="text-sm text-gray-500">
+        <h1 className="text-[26px] font-semibold tracking-tight text-ink">
+          Research Atlas
+        </h1>
+        <p className="text-sm text-ink-secondary">
           Discover organisations, people, and capabilities across the African
           research ecosystem. Aggregated from public sources.
         </p>
       </div>
 
-      <div className="flex items-center gap-1 border-b border-hairline">
+      <div className="flex items-center gap-1 border-b border-border">
         {TABS.map((t) => (
           <button
             key={t.id}
@@ -53,7 +73,7 @@ export function DirectoryPage() {
               "-mb-px border-b-2 px-3 py-2 text-sm font-medium transition-colors",
               tab === t.id
                 ? "border-brand text-brand"
-                : "border-transparent text-gray-500 hover:text-gray-800",
+                : "border-transparent text-ink-secondary hover:text-ink",
             )}
           >
             {t.label}
@@ -100,7 +120,7 @@ function OrgFacetFilters({
 }) {
   const facets = useOrganizationFacets();
   const sel =
-    "rounded-lg border border-hairline bg-surface px-2.5 py-2 text-sm text-gray-700";
+    "rounded-lg border border-border bg-white px-2.5 py-2 text-sm text-ink";
   return (
     <>
       <select className={sel} value={country} onChange={(e) => onCountry(e.target.value)}>
@@ -142,24 +162,24 @@ function OrganizationsList({
       {orgs.data.map((o) => {
         const c = counts.data?.[o.id];
         return (
-          <Card key={o.id} className="p-4">
+          <Card key={o.id} className="p-4 transition-shadow hover:shadow-[0_1px_4px_rgba(16,24,40,.08)]">
             <div className="flex items-start justify-between gap-2">
               <div>
-                <span className="font-medium text-gray-900">{o.name}</span>
+                <EntityLink to={`/organizations/${o.id}`} className="text-[15px]">
+                  {o.name}
+                </EntityLink>
                 <div className="mt-1 flex items-center gap-2">
                   {o.short_name && <MonoCode>{o.short_name}</MonoCode>}
                   {o.country && (
-                    <span className="text-xs text-gray-500">{o.country}</span>
+                    <span className="text-xs text-ink-secondary">{o.country}</span>
                   )}
                 </div>
               </div>
               <IllustrativeBadge status={o.verification_status} />
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-2">
-              <StatusPill tone="blue">
-                {ORG_TYPE_LABELS[o.org_type] ?? o.org_type}
-              </StatusPill>
-              <span className="text-xs text-gray-500">
+              <Tag>{ORG_TYPE_LABELS[o.org_type] ?? o.org_type}</Tag>
+              <span className="text-xs text-ink-secondary">
                 {c?.people ?? "—"} people · {c?.capabilities ?? "—"} capabilities
               </span>
             </div>
@@ -177,11 +197,13 @@ function PeopleList({ q }: { q: string }) {
   return (
     <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
       {people.data.map((p) => (
-        <Card key={p.id} className="p-4">
+        <Card key={p.id} className="p-4 transition-shadow hover:shadow-[0_1px_4px_rgba(16,24,40,.08)]">
           <div className="flex items-start justify-between gap-2">
             <div>
-              <div className="font-medium text-gray-900">{p.full_name}</div>
-              <div className="text-xs text-gray-500">
+              <EntityLink to={`/people/${p.id}`} className="text-[15px]">
+                {p.full_name}
+              </EntityLink>
+              <div className="text-xs text-ink-secondary">
                 {[p.title, p.highest_qualification].filter(Boolean).join(" · ")}
               </div>
             </div>
@@ -190,14 +212,12 @@ function PeopleList({ q }: { q: string }) {
           {p.specializations.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-1">
               {p.specializations.slice(0, 4).map((s) => (
-                <StatusPill key={s} tone="gray">
-                  {s}
-                </StatusPill>
+                <Tag key={s}>{s}</Tag>
               ))}
             </div>
           )}
           {p.bio && (
-            <p className="mt-2 line-clamp-2 text-sm text-gray-600">{p.bio}</p>
+            <p className="mt-2 line-clamp-2 text-sm text-ink-secondary">{p.bio}</p>
           )}
         </Card>
       ))}
@@ -213,18 +233,20 @@ function CapabilitiesList({ q }: { q: string }) {
   return (
     <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
       {caps.data.map((c) => (
-        <Card key={c.id} className="p-4">
-          <div className="flex items-center justify-between">
-            <span className="font-medium text-gray-900">{c.name}</span>
-            <StatusPill tone="blue">{CAPABILITY_KIND_LABELS[c.kind]}</StatusPill>
+        <Card key={c.id} className="p-4 transition-shadow hover:shadow-[0_1px_4px_rgba(16,24,40,.08)]">
+          <div className="flex items-center justify-between gap-2">
+            <EntityLink to={`/capabilities/${c.id}`} className="text-[15px]">
+              {c.name}
+            </EntityLink>
+            <Tag>{CAPABILITY_KIND_LABELS[c.kind]}</Tag>
           </div>
           {(c.category || c.city || c.country) && (
-            <div className="text-xs text-gray-500">
+            <div className="text-xs text-ink-secondary">
               {[c.category, c.city, c.country].filter(Boolean).join(" · ")}
             </div>
           )}
           {c.description && (
-            <p className="mt-2 line-clamp-2 text-sm text-gray-600">{c.description}</p>
+            <p className="mt-2 line-clamp-2 text-sm text-ink-secondary">{c.description}</p>
           )}
         </Card>
       ))}
@@ -234,6 +256,6 @@ function CapabilitiesList({ q }: { q: string }) {
 
 function Empty({ children }: { children: ReactNode }) {
   return (
-    <Card className="p-8 text-center text-sm text-gray-500">{children}</Card>
+    <Card className="p-8 text-center text-sm text-ink-secondary">{children}</Card>
   );
 }
