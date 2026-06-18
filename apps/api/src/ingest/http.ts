@@ -34,6 +34,7 @@ export async function oaPaginate<T>(
   path: string,
   filter: string,
   cap: number,
+  extra: Record<string, string> = {},
 ): Promise<T[]> {
   const out: T[] = [];
   let cursor = "*";
@@ -42,6 +43,7 @@ export async function oaPaginate<T>(
       filter,
       "per-page": "200",
       cursor,
+      ...extra,
     });
     out.push(...page.results);
     cursor = page.meta.next_cursor ?? "";
