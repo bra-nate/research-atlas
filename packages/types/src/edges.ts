@@ -28,4 +28,17 @@ export interface PublicationAuthor extends Provenance {
   publication_id: string;
   person_id: string;
   author_position: number | null;
+  match_confidence: number | null;
+}
+
+export interface ProjectGrant extends Provenance {
+  id: string;
+  project_id: string;
+  grant_id: string;
+}
+
+export interface ProjectPublication extends Provenance {
+  id: string;
+  project_id: string;
+  publication_id: string;
 }

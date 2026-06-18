@@ -49,6 +49,10 @@ export interface PersonUpsert {
 export interface GrantUpsert {
   name: string;
   awardNumber: string | null;
+  amount: string | null;
+  currency: string | null;
+  startDate: string | null;
+  endDate: string | null;
   funder: OrgUpsert;
   sourceUrl: string;
 }
@@ -89,5 +93,6 @@ export interface ProjectUpsert {
   pi: PersonUpsert | null;
   partners: PartnerEdge[];
   members: MemberEdge[];
+  grant: GrantUpsert | null;
   sourceUrl: string;
 }

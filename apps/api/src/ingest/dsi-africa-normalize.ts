@@ -1,4 +1,4 @@
-import type { MemberEdge, OrgUpsert, PersonUpsert, ProjectUpsert } from "./types.js";
+import type { GrantUpsert, MemberEdge, OrgUpsert, PersonUpsert, ProjectUpsert } from "./types.js";
 
 /**
  * DS-I Africa (NIH Common Fund) is ingested from the NIH RePORTER API
@@ -23,6 +23,9 @@ interface ReporterResult {
   fiscal_year?: number | null;
   project_title?: string | null;
   opportunity_number?: string | null;
+  award_amount?: number | null;
+  project_start_date?: string | null;
+  project_end_date?: string | null;
   principal_investigators?: ReporterPI[];
   organization?: ReporterOrg | null;
 }
@@ -69,6 +72,37 @@ function cleanTitle(t: string): string {
   return t.replace(/^["']+|["']+$/g, "").trim();
 }
 
+const NIH_FUNDER: OrgUpsert = {
+  name: "National Institutes of Health (NIH)",
+  shortName: "NIH",
+  orgType: "funder",
+  country: "United States",
+  website: "https://www.nih.gov",
+  rorId: null,
+  sourceUrl: "https://reporter.nih.gov",
+};
+
+/** "2021-09-20T00:00:00" → "2021-09-20"; null/empty → null. */
+function isoDate(d: string | null | undefined): string | null {
+  return d ? d.slice(0, 10) : null;
+}
+
+/** Build the NIH grant for an award, keyed by its core project number. */
+function grantFor(r: ReporterResult, sourceUrl: string): GrantUpsert | null {
+  const award = r.core_project_num?.trim();
+  if (!award) return null;
+  return {
+    name: `NIH ${award}`,
+    awardNumber: award,
+    amount: r.award_amount != null ? String(r.award_amount) : null,
+    currency: r.award_amount != null ? "USD" : null,
+    startDate: isoDate(r.project_start_date),
+    endDate: isoDate(r.project_end_date),
+    funder: { ...NIH_FUNDER, sourceUrl },
+    sourceUrl,
+  };
+}
+
 /**
  * Normalise a RePORTER response into one project per DS-I Africa core award
  * (collapsing the per-fiscal-year rows, keeping the latest year), with its lead
@@ -112,6 +146,7 @@ export function parseDsiAfrica(jsonText: string): ProjectUpsert[] {
       pi,
       partners: [{ org: leadOrg, role: "lead" }],
       members,
+      grant: grantFor(r, sourceUrl),
       sourceUrl,
     });
   }

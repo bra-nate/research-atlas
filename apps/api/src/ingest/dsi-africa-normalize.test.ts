@@ -30,6 +30,17 @@ test("parseDsiAfrica extracts the eLwazi platform with PI and University of Cape
   assert.match(elwazi!.leadOrg!.name, /university of cape town/i);
 });
 
+test("parseDsiAfrica emits a NIH grant per award keyed by core project number", () => {
+  const projects = parseDsiAfrica(json);
+  const elwazi = projects.find((p) => /elwazi/i.test(p.title))!;
+  assert.ok(elwazi.grant, "award has a grant");
+  assert.match(elwazi.grant!.awardNumber!, /^U2CEB032224$/);
+  assert.equal(elwazi.grant!.funder.name, "National Institutes of Health (NIH)");
+  assert.equal(elwazi.grant!.funder.orgType, "funder");
+  // amount is a numeric string when RePORTER provides it
+  assert.match(elwazi.grant!.amount ?? "", /^[0-9]+$/);
+});
+
 test("parseDsiAfrica title-cases the cross-source anchor org (matches DELTAS casing)", () => {
   const projects = parseDsiAfrica(json);
   const uctAwards = projects.filter((p) => /university of cape town/i.test(p.leadOrg?.name ?? ""));
