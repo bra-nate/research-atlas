@@ -22,7 +22,7 @@ psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -f "$ROOT/supabase/mig
 
 psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -c "
 insert into organizations (id,name,short_name,org_type,country) values ('$ORG','WACCBIP','WACCBIP','university','Ghana');
-insert into people (id,full_name,primary_org_id,specializations,skills,orcid) values ('$PERSON','Gordon Awandare','$ORG','{genomics}','{malaria}','0000-0002-8793-3641');
+insert into people (id,full_name,primary_org_id,specializations,skills,orcid,openalex_author_id) values ('$PERSON','Gordon Awandare','$ORG','{genomics}','{malaria}','0000-0002-8793-3641','A5026031023');
 insert into programs (id,name,short_name) values ('$PROG','H3Africa','H3A');
 insert into projects (id,title,program_id,lead_org_id,pi_person_id,country) values ('$PROJ','SickleGenAfrica','$PROG','$ORG','$PERSON','Ghana');
 insert into project_members (project_id,person_id,role) values ('$PROJ','$PERSON','pi');
@@ -37,6 +37,9 @@ insert into grants (name,funder_org_id,amount,currency) values ('Wellcome Award'
 # RePORTER snapshot) and DELTAS Africa (AAS programme + curated consortia).
 ( cd "$API" && DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" pnpm ingest dsi-africa >/dev/null )
 ( cd "$API" && DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" pnpm ingest deltas >/dev/null )
+
+# Publications enrichment (offline: reads the committed works fixture for the seeded author id).
+( cd "$API" && DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" pnpm ingest enrich >/dev/null )
 
 cd "$API"
 DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" PORT=$PORT WEB_ORIGIN="http://localhost:5173" \
@@ -102,6 +105,19 @@ NIH_GRANT=$(psql -h localhost -p 5432 -d $DB -tAc "
   join organizations o on o.id = g.funder_org_id
   where g.award_number is not null and o.org_type = 'funder' and o.name ilike '%National Institutes of Health%'")
 ck "grant link resolves to a NIH-funded award" 1 "$([ "${NIH_GRANT:-0}" -ge 1 ] && echo 1 || echo 0)"
+
+# --- P7b: publications enrichment ---
+PUBS=$(curl -s "$BASE/people/$HERO_ID/publications" | grep -c '"publication"')
+ck "hero person has enriched publications" 1 "$([ "${PUBS:-0}" -ge 1 ] && echo 1 || echo 0)"
+# the authorship carries a match_confidence (1.0 via ORCID)
+MC=$(psql -h localhost -p 5432 -d $DB -tAc "select count(*) from publication_authors where person_id='$HERO_ID' and match_confidence is not null")
+ck "authorship carries match_confidence" 1 "$([ "${MC:-0}" -ge 1 ] && echo 1 || echo 0)"
+# author-membership linking produced project_publications for a hero consortium
+PP=$(psql -h localhost -p 5432 -d $DB -tAc "
+  select count(*) from project_publications pp
+  join project_members pm on pm.project_id = pp.project_id
+  where pm.person_id = '$HERO_ID'")
+ck "publications link to hero's projects (author-membership)" 1 "$([ "${PP:-0}" -ge 1 ] && echo 1 || echo 0)"
 
 echo "### Result: $pass passed, $fail failed"
 [ "$fail" = "0" ]
