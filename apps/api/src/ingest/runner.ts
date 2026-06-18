@@ -7,6 +7,7 @@ const ADAPTER_MODULES: Record<string, () => Promise<{ [key: string]: Adapter }>>
   openalex: () => import("./openalex.js") as Promise<{ openalexAdapter: Adapter }>,
   "seed-consortia": () => import("./seed-consortia.js") as Promise<{ seedConsortiaAdapter: Adapter }>,
   "dsi-africa": () => import("./dsi-africa.js") as Promise<{ dsiAfricaAdapter: Adapter }>,
+  deltas: () => import("./deltas.js") as Promise<{ deltasAdapter: Adapter }>,
 };
 
 async function main(): Promise<void> {
