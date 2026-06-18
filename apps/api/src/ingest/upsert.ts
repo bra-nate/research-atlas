@@ -8,7 +8,10 @@ import {
   projectGrants,
   projectMembers,
   projectPartners,
+  projectPublications,
   projects,
+  publicationAuthors,
+  publications,
 } from "../db/schema.js";
 import type {
   GrantUpsert,
@@ -17,6 +20,7 @@ import type {
   ProgramUpsert,
   ProjectUpsert,
   ProvInput,
+  PublicationUpsert,
 } from "./types.js";
 import { matchPersonToExisting } from "./resolve.js";
 
@@ -249,4 +253,72 @@ export async function upsertProjectPartner(
     .limit(1);
   if (existing[0]) return;
   await db.insert(projectPartners).values({ projectId, orgId, role, ...prov(sourceUrl, p) });
+}
+
+/** Upsert a publication by openalex_id, then doi, else insert. Returns its id. */
+export async function upsertPublication(pub: PublicationUpsert, p: ProvInput): Promise<string> {
+  const existing = pub.openalexId
+    ? await db.select({ id: publications.id }).from(publications).where(eq(publications.openalexId, pub.openalexId)).limit(1)
+    : pub.doi
+      ? await db.select({ id: publications.id }).from(publications).where(eq(publications.doi, pub.doi)).limit(1)
+      : [];
+  const values = {
+    title: pub.title,
+    doi: pub.doi,
+    openalexId: pub.openalexId,
+    journal: pub.journal,
+    publicationDate: pub.publicationDate,
+    url: pub.url,
+    ...prov(pub.sourceUrl, p),
+  };
+  if (existing[0]) {
+    await db.update(publications).set(values).where(eq(publications.id, existing[0].id));
+    return existing[0].id;
+  }
+  const [row] = await db.insert(publications).values(values).returning({ id: publications.id });
+  return row.id;
+}
+
+/** Idempotent authorship edge keyed on (publication, person); carries confidence. */
+export async function upsertPublicationAuthor(
+  publicationId: string,
+  personId: string,
+  position: number,
+  confidence: number,
+  sourceUrl: string,
+  p: ProvInput,
+): Promise<void> {
+  const existing = await db
+    .select({ id: publicationAuthors.id })
+    .from(publicationAuthors)
+    .where(sql`publication_id = ${publicationId} and person_id = ${personId}`)
+    .limit(1);
+  const values = {
+    publicationId,
+    personId,
+    authorPosition: position,
+    matchConfidence: String(confidence),
+    ...prov(sourceUrl, p),
+  };
+  if (existing[0]) {
+    await db.update(publicationAuthors).set(values).where(eq(publicationAuthors.id, existing[0].id));
+    return;
+  }
+  await db.insert(publicationAuthors).values(values);
+}
+
+/** Idempotent project↔publication edge keyed on (project, publication). */
+export async function upsertProjectPublication(
+  projectId: string,
+  publicationId: string,
+  sourceUrl: string,
+  p: ProvInput,
+): Promise<void> {
+  const existing = await db
+    .select({ id: projectPublications.id })
+    .from(projectPublications)
+    .where(sql`project_id = ${projectId} and publication_id = ${publicationId}`)
+    .limit(1);
+  if (existing[0]) return;
+  await db.insert(projectPublications).values({ projectId, publicationId, ...prov(sourceUrl, p) });
 }
