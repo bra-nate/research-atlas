@@ -112,6 +112,7 @@ export function parseDsiAfrica(jsonText: string): ProjectUpsert[] {
       pi,
       partners: [{ org: leadOrg, role: "lead" }],
       members,
+      grant: null,
       sourceUrl,
     });
   }

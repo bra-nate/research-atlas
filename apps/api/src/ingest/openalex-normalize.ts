@@ -51,6 +51,10 @@ export function normalizeGrants(works: OAWork[]): GrantUpsert[] {
       byKey.set(key, {
         name: g.award_id ? `${g.funder_display_name} ${g.award_id}` : g.funder_display_name,
         awardNumber: g.award_id,
+        amount: null,
+        currency: null,
+        startDate: null,
+        endDate: null,
         funder: {
           name: g.funder_display_name,
           shortName: null,

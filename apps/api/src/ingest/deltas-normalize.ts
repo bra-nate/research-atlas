@@ -68,6 +68,7 @@ export function parseDeltas(jsonText: string): ProjectUpsert[] {
       pi: person(c.director, c.orcid, c.sourceUrl, leadOrg.name),
       partners: [{ org: leadOrg, role: "lead" as const }],
       members: [],
+      grant: null,
       sourceUrl: c.sourceUrl,
     };
   });

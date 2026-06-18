@@ -5,6 +5,7 @@ import {
   organizations,
   people,
   programs,
+  projectGrants,
   projectMembers,
   projectPartners,
   projects,
@@ -110,24 +111,43 @@ export async function upsertPerson(p: PersonUpsert, prv: ProvInput = OPENALEX_PR
 }
 
 /** Upsert a grant (and its funder org) keyed by funder name + award number. */
-export async function upsertGrant(g: GrantUpsert, p: ProvInput = OPENALEX_PROV): Promise<void> {
+export async function upsertGrant(g: GrantUpsert, p: ProvInput = OPENALEX_PROV): Promise<string> {
   const funderOrgId = await upsertOrg(g.funder, p);
-  const existing = await db
-    .select({ id: grants.id })
-    .from(grants)
-    .where(sql`lower(name) = lower(${g.name})`)
-    .limit(1);
+  const existing = g.awardNumber
+    ? await db.select({ id: grants.id }).from(grants).where(eq(grants.awardNumber, g.awardNumber)).limit(1)
+    : await db.select({ id: grants.id }).from(grants).where(sql`lower(name) = lower(${g.name})`).limit(1);
   const values = {
     name: g.name,
     funderOrgId,
     awardNumber: g.awardNumber,
+    amount: g.amount,
+    currency: g.currency,
+    startDate: g.startDate,
+    endDate: g.endDate,
     ...prov(g.sourceUrl, p),
   };
   if (existing[0]) {
     await db.update(grants).set(values).where(eq(grants.id, existing[0].id));
-    return;
+    return existing[0].id;
   }
-  await db.insert(grants).values(values);
+  const [row] = await db.insert(grants).values(values).returning({ id: grants.id });
+  return row.id;
+}
+
+/** Idempotent project↔grant edge keyed on (project, grant). */
+export async function upsertProjectGrant(
+  projectId: string,
+  grantId: string,
+  sourceUrl: string,
+  p: ProvInput,
+): Promise<void> {
+  const existing = await db
+    .select({ id: projectGrants.id })
+    .from(projectGrants)
+    .where(sql`project_id = ${projectId} and grant_id = ${grantId}`)
+    .limit(1);
+  if (existing[0]) return;
+  await db.insert(projectGrants).values({ projectId, grantId, ...prov(sourceUrl, p) });
 }
 
 /** Upsert a programme by lower(name). Returns its id. */
@@ -189,6 +209,10 @@ export async function upsertProject(proj: ProjectUpsert, p: ProvInput): Promise<
   for (const pt of proj.partners) {
     const orgId = await upsertOrg(pt.org, p);
     await upsertProjectPartner(projectId, orgId, pt.role, proj.sourceUrl, p);
+  }
+  if (proj.grant) {
+    const grantId = await upsertGrant(proj.grant, p);
+    await upsertProjectGrant(projectId, grantId, proj.sourceUrl, p);
   }
   return projectId;
 }
