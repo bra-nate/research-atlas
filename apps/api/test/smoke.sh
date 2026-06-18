@@ -18,6 +18,7 @@ psql -h localhost -p 5432 -d postgres -X -q -c "drop database if exists $DB;"
 psql -h localhost -p 5432 -d postgres -X -q -c "create database $DB;"
 psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -f "$ROOT/supabase/migrations/0001_init.sql" >/dev/null
 psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -f "$ROOT/supabase/migrations/0002_person_activity_signal.sql" >/dev/null
+psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -f "$ROOT/supabase/migrations/0003_enrichment_edges.sql" >/dev/null
 
 psql -h localhost -p 5432 -d $DB -v ON_ERROR_STOP=1 -X -q -c "
 insert into organizations (id,name,short_name,org_type,country) values ('$ORG','WACCBIP','WACCBIP','university','Ghana');
@@ -90,6 +91,17 @@ ck "shared org spans >=2 source programmes" 1 "$([ "${SRC_SPREAD:-0}" -ge 2 ] &&
 # (c) the hero person gains a consortium from the real DELTAS source
 DELTAS_HERO=$(curl -s "$BASE/people/$HERO_ID/projects" | grep -c '"source":"deltas"')
 ck "hero person has a deltas-sourced project" 1 "$([ "${DELTAS_HERO:-0}" -ge 1 ] && echo 1 || echo 0)"
+
+# --- P7a: DS-I project grants from RePORTER ---
+PG_COUNT=$(psql -h localhost -p 5432 -d $DB -tAc "select count(*) from project_grants")
+ck "DS-I projects have grant links" 1 "$([ "${PG_COUNT:-0}" -ge 1 ] && echo 1 || echo 0)"
+# the linked grant is a real NIH award with a core project number, funded by NIH (org_type 'funder')
+NIH_GRANT=$(psql -h localhost -p 5432 -d $DB -tAc "
+  select count(*) from project_grants pg
+  join grants g on g.id = pg.grant_id
+  join organizations o on o.id = g.funder_org_id
+  where g.award_number is not null and o.org_type = 'funder' and o.name ilike '%National Institutes of Health%'")
+ck "grant link resolves to a NIH-funded award" 1 "$([ "${NIH_GRANT:-0}" -ge 1 ] && echo 1 || echo 0)"
 
 echo "### Result: $pass passed, $fail failed"
 [ "$fail" = "0" ]
