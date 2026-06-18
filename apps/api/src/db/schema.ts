@@ -189,5 +189,20 @@ export const publicationAuthors = pgTable("publication_authors", {
   publicationId: uuid("publication_id").notNull(),
   personId: uuid("person_id").notNull(),
   authorPosition: integer("author_position"),
+  matchConfidence: numeric("match_confidence"),
+  ...provenance,
+});
+
+export const projectGrants = pgTable("project_grants", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  projectId: uuid("project_id").notNull(),
+  grantId: uuid("grant_id").notNull(),
+  ...provenance,
+});
+
+export const projectPublications = pgTable("project_publications", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  projectId: uuid("project_id").notNull(),
+  publicationId: uuid("publication_id").notNull(),
   ...provenance,
 });

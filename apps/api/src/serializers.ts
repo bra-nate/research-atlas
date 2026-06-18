@@ -191,6 +191,7 @@ export function toPublicationAuthor(
     publication_id: r.publicationId,
     person_id: r.personId,
     author_position: r.authorPosition,
+    match_confidence: r.matchConfidence != null ? Number(r.matchConfidence) : null,
     ...prov(r),
   };
 }
