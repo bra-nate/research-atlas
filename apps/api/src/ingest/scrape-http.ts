@@ -4,11 +4,16 @@
  */
 class NonRetryableError extends Error {}
 
-export async function httpGet(url: string): Promise<string> {
+export async function httpGet(
+  url: string,
+  opts: { method?: "GET" | "POST"; body?: string } = {},
+): Promise<string> {
+  const headers: Record<string, string> = { "User-Agent": "research-atlas-ingest" };
+  if (opts.body) headers["Content-Type"] = "application/json";
   let lastErr: unknown;
   for (let attempt = 0; attempt < 4; attempt++) {
     try {
-      const res = await fetch(url, { headers: { "User-Agent": "research-atlas-ingest" } });
+      const res = await fetch(url, { method: opts.method ?? "GET", body: opts.body, headers });
       if (res.status === 429 || res.status >= 500) {
         await sleep(500 * 2 ** attempt);
         continue;
