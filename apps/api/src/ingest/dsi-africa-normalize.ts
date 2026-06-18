@@ -50,7 +50,7 @@ function org(name: string, country: string | null): OrgUpsert {
   };
 }
 
-function person(fullName: string, sourceUrl: string): PersonUpsert {
+function person(fullName: string, sourceUrl: string, primaryOrgName: string): PersonUpsert {
   return {
     fullName: fullName.trim(),
     orcid: null,
@@ -59,6 +59,7 @@ function person(fullName: string, sourceUrl: string): PersonUpsert {
     worksCount: null,
     lastActiveYear: null,
     primaryOrgRor: null,
+    primaryOrgName,
     sourceUrl,
   };
 }
@@ -98,10 +99,10 @@ export function parseDsiAfrica(jsonText: string): ProjectUpsert[] {
 
     const pis = r.principal_investigators ?? [];
     const contact = pis.find((p) => p.is_contact_pi && p.full_name) ?? pis.find((p) => p.full_name);
-    const pi = contact?.full_name ? person(contact.full_name, sourceUrl) : null;
+    const pi = contact?.full_name ? person(contact.full_name, sourceUrl, leadOrg.name) : null;
     const members: MemberEdge[] = pis
       .filter((p) => p.full_name && p.full_name !== contact?.full_name)
-      .map((p) => ({ person: person(p.full_name!, sourceUrl), role: "co_pi" as const }));
+      .map((p) => ({ person: person(p.full_name!, sourceUrl, leadOrg.name), role: "co_pi" as const }));
 
     out.push({
       title,

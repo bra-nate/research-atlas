@@ -63,6 +63,10 @@ export async function upsertPerson(p: PersonUpsert, prv: ProvInput = OPENALEX_PR
     const [org] = await db.select({ id: organizations.id }).from(organizations).where(eq(organizations.rorId, p.primaryOrgRor)).limit(1);
     primaryOrgId = org?.id ?? null;
   }
+  if (!primaryOrgId && p.primaryOrgName) {
+    const [org] = await db.select({ id: organizations.id }).from(organizations).where(sql`lower(name) = lower(${p.primaryOrgName})`).limit(1);
+    primaryOrgId = org?.id ?? null;
+  }
 
   const normalisedName = p.fullName.toLowerCase().trim();
   const match = await matchPersonToExisting({

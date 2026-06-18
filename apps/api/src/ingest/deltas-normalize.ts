@@ -35,7 +35,12 @@ function org(name: string, country: string | null, sourceUrl: string): OrgUpsert
   };
 }
 
-function person(fullName: string, orcid: string | null, sourceUrl: string): PersonUpsert {
+function person(
+  fullName: string,
+  orcid: string | null,
+  sourceUrl: string,
+  primaryOrgName: string,
+): PersonUpsert {
   return {
     fullName: fullName.trim(),
     orcid,
@@ -44,6 +49,7 @@ function person(fullName: string, orcid: string | null, sourceUrl: string): Pers
     worksCount: null,
     lastActiveYear: null,
     primaryOrgRor: null,
+    primaryOrgName,
     sourceUrl,
   };
 }
@@ -59,7 +65,7 @@ export function parseDeltas(jsonText: string): ProjectUpsert[] {
       programName,
       country: c.country,
       leadOrg,
-      pi: person(c.director, c.orcid, c.sourceUrl),
+      pi: person(c.director, c.orcid, c.sourceUrl, leadOrg.name),
       partners: [{ org: leadOrg, role: "lead" as const }],
       members: [],
       sourceUrl: c.sourceUrl,

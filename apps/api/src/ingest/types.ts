@@ -36,6 +36,12 @@ export interface PersonUpsert {
   lastActiveYear: number | null;
   /** ROR of the person's primary institution, resolved to an org at upsert. */
   primaryOrgRor: string | null;
+  /**
+   * Name of the person's primary institution, used to resolve a primary org when
+   * no ROR is available (RePORTER / curated sources). Lets name+org resolution
+   * fire so re-runs stay idempotent. ROR takes precedence when both are present.
+   */
+  primaryOrgName: string | null;
   sourceUrl: string;
 }
 
