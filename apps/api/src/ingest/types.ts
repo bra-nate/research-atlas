@@ -84,6 +84,26 @@ export interface PartnerEdge {
   role: "lead" | "hub" | "partner" | "funder";
 }
 
+/** Normalized publication (one OpenAlex work). */
+export interface PublicationUpsert {
+  title: string;
+  doi: string | null;
+  openalexId: string | null;
+  journal: string | null;
+  publicationDate: string | null;
+  url: string | null;
+  sourceUrl: string;
+}
+
+/** One authorship on a work, carrying resolution keys for matchPersonToExisting. */
+export interface AuthorshipInput {
+  orcid: string | null;
+  openalexAuthorId: string | null;
+  rawName: string;
+  position: number;
+  instRor: string | null;
+}
+
 /** Normalised project/consortium plus its programme, lead, PI and partners. */
 export interface ProjectUpsert {
   title: string;
