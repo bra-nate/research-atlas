@@ -87,6 +87,7 @@ export function normalizeAuthor(a: OAAuthor): PersonUpsert {
     worksCount: a.works_count ?? null,
     lastActiveYear: activeYears.length ? Math.max(...activeYears) : null,
     primaryOrgRor: bareId(primaryRor ?? null),
+    primaryOrgName: null,
     sourceUrl: a.id,
   };
 }

@@ -34,7 +34,34 @@ Headline proofs (both on real data):
 
 Both map cleanly onto the existing schema — **no migration needed**.
 
-## Acquisition — fixture-driven parsers
+## Implementation note (2026-06-18) — acquisition pivot
+
+During execution both target sites turned out to be **JS-rendered SPAs** with no
+scrapable structural data in static HTML (DS-I Africa: Drupal + AngularJS; DELTAS:
+Next.js backed by `portal.aasciences.app`). Rather than fabricate HTML fixtures
+(which the provenance non-negotiable forbids), the acquisition was changed — with the
+user's approval — to **authoritative APIs**, keeping every other part of this design
+(shared upserts, the ORCID→OpenAlex→name+org resolver, provenance, idempotency, the
+fixture-default / `INGEST_LIVE` live-fetch pattern, the smoke proof) intact:
+
+- **DS-I Africa** → **NIH RePORTER API** (`api.reporter.nih.gov`), filtered to the
+  programme's funding opportunities `RFA-RM-20-015` (research hubs), `RFA-RM-20-017`
+  (ELSI), `RFA-RM-20-018` (eLwazi platform). 12 distinct awards with real PIs +
+  institutions. `ingest_method = "api"`. Fixture: a raw RePORTER response.
+- **DELTAS Africa** → programme metadata reconciled to the **AAS portal API**
+  (`portal.aasciences.app/api/programmes`, id 3); the consortium tier (which no API
+  exposes) is **curated from public record** — the 11 Phase I consortia with lead org
+  + director. `ingest_method = "manual"`. Fixture: `deltas.consortia.json`.
+- Parsers consume JSON, so `node-html-parser` was **not** needed and was removed.
+- Cross-source proof on real data: **University of KwaZulu-Natal** is both a DS-I
+  Africa lead (DS-I Africa – LAW) and a DELTAS lead (SANTHE) → one org row spanning two
+  sources; **Gordon Awandare** (DELTAS WACCBIP, carrying his ORCID) resolves onto the
+  existing person, adding a `deltas`-sourced consortium to the hero footprint.
+- A `primaryOrgName` field was added to `PersonUpsert` so ORCID-less people (RePORTER /
+  curated) get their institution as primary org, letting name+org resolution fire and
+  keeping re-runs idempotent.
+
+## Acquisition — fixture-driven parsers (original plan; superseded above for live fetch)
 
 Each adapter reads a committed HTML **snapshot** from `__fixtures__/` by default, so
 runs are deterministic and CI never touches the network (mirrors the OpenAlex pattern,

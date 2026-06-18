@@ -1,0 +1,111 @@
+{
+  "_provenance": "DELTAS Africa Phase I consortia, curated from public record (AAS DELTAS Africa programme + each consortium's published lead institution and director). The AAS portal API (portal.aasciences.app/api/programmes) exposes the programme record but not its consortia, so this structural tier is hand-curated; programme metadata is reconciled to the live API record (id 3, abbreviation DELTAS).",
+  "programme": {
+    "name": "DELTAS Africa",
+    "shortName": "DELTAS",
+    "region": "Africa",
+    "website": "https://www.aasciences.africa/deltas",
+    "sourceUrl": "https://www.aasciences.africa/deltas"
+  },
+  "consortia": [
+    {
+      "title": "West African Centre for Cell Biology of Infectious Pathogens (DELTAS Africa)",
+      "abbreviation": "WACCBIP-DELTAS",
+      "director": "Gordon Awandare",
+      "orcid": "0000-0002-8793-3641",
+      "leadOrg": "University of Ghana",
+      "country": "Ghana",
+      "sourceUrl": "https://waccbip.org"
+    },
+    {
+      "title": "Developing Excellence in Leadership and Genetics Training for Malaria Elimination in sub-Saharan Africa",
+      "abbreviation": "DELGEME",
+      "director": "Abdoulaye Djimde",
+      "orcid": null,
+      "leadOrg": "University of Sciences, Techniques and Technologies of Bamako",
+      "country": "Mali",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Sub-Saharan Africa Consortium for Advanced Biostatistics",
+      "abbreviation": "SSACAB",
+      "director": "Tobias Chirwa",
+      "orcid": null,
+      "leadOrg": "University of the Witwatersrand",
+      "country": "South Africa",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Afrique One-African Science Partnership for Intervention Research Excellence",
+      "abbreviation": "Afrique One-ASPIRE",
+      "director": "Bassirou Bonfoh",
+      "orcid": null,
+      "leadOrg": "Centre Suisse de Recherches Scientifiques en Cote d'Ivoire",
+      "country": "Cote d'Ivoire",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Makerere University/UVRI Centre of Excellence for Infection and Immunity Research and Training (MUII-plus)",
+      "abbreviation": "MUII-plus",
+      "director": "Alison Elliott",
+      "orcid": null,
+      "leadOrg": "Makerere University",
+      "country": "Uganda",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Training Health Researchers into Vocational Excellence in East Africa (THRiVE-2)",
+      "abbreviation": "THRiVE-2",
+      "director": "Nelson Sewankambo",
+      "orcid": null,
+      "leadOrg": "Makerere University",
+      "country": "Uganda",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Initiative to Develop African Research Leaders",
+      "abbreviation": "IDeAL",
+      "director": "Sam Kinyanjui",
+      "orcid": null,
+      "leadOrg": "KEMRI-Wellcome Trust Research Programme",
+      "country": "Kenya",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Sub-Saharan African Network for TB/HIV Research Excellence",
+      "abbreviation": "SANTHE",
+      "director": "Thumbi Ndung'u",
+      "orcid": null,
+      "leadOrg": "University of KwaZulu-Natal",
+      "country": "South Africa",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Malaria Research Capacity Development in West and Central Africa",
+      "abbreviation": "MARCAD",
+      "director": "Oumar Gaye",
+      "orcid": null,
+      "leadOrg": "Cheikh Anta Diop University",
+      "country": "Senegal",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Consortium for Advanced Research Training in Africa",
+      "abbreviation": "CARTA",
+      "director": "Catherine Kyobutungi",
+      "orcid": null,
+      "leadOrg": "African Population and Health Research Center",
+      "country": "Kenya",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    },
+    {
+      "title": "Centre for Innovative Drug Development and Therapeutic Trials for Africa",
+      "abbreviation": "CDT-Africa",
+      "director": "Abebaw Fekadu",
+      "orcid": null,
+      "leadOrg": "Addis Ababa University",
+      "country": "Ethiopia",
+      "sourceUrl": "https://www.aasciences.africa/deltas"
+    }
+  ]
+}

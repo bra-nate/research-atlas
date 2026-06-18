@@ -32,6 +32,11 @@ insert into grants (name,funder_org_id,amount,currency) values ('Wellcome Award'
 # Seed the hero programme→consortium→membership tier through the real adapter.
 ( cd "$API" && DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" pnpm ingest seed-consortia >/dev/null )
 
+# Structural sources (read committed fixtures — no network): DS-I Africa (NIH
+# RePORTER snapshot) and DELTAS Africa (AAS programme + curated consortia).
+( cd "$API" && DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" pnpm ingest dsi-africa >/dev/null )
+( cd "$API" && DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" pnpm ingest deltas >/dev/null )
+
 cd "$API"
 DATABASE_URL="postgres://$(whoami)@localhost:5432/$DB" PORT=$PORT WEB_ORIGIN="http://localhost:5173" \
   node --import tsx src/index.ts &
@@ -47,7 +52,8 @@ jqlen(){ curl -s "$1" | grep -o '"id"' | wc -l | tr -d ' '; }
 
 echo "### Tests"
 ck "GET /organizations" 200 "$(code "$BASE/organizations")"
-ck "organizations has 1" 1 "$(jqlen "$BASE/organizations")"
+# Seed inserts 1 org; the DS-I Africa + DELTAS structural ingests add many more.
+ck "organizations populated by ingests (>1)" 1 "$([ "$(jqlen "$BASE/organizations")" -gt 1 ] && echo 1 || echo 0)"
 ck "GET /organizations/facets" 200 "$(code "$BASE/organizations/facets")"
 ck "GET /people" 200 "$(code "$BASE/people")"
 ck "GET /programs" 200 "$(code "$BASE/programs")"
@@ -68,6 +74,22 @@ ck "hero person spans WACCBIP" 1 "$(echo "$HEROJSON" | grep -c 'waccbip.org')"
 ck "hero person spans SickleGenAfrica" 1 "$(echo "$HEROJSON" | grep -c 'SickleGenAfrica')"
 ck "search people q=malaria finds 1" 1 "$(jqlen "$BASE/people?q=malaria")"
 ck "provenance label present (ingested_unverified)" 1 "$(curl -s "$BASE/organizations" | grep -c 'ingested_unverified')"
+
+# --- P6: cross-source entity resolution on real data ---
+# (a) the shared institution (UKZN — a DS-I Africa lead AND a DELTAS lead) is ONE org row
+SHARED_ORG="University of KwaZulu-Natal"
+ORG_COUNT=$(psql -h localhost -p 5432 -d $DB -tAc "select count(*) from organizations where lower(name) = lower('$SHARED_ORG')")
+ck "shared org '$SHARED_ORG' resolves to one row" 1 "$ORG_COUNT"
+# (b) that one org is reachable from projects of >=2 different sources (dsi-africa + deltas)
+ORG_ID=$(psql -h localhost -p 5432 -d $DB -tAc "select id from organizations where lower(name)=lower('$SHARED_ORG') limit 1")
+SRC_SPREAD=$(psql -h localhost -p 5432 -d $DB -tAc "
+  select count(distinct pr.source) from projects pr
+  where pr.lead_org_id = '$ORG_ID'
+     or pr.id in (select project_id from project_partners where org_id = '$ORG_ID')")
+ck "shared org spans >=2 source programmes" 1 "$([ "${SRC_SPREAD:-0}" -ge 2 ] && echo 1 || echo 0)"
+# (c) the hero person gains a consortium from the real DELTAS source
+DELTAS_HERO=$(curl -s "$BASE/people/$HERO_ID/projects" | grep -c '"source":"deltas"')
+ck "hero person has a deltas-sourced project" 1 "$([ "${DELTAS_HERO:-0}" -ge 1 ] && echo 1 || echo 0)"
 
 echo "### Result: $pass passed, $fail failed"
 [ "$fail" = "0" ]

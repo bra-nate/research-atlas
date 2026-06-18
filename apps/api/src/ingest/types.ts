@@ -36,6 +36,12 @@ export interface PersonUpsert {
   lastActiveYear: number | null;
   /** ROR of the person's primary institution, resolved to an org at upsert. */
   primaryOrgRor: string | null;
+  /**
+   * Name of the person's primary institution, used to resolve a primary org when
+   * no ROR is available (RePORTER / curated sources). Lets name+org resolution
+   * fire so re-runs stay idempotent. ROR takes precedence when both are present.
+   */
+  primaryOrgName: string | null;
   sourceUrl: string;
 }
 
@@ -44,5 +50,44 @@ export interface GrantUpsert {
   name: string;
   awardNumber: string | null;
   funder: OrgUpsert;
+  sourceUrl: string;
+}
+
+/** Per-record provenance descriptor passed into the upsert layer. */
+export interface ProvInput {
+  source: string;
+  ingestMethod: "manual" | "csv" | "scrape" | "api" | "enrichment";
+}
+
+/** Normalised programme (umbrella initiative — ACE, DELTAS, DS-I Africa). */
+export interface ProgramUpsert {
+  name: string;
+  shortName: string | null;
+  region: string | null;
+  website: string | null;
+  sourceUrl: string;
+}
+
+/** A person on a project, with their role on it. */
+export interface MemberEdge {
+  person: PersonUpsert;
+  role: "pi" | "co_pi" | "investigator" | "fellow" | "student" | "collaborator";
+}
+
+/** A partner organisation on a project, with its role on it. */
+export interface PartnerEdge {
+  org: OrgUpsert;
+  role: "lead" | "hub" | "partner" | "funder";
+}
+
+/** Normalised project/consortium plus its programme, lead, PI and partners. */
+export interface ProjectUpsert {
+  title: string;
+  programName: string;
+  country: string | null;
+  leadOrg: OrgUpsert | null;
+  pi: PersonUpsert | null;
+  partners: PartnerEdge[];
+  members: MemberEdge[];
   sourceUrl: string;
 }
