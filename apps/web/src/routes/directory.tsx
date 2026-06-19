@@ -52,8 +52,10 @@ type Filters = Record<string, string>;
 
 export function DirectoryPage() {
   const [params, setParams] = useSearchParams();
-  const tab: Tab = isTab(params.get("tab")) ? (params.get("tab") as Tab) : "organizations";
+  const rawTab = params.get("tab");
+  const tab: Tab = isTab(rawTab) ? rawTab : "organizations";
   const q = params.get("q") ?? "";
+  const allMode = !rawTab && !!q;
   const [filters, setFilters] = useState<Filters>({});
 
   const setTab = (t: Tab) => {
@@ -87,10 +89,10 @@ export function DirectoryPage() {
             key={t.id}
             type="button"
             onClick={() => setTab(t.id)}
-            aria-current={tab === t.id ? "page" : undefined}
+            aria-current={!allMode && tab === t.id ? "page" : undefined}
             className={cn(
               "-mb-px border-b-2 px-3 py-2 text-sm font-medium transition-colors",
-              tab === t.id
+              !allMode && tab === t.id
                 ? "border-brand text-brand"
                 : "border-transparent text-ink-secondary hover:text-ink",
             )}
@@ -102,7 +104,7 @@ export function DirectoryPage() {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-[220px_1fr]">
         <aside className="space-y-4">
-          <FilterRail tab={tab} filters={filters} setFilters={setFilters} />
+          <FilterRail tab={tab} filters={filters} setFilters={setFilters} allMode={allMode} />
         </aside>
         <div>
           <div className="mb-4">
@@ -114,16 +116,22 @@ export function DirectoryPage() {
               className="max-w-md"
             />
           </div>
-          {tab === "programmes" && <ProgrammesList q={q} />}
-          {tab === "projects" && (
-            <ProjectsList q={q} programId={filters.programId} country={filters.country} />
+          {allMode ? (
+            <AllResults q={q} onTab={setTab} />
+          ) : (
+            <>
+              {tab === "programmes" && <ProgrammesList q={q} />}
+              {tab === "projects" && (
+                <ProjectsList q={q} programId={filters.programId} country={filters.country} />
+              )}
+              {tab === "organizations" && (
+                <OrganizationsList q={q} country={filters.country ?? ""} orgType={filters.orgType ?? ""} />
+              )}
+              {tab === "people" && <PeopleList q={q} specialization={filters.specialization} />}
+              {tab === "capabilities" && <CapabilitiesList q={q} category={filters.category} />}
+              {tab === "publications" && <PublicationsList q={q} />}
+            </>
           )}
-          {tab === "organizations" && (
-            <OrganizationsList q={q} country={filters.country ?? ""} orgType={filters.orgType ?? ""} />
-          )}
-          {tab === "people" && <PeopleList q={q} specialization={filters.specialization} />}
-          {tab === "capabilities" && <CapabilitiesList q={q} category={filters.category} />}
-          {tab === "publications" && <PublicationsList q={q} />}
         </div>
       </div>
     </div>
@@ -134,10 +142,12 @@ function FilterRail({
   tab,
   filters,
   setFilters,
+  allMode,
 }: {
   tab: Tab;
   filters: Filters;
   setFilters: (f: Filters) => void;
+  allMode?: boolean;
 }) {
   const orgFacets = useOrganizationFacets();
   const peopleFacets = usePeopleFacets();
@@ -146,6 +156,15 @@ function FilterRail({
   const set = (k: string, v: string) => setFilters({ ...filters, [k]: v });
   const active = Object.values(filters).some(Boolean);
   const sel = "w-full rounded-lg border border-border bg-white px-2.5 py-2 text-sm text-ink";
+
+  if (allMode) {
+    return (
+      <div className="rounded-xl border border-border p-3">
+        <span className="text-xs font-semibold uppercase tracking-wide text-ink-secondary">Filters</span>
+        <p className="mt-2 text-xs text-ink-secondary">Select a category tab to filter results.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="rounded-xl border border-border p-3">
@@ -382,6 +401,49 @@ function PublicationsList({ q }: { q: string }) {
             {[pub.journal, pub.publication_date].filter(Boolean).join(" · ")}
           </div>
         </Card>
+      ))}
+    </div>
+  );
+}
+
+function AllResults({ q, onTab }: { q: string; onTab: (t: Tab) => void }) {
+  const people = usePeople({ q, limit: "4" });
+  const orgs = useOrganizations({ q });
+  const projects = useProjects({ q: q || undefined, limit: "4" });
+  const programs = usePrograms();
+  const caps = useCapabilitiesSearch(q);
+  const pubs = usePublicationsSearch(q);
+  const ql = q.toLowerCase();
+  const programRows = (programs.data ?? []).filter((p) => p.name.toLowerCase().includes(ql)).slice(0, 4);
+
+  const groups = [
+    { tab: "people" as Tab, title: "People", rows: (people.data ?? []).slice(0, 4).map((p) => ({ id: p.id, to: `/people/${p.id}`, label: p.full_name })) },
+    { tab: "organizations" as Tab, title: "Organisations", rows: (orgs.data ?? []).slice(0, 4).map((o) => ({ id: o.id, to: `/organizations/${o.id}`, label: o.name })) },
+    { tab: "projects" as Tab, title: "Projects", rows: (projects.data ?? []).slice(0, 4).map((pr) => ({ id: pr.id, to: `/projects/${pr.id}`, label: pr.title })) },
+    { tab: "programmes" as Tab, title: "Programmes", rows: programRows.map((p) => ({ id: p.id, to: `/programs/${p.id}`, label: p.name })) },
+    { tab: "capabilities" as Tab, title: "Capabilities", rows: (caps.data ?? []).slice(0, 4).map((c) => ({ id: c.id, to: `/capabilities/${c.id}`, label: c.name })) },
+    { tab: "publications" as Tab, title: "Publications", rows: (pubs.data ?? []).slice(0, 4).map((pub) => ({ id: pub.id, to: `/publications/${pub.id}`, label: pub.title })) },
+  ].filter((g) => g.rows.length > 0);
+
+  if (!groups.length) return <Empty>No results across the directory for "{q}".</Empty>;
+  return (
+    <div className="space-y-6">
+      {groups.map((g) => (
+        <div key={g.tab}>
+          <div className="mb-2 flex items-baseline justify-between">
+            <h2 className="text-[15px] font-semibold text-ink">{g.title}</h2>
+            <button type="button" onClick={() => onTab(g.tab)} className="text-sm text-brand hover:underline">
+              See all
+            </button>
+          </div>
+          <ul className="divide-y divide-border rounded-xl border border-border">
+            {g.rows.map((r) => (
+              <li key={r.id} className="px-3 py-2">
+                <EntityLink to={r.to}>{r.label}</EntityLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       ))}
     </div>
   );
