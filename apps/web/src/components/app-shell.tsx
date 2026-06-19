@@ -38,7 +38,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               value={scope}
               onChange={(e) => setScope(e.target.value)}
               aria-label="Search scope"
-              className="absolute left-1 top-1/2 hidden -translate-y-1/2 rounded-md bg-transparent py-1 pl-2 pr-1 text-xs text-ink-secondary sm:block"
+              className="absolute left-1 top-1/2 hidden -translate-y-1/2 rounded-md bg-transparent py-1 pl-2 pr-6 text-xs text-ink-secondary sm:block"
             >
               <option value="all">All</option>
               <option value="programmes">Programmes</option>
