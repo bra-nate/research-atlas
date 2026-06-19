@@ -39,8 +39,15 @@ function qs(params?: Record<string, string | undefined>): string {
   return s ? `?${s}` : "";
 }
 
+/**
+ * API origin. Dev leaves this unset → "/api" (Vite proxies to the local Express
+ * server). In production the SPA and the Express API are deployed separately, so
+ * set VITE_API_BASE to the API's public URL (e.g. https://api.example.com/api).
+ */
+const API_BASE = import.meta.env.VITE_API_BASE ?? "/api";
+
 async function req<T>(path: string): Promise<T> {
-  const res = await fetch(`/api${path}`);
+  const res = await fetch(`${API_BASE}${path}`);
   const data = await res.json().catch(() => null);
   if (!res.ok) {
     throw {
