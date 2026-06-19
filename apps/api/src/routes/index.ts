@@ -6,6 +6,7 @@ import { programsRouter } from "./programs.js";
 import { projectsRouter } from "./projects.js";
 import { grantsRouter } from "./grants.js";
 import { publicationsRouter } from "./publications.js";
+import { statsRouter } from "./stats.js";
 
 /**
  * Public API surface. V1 is read-only and unauthenticated — discovery only.
@@ -20,3 +21,4 @@ api.use("/programs", programsRouter);
 api.use("/projects", projectsRouter);
 api.use("/grants", grantsRouter);
 api.use("/publications", publicationsRouter);
+api.use("/stats", statsRouter);

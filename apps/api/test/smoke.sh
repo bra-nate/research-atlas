@@ -65,6 +65,8 @@ ck "GET /projects" 200 "$(code "$BASE/projects")"
 ck "GET /capabilities" 200 "$(code "$BASE/capabilities")"
 ck "GET /grants" 200 "$(code "$BASE/grants")"
 ck "GET /publications" 200 "$(code "$BASE/publications")"
+ck "GET /stats" 200 "$(code "$BASE/stats")"
+ck "stats has people count >=1" 1 "$(curl -s "$BASE/stats" | grep -o '"people":[0-9]*' | grep -o '[0-9]*' | head -1 | awk '{print ($1>=1)?1:0}')"
 ck "GET /people/:id/publications" 200 "$(code "$BASE/people/$PERSON/publications")"
 # hero: person → projects (across programmes)
 HERO=$(curl -s "$BASE/people/$PERSON/projects")
