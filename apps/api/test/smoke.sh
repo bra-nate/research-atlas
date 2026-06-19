@@ -79,6 +79,9 @@ HEROJSON=$(curl -s "$BASE/people/$HERO_ID/projects")
 ck "hero person spans WACCBIP" 1 "$(echo "$HEROJSON" | grep -c 'waccbip.org')"
 ck "hero person spans SickleGenAfrica" 1 "$(echo "$HEROJSON" | grep -c 'SickleGenAfrica')"
 ck "search people q=malaria finds 1" 1 "$(jqlen "$BASE/people?q=malaria")"
+ck "GET /people/featured" 200 "$(code "$BASE/people/featured")"
+ck "people list carries consortia_count" 1 "$(curl -s "$BASE/people" | grep -c 'consortia_count')"
+ck "featured returns only multi-consortium people" 1 "$(curl -s "$BASE/people/featured" | grep -o '"consortia_count":[0-9]*' | grep -o '[0-9]*' | awk 'BEGIN{ok=1} {if($1<2)ok=0} END{print ok}')"
 ck "provenance label present (ingested_unverified)" 1 "$(curl -s "$BASE/organizations" | grep -c 'ingested_unverified')"
 
 # --- P6: cross-source entity resolution on real data ---
