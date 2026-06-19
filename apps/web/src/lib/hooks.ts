@@ -127,6 +127,22 @@ export function useProjectPartners(id: string | undefined) {
   });
 }
 
+export function useProjectPublications(id: string | undefined) {
+  return useQuery({
+    queryKey: ["project", id, "publications"],
+    queryFn: () => api.projectPublications(id!),
+    enabled: !!id,
+  });
+}
+
+export function useProjectGrants(id: string | undefined) {
+  return useQuery({
+    queryKey: ["project", id, "grants"],
+    queryFn: () => api.projectGrants(id!),
+    enabled: !!id,
+  });
+}
+
 export function useProgram(id: string | undefined) {
   return useQuery({
     queryKey: ["program", id],

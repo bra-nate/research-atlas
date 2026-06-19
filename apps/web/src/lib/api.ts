@@ -23,6 +23,8 @@ export type PersonPublication = {
 };
 export type ProjectMemberView = { role: string | null; person: Person };
 export type ProjectPartnerView = { role: string | null; organization: Organization };
+export type ProjectPublicationView = { publication: Publication };
+export type ProjectGrantView = { grant: Grant; funder: Organization | null };
 export type PublicationAuthorView = {
   author_position: number | null;
   person: Person;
@@ -78,6 +80,10 @@ export const api = {
   projectMembers: (id: string) => req<ProjectMemberView[]>(`/projects/${id}/members`),
   projectPartners: (id: string) =>
     req<ProjectPartnerView[]>(`/projects/${id}/partners`),
+  projectPublications: (id: string) =>
+    req<ProjectPublicationView[]>(`/projects/${id}/publications`),
+  projectGrants: (id: string) =>
+    req<ProjectGrantView[]>(`/projects/${id}/grants`),
 
   // Programmes
   programs: () => req<Program[]>("/programs"),
