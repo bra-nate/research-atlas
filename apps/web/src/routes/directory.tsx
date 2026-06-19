@@ -11,6 +11,9 @@ import {
   useOrganizationFacets,
   useOrganizations,
   usePeople,
+  usePrograms,
+  useProjects,
+  usePublicationsSearch,
 } from "../lib/hooks";
 import {
   Card,
@@ -18,20 +21,30 @@ import {
   IllustrativeBadge,
   Input,
   MonoCode,
+  SkeletonRows,
   Tag,
 } from "../components/ui";
 import { cn } from "../lib/cn";
 
-type Tab = "organizations" | "people" | "capabilities";
+type Tab =
+  | "programmes"
+  | "projects"
+  | "organizations"
+  | "people"
+  | "capabilities"
+  | "publications";
 
 const TABS: { id: Tab; label: string }[] = [
+  { id: "programmes", label: "Programmes" },
+  { id: "projects", label: "Projects" },
   { id: "organizations", label: "Organisations" },
   { id: "people", label: "People" },
   { id: "capabilities", label: "Capabilities" },
+  { id: "publications", label: "Publications" },
 ];
 
-const isTab = (v: string | null): v is Tab =>
-  v === "organizations" || v === "people" || v === "capabilities";
+const TAB_IDS = TABS.map((t) => t.id);
+const isTab = (v: string | null): v is Tab => !!v && (TAB_IDS as string[]).includes(v);
 
 export function DirectoryPage() {
   const [params, setParams] = useSearchParams();
@@ -101,11 +114,14 @@ export function DirectoryPage() {
         )}
       </div>
 
+      {tab === "programmes" && <ProgrammesList q={q} />}
+      {tab === "projects" && <ProjectsList q={q} />}
       {tab === "organizations" && (
         <OrganizationsList q={q} country={country} orgType={orgType} />
       )}
       {tab === "people" && <PeopleList q={q} />}
       {tab === "capabilities" && <CapabilitiesList q={q} />}
+      {tab === "publications" && <PublicationsList q={q} />}
     </div>
   );
 }
@@ -157,7 +173,7 @@ function OrganizationsList({
   const ids = useMemo(() => (orgs.data ?? []).map((o) => o.id), [orgs.data]);
   const counts = useCentreCounts(ids);
 
-  if (orgs.isLoading) return <Empty>Loading organisations…</Empty>;
+  if (orgs.isLoading) return <SkeletonRows />;
   if (!orgs.data?.length) return <Empty>No organisations match your search.</Empty>;
 
   return (
@@ -195,7 +211,7 @@ function OrganizationsList({
 
 function PeopleList({ q }: { q: string }) {
   const people = usePeople({ q });
-  if (people.isLoading) return <Empty>Loading people…</Empty>;
+  if (people.isLoading) return <SkeletonRows />;
   if (!people.data?.length) return <Empty>No people match your search.</Empty>;
   return (
     <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
@@ -230,7 +246,7 @@ function PeopleList({ q }: { q: string }) {
 
 function CapabilitiesList({ q }: { q: string }) {
   const caps = useCapabilitiesSearch(q);
-  if (caps.isLoading) return <Empty>Loading capabilities…</Empty>;
+  if (caps.isLoading) return <SkeletonRows />;
   if (!caps.data?.length)
     return <Empty>No capabilities match your search.</Empty>;
   return (
@@ -251,6 +267,82 @@ function CapabilitiesList({ q }: { q: string }) {
           {c.description && (
             <p className="mt-2 line-clamp-2 text-sm text-ink-secondary">{c.description}</p>
           )}
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+function ProgrammesList({ q }: { q: string }) {
+  const programs = usePrograms();
+  const ql = q.toLowerCase();
+  const rows = (programs.data ?? []).filter(
+    (p) => !ql || p.name.toLowerCase().includes(ql) || (p.short_name ?? "").toLowerCase().includes(ql),
+  );
+  if (programs.isLoading) return <SkeletonRows />;
+  if (!rows.length) return <Empty>No programmes match your search.</Empty>;
+  return (
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      {rows.map((p) => (
+        <Card key={p.id} className="p-4 transition-shadow hover:shadow-[0_1px_4px_rgba(16,24,40,.08)]">
+          <EntityLink to={`/programs/${p.id}`} className="text-[15px]">
+            {p.name}
+          </EntityLink>
+          {p.short_name && <span className="ml-2 text-xs text-ink-secondary">{p.short_name}</span>}
+          {p.focus_areas.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {p.focus_areas.slice(0, 4).map((f) => (
+                <Tag key={f}>{f}</Tag>
+              ))}
+            </div>
+          )}
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+function ProjectsList({ q }: { q: string }) {
+  const projects = useProjects({ q: q || undefined });
+  if (projects.isLoading) return <SkeletonRows />;
+  if (!projects.data?.length) return <Empty>No projects match your search.</Empty>;
+  return (
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      {projects.data.map((pr) => (
+        <Card key={pr.id} className="p-4 transition-shadow hover:shadow-[0_1px_4px_rgba(16,24,40,.08)]">
+          <EntityLink to={`/projects/${pr.id}`} className="text-[15px]">
+            {pr.title}
+          </EntityLink>
+          <div className="mt-1 text-xs text-ink-secondary">
+            {[pr.status, pr.country].filter(Boolean).join(" · ")}
+          </div>
+          {pr.themes.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {pr.themes.slice(0, 4).map((t) => (
+                <Tag key={t}>{t}</Tag>
+              ))}
+            </div>
+          )}
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+function PublicationsList({ q }: { q: string }) {
+  const pubs = usePublicationsSearch(q);
+  if (pubs.isLoading) return <SkeletonRows />;
+  if (!pubs.data?.length) return <Empty>No publications match your search.</Empty>;
+  return (
+    <div className="grid grid-cols-1 gap-3">
+      {pubs.data.map((pub) => (
+        <Card key={pub.id} className="p-4">
+          <EntityLink to={`/publications/${pub.id}`} className="text-[15px]">
+            {pub.title}
+          </EntityLink>
+          <div className="mt-1 text-xs text-ink-secondary">
+            {[pub.journal, pub.publication_date].filter(Boolean).join(" · ")}
+          </div>
         </Card>
       ))}
     </div>
