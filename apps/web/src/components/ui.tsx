@@ -322,6 +322,22 @@ export function ProvenanceLine({
   );
 }
 
+/**
+ * Inert V2 signpost on person profiles. Discovery is public; claiming is a
+ * future, private concern — so this is deliberately non-interactive: no link,
+ * no form, no contact. Just a quiet "coming soon" note.
+ */
+export function ClaimStub() {
+  return (
+    <div className="rounded-lg border border-dashed border-border bg-surface-alt p-4">
+      <h3 className="text-[13px] font-semibold text-ink">Is this you?</h3>
+      <p className="mt-1 text-xs text-ink-secondary">
+        Profile claiming is coming soon.
+      </p>
+    </div>
+  );
+}
+
 /** Quiet "last updated" stamp from a record's ingested_at; renders nothing if absent. */
 export function UpdatedLine({ ingestedAt }: { ingestedAt?: string | null }) {
   const label = formatUpdated(ingestedAt);

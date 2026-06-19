@@ -11,6 +11,7 @@ import {
 import type { PersonProject } from "../lib/api";
 import {
   Breadcrumbs,
+  ClaimStub,
   EntityLink,
   IllustrativeBadge,
   PageStatus,
@@ -177,6 +178,7 @@ export function PersonPage() {
                 </ul>
               </RailBlock>
             )}
+            <ClaimStub />
             <div className="space-y-1 px-1">
               <ProvenanceLine
                 source={p.source}
