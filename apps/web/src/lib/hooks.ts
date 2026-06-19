@@ -35,10 +35,23 @@ export function usePeople(filters: {
   q?: string;
   specialization?: string;
   organizationId?: string;
+  sort?: string;
+  limit?: string;
 }) {
   return useQuery({
     queryKey: ["people", filters],
     queryFn: () => api.people(filters),
+  });
+}
+
+export function useStats() {
+  return useQuery({ queryKey: ["stats"], queryFn: () => api.stats() });
+}
+
+export function usePeopleFeatured(limit = 6) {
+  return useQuery({
+    queryKey: ["peopleFeatured", limit],
+    queryFn: () => api.peopleFeatured(limit),
   });
 }
 
@@ -49,8 +62,19 @@ export function useCapabilitiesSearch(q: string) {
   });
 }
 
-export function usePrograms() {
-  return useQuery({ queryKey: ["programs"], queryFn: () => api.programs() });
+export function usePrograms(params?: { sort?: string; limit?: string }) {
+  return useQuery({ queryKey: ["programs", params], queryFn: () => api.programs(params) });
+}
+
+export function useProjects(filters: { q?: string; programId?: string; country?: string; sort?: string; limit?: string } = {}) {
+  return useQuery({ queryKey: ["projects", filters], queryFn: () => api.projects(filters) });
+}
+
+export function usePublicationsSearch(q: string) {
+  return useQuery({
+    queryKey: ["publications", "search", q],
+    queryFn: () => api.publications({ q: q || undefined }),
+  });
 }
 
 // ── Detail / profiles ───────────────────────────────────────────────────────
