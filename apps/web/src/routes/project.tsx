@@ -24,6 +24,7 @@ import {
   ProvenanceLine,
   SectionCard,
   Tag,
+  UpdatedLine,
 } from "../components/ui";
 import { ProfileHeader, RailBlock, TwoColumn } from "../components/profile-layout";
 
@@ -116,12 +117,13 @@ export function ProjectPage() {
                 <p className="text-sm text-ink">{pr.funding_note}</p>
               </RailBlock>
             )}
-            <div className="px-1">
+            <div className="space-y-1 px-1">
               <ProvenanceLine
                 source={pr.source}
                 sourceUrl={pr.source_url}
                 status={pr.verification_status}
               />
+              <UpdatedLine ingestedAt={pr.ingested_at} />
             </div>
           </>
         }

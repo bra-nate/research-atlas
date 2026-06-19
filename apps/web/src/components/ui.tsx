@@ -7,6 +7,7 @@ import type {
 } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "../lib/cn";
+import { formatUpdated } from "../lib/format";
 
 /** Primitive set matching the Partner Dashboard design system (light, airy). */
 
@@ -319,6 +320,13 @@ export function ProvenanceLine({
       · {verified ? "verified" : "unverified"}
     </p>
   );
+}
+
+/** Quiet "last updated" stamp from a record's ingested_at; renders nothing if absent. */
+export function UpdatedLine({ ingestedAt }: { ingestedAt?: string | null }) {
+  const label = formatUpdated(ingestedAt);
+  if (!label) return null;
+  return <p className="text-xs text-ink-secondary">{label}</p>;
 }
 
 /** Standard loading / error / not-found state for a profile page. */

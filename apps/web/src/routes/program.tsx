@@ -7,6 +7,7 @@ import {
   PageStatus,
   ProvenanceLine,
   SectionCard,
+  UpdatedLine,
   Tag,
 } from "../components/ui";
 import { ProfileHeader, RailBlock, TwoColumn } from "../components/profile-layout";
@@ -77,12 +78,13 @@ export function ProgramPage() {
                 </a>
               </RailBlock>
             )}
-            <div className="px-1">
+            <div className="space-y-1 px-1">
               <ProvenanceLine
                 source={pg.source}
                 sourceUrl={pg.source_url}
                 status={pg.verification_status}
               />
+              <UpdatedLine ingestedAt={pg.ingested_at} />
             </div>
           </>
         }

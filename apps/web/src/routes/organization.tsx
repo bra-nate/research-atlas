@@ -16,6 +16,7 @@ import {
   PageStatus,
   ProvenanceLine,
   SectionCard,
+  UpdatedLine,
   Tag,
 } from "../components/ui";
 import { ProfileHeader, RailBlock, TwoColumn } from "../components/profile-layout";
@@ -80,12 +81,13 @@ export function OrganizationPage() {
                 </a>
               </RailBlock>
             )}
-            <div className="px-1">
+            <div className="space-y-1 px-1">
               <ProvenanceLine
                 source={o.source}
                 sourceUrl={o.source_url}
                 status={o.verification_status}
               />
+              <UpdatedLine ingestedAt={o.ingested_at} />
             </div>
           </>
         }

@@ -17,6 +17,7 @@ import {
   ProvenanceLine,
   SectionCard,
   Tag,
+  UpdatedLine,
 } from "../components/ui";
 import { ProfileHeader, RailBlock, TwoColumn } from "../components/profile-layout";
 
@@ -176,12 +177,13 @@ export function PersonPage() {
                 </ul>
               </RailBlock>
             )}
-            <div className="px-1">
+            <div className="space-y-1 px-1">
               <ProvenanceLine
                 source={p.source}
                 sourceUrl={p.source_url}
                 status={p.verification_status}
               />
+              <UpdatedLine ingestedAt={p.ingested_at} />
             </div>
           </>
         }
