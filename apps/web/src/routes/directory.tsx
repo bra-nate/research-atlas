@@ -19,6 +19,7 @@ import {
 } from "../lib/hooks";
 import {
   Card,
+  ConsortiaChip,
   EntityLink,
   IllustrativeBadge,
   Input,
@@ -285,13 +286,12 @@ function PeopleList({ q, specialization }: { q: string; specialization?: string 
             </div>
             <IllustrativeBadge status={p.verification_status} />
           </div>
-          {p.specializations.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-1">
-              {p.specializations.slice(0, 4).map((s) => (
-                <Tag key={s}>{s}</Tag>
-              ))}
-            </div>
-          )}
+          <div className="mt-2 flex flex-wrap items-center gap-1.5">
+            <ConsortiaChip count={p.consortia_count} />
+            {p.specializations.slice(0, 4).map((s) => (
+              <Tag key={s}>{s}</Tag>
+            ))}
+          </div>
           {p.bio && (
             <p className="mt-2 line-clamp-2 text-sm text-ink-secondary">{p.bio}</p>
           )}
