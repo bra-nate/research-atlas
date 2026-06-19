@@ -22,6 +22,12 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-full bg-white">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:text-brand focus:shadow"
+      >
+        Skip to content
+      </a>
       <header className="sticky top-0 z-20 border-b border-border bg-white">
         <div className="mx-auto flex h-14 max-w-[1200px] items-center gap-4 px-4 sm:px-6">
           <Link to="/" className="flex shrink-0 items-center gap-2">
@@ -63,7 +69,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1200px] px-4 py-6 sm:px-6">{children}</main>
+      <main id="main" className="mx-auto max-w-[1200px] px-4 py-6 sm:px-6">{children}</main>
     </div>
   );
 }

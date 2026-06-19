@@ -84,13 +84,15 @@ export function DirectoryPage() {
         </p>
       </div>
 
-      <div className="flex items-center gap-1 border-b border-border">
+      <div role="tablist" className="flex items-center gap-1 border-b border-border">
         {TABS.map((t) => (
           <button
             key={t.id}
             type="button"
+            role="tab"
             onClick={() => setTab(t.id)}
             aria-current={!allMode && tab === t.id ? "page" : undefined}
+            aria-selected={!allMode && tab === t.id}
             className={cn(
               "-mb-px border-b-2 px-3 py-2 text-sm font-medium transition-colors",
               !allMode && tab === t.id
