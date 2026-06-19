@@ -94,6 +94,7 @@ peopleRouter.get(
       .select({
         publication: publications,
         position: publicationAuthors.authorPosition,
+        matchConfidence: publicationAuthors.matchConfidence,
       })
       .from(publicationAuthors)
       .innerJoin(
@@ -105,6 +106,7 @@ peopleRouter.get(
     res.json(
       rows.map((r) => ({
         author_position: r.position,
+        match_confidence: r.matchConfidence != null ? Number(r.matchConfidence) : null,
         publication: toPublication(r.publication),
       })),
     );

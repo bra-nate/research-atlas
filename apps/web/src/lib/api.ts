@@ -19,6 +19,7 @@ export type CentreCounts = Record<
 export type PersonProject = { role: string | null; project: Project };
 export type PersonPublication = {
   author_position: number | null;
+  match_confidence: number | null;
   publication: Publication;
 };
 export type ProjectMemberView = { role: string | null; person: Person };

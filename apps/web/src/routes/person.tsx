@@ -255,9 +255,19 @@ export function PersonPage() {
             <ul className="divide-y divide-border">
               {pubs.data.map((row) => (
                 <li key={row.publication.id} className="py-2">
-                  <EntityLink to={`/publications/${row.publication.id}`}>
-                    {row.publication.title}
-                  </EntityLink>
+                  <div className="flex items-start justify-between gap-3">
+                    <EntityLink to={`/publications/${row.publication.id}`}>
+                      {row.publication.title}
+                    </EntityLink>
+                    {row.match_confidence != null && row.match_confidence < 1 && (
+                      <span
+                        className="shrink-0"
+                        title="Author matched by name and institution — not confirmed by ORCID"
+                      >
+                        <Tag>possible match</Tag>
+                      </span>
+                    )}
+                  </div>
                   <div className="text-xs text-ink-secondary">
                     {[row.publication.journal, row.publication.publication_date]
                       .filter(Boolean)
