@@ -9,7 +9,7 @@ import {
   publications,
 } from "../db/schema.js";
 import { asyncHandler, HttpError } from "../http.js";
-import { prefixTsQuery, str, uniqSorted } from "../lib/search.js";
+import { parseLimit, prefixTsQuery, str, uniqSorted } from "../lib/search.js";
 import { toPerson, toPersonListItem, toProject, toPublication } from "../serializers.js";
 
 export const peopleRouter = Router();
@@ -36,11 +36,16 @@ peopleRouter.get(
       where pm.person_id = people.id and p.program_id is not null
     )`;
 
-    const rows = await db
+    const sort = str(req.query.sort);
+    const limit = parseLimit(req.query.limit);
+    let qb = db
       .select({ person: getTableColumns(people), consortiaCount })
       .from(people)
       .where(and(...filters))
-      .orderBy(people.fullName);
+      .orderBy(sort === "recent" ? desc(people.ingestedAt) : people.fullName)
+      .$dynamic();
+    if (limit) qb = qb.limit(limit);
+    const rows = await qb;
     res.json(rows.map((r) => toPersonListItem(r.person, r.consortiaCount ?? 0)));
   }),
 );

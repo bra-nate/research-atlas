@@ -133,6 +133,7 @@ ck "project→grants returns >=1 grant" 1 "$([ "$(curl -s "$BASE/projects/$GPROJ
 PPROJ=$(psql -h localhost -p 5432 -d $DB -tAc "select project_id from project_publications limit 1")
 ck "GET /projects/:id/publications" 200 "$(code "$BASE/projects/$PPROJ/publications")"
 ck "project→publications returns >=1 output" 1 "$([ "$(curl -s "$BASE/projects/$PPROJ/publications" | grep -c '"publication"')" -ge 1 ] && echo 1 || echo 0)"
+ck "GET /projects?sort=recent&limit=3 returns <=3" 1 "$([ "$(jqlen "$BASE/projects?sort=recent&limit=3")" -le 3 ] && echo 1 || echo 0)"
 
 echo "### Result: $pass passed, $fail failed"
 [ "$fail" = "0" ]

@@ -24,3 +24,10 @@ export function str(v: unknown): string | undefined {
   const t = v.trim();
   return t === "" ? undefined : t;
 }
+
+/** Parse a capped positive integer limit from a query param. Returns undefined if absent/invalid. */
+export function parseLimit(v: unknown, max = 50): number | undefined {
+  const n = Number(typeof v === "string" ? v : "");
+  if (!Number.isFinite(n) || n <= 0) return undefined;
+  return Math.min(Math.floor(n), max);
+}
