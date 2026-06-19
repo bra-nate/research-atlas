@@ -119,5 +119,15 @@ PP=$(psql -h localhost -p 5432 -d $DB -tAc "
   where pm.person_id = '$HERO_ID'")
 ck "publications link to hero's projects (author-membership)" 1 "$([ "${PP:-0}" -ge 1 ] && echo 1 || echo 0)"
 
+# --- P8: project-level publications + grants endpoints ---
+# A project that actually has a grant link (DS-I, from RePORTER).
+GPROJ=$(psql -h localhost -p 5432 -d $DB -tAc "select project_id from project_grants limit 1")
+ck "GET /projects/:id/grants" 200 "$(code "$BASE/projects/$GPROJ/grants")"
+ck "project→grants returns >=1 grant" 1 "$([ "$(curl -s "$BASE/projects/$GPROJ/grants" | grep -c '"grant"')" -ge 1 ] && echo 1 || echo 0)"
+# A project that has a publication link (author-membership, from enrichment).
+PPROJ=$(psql -h localhost -p 5432 -d $DB -tAc "select project_id from project_publications limit 1")
+ck "GET /projects/:id/publications" 200 "$(code "$BASE/projects/$PPROJ/publications")"
+ck "project→publications returns >=1 output" 1 "$([ "$(curl -s "$BASE/projects/$PPROJ/publications" | grep -c '"publication"')" -ge 1 ] && echo 1 || echo 0)"
+
 echo "### Result: $pass passed, $fail failed"
 [ "$fail" = "0" ]
