@@ -108,9 +108,10 @@ export const api = {
   programProjects: (id: string) => req<Project[]>(`/programs/${id}/projects`),
 
   // Capabilities
-  capabilities: (p?: { q?: string; organizationId?: string; kind?: string }) =>
+  capabilities: (p?: { q?: string; organizationId?: string; kind?: string; category?: string }) =>
     req<Capability[]>(`/capabilities${qs(p)}`),
   capability: (id: string) => req<Capability>(`/capabilities/${id}`),
+  capabilityFacets: () => req<{ categories: string[] }>("/capabilities/facets"),
 
   // Stats
   stats: () => req<StatsResponse>("/stats"),

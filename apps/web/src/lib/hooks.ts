@@ -55,11 +55,19 @@ export function usePeopleFeatured(limit = 6) {
   });
 }
 
-export function useCapabilitiesSearch(q: string) {
+export function useCapabilitiesSearch(q: string, category?: string) {
   return useQuery({
-    queryKey: ["capabilities", "search", q],
-    queryFn: () => api.capabilities({ q: q || undefined }),
+    queryKey: ["capabilities", "search", q, category],
+    queryFn: () => api.capabilities({ q: q || undefined, category: category || undefined }),
   });
+}
+
+export function usePeopleFacets() {
+  return useQuery({ queryKey: ["peopleFacets"], queryFn: () => api.peopleFacets() });
+}
+
+export function useCapabilityFacets() {
+  return useQuery({ queryKey: ["capabilityFacets"], queryFn: () => api.capabilityFacets() });
 }
 
 export function usePrograms(params?: { sort?: string; limit?: string }) {

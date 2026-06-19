@@ -7,10 +7,12 @@ import {
 } from "@research-atlas/types";
 import {
   useCapabilitiesSearch,
+  useCapabilityFacets,
   useCentreCounts,
   useOrganizationFacets,
   useOrganizations,
   usePeople,
+  usePeopleFacets,
   usePrograms,
   useProjects,
   usePublicationsSearch,
@@ -46,17 +48,19 @@ const TABS: { id: Tab; label: string }[] = [
 const TAB_IDS = TABS.map((t) => t.id);
 const isTab = (v: string | null): v is Tab => !!v && (TAB_IDS as string[]).includes(v);
 
+type Filters = Record<string, string>;
+
 export function DirectoryPage() {
   const [params, setParams] = useSearchParams();
   const tab: Tab = isTab(params.get("tab")) ? (params.get("tab") as Tab) : "organizations";
   const q = params.get("q") ?? "";
-  const [country, setCountry] = useState("");
-  const [orgType, setOrgType] = useState("");
+  const [filters, setFilters] = useState<Filters>({});
 
   const setTab = (t: Tab) => {
     const next = new URLSearchParams(params);
     next.set("tab", t);
     setParams(next, { replace: true });
+    setFilters({});
   };
   const setQ = (v: string) => {
     const next = new URLSearchParams(params);
@@ -96,67 +100,101 @@ export function DirectoryPage() {
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <Input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          aria-label="Search the directory"
-          placeholder="Search…"
-          className="max-w-xs"
-        />
-        {tab === "organizations" && (
-          <OrgFacetFilters
-            country={country}
-            orgType={orgType}
-            onCountry={setCountry}
-            onOrgType={setOrgType}
-          />
-        )}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[220px_1fr]">
+        <aside className="space-y-4">
+          <FilterRail tab={tab} filters={filters} setFilters={setFilters} />
+        </aside>
+        <div>
+          <div className="mb-4">
+            <Input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              aria-label="Search the directory"
+              placeholder="Search…"
+              className="max-w-md"
+            />
+          </div>
+          {tab === "programmes" && <ProgrammesList q={q} />}
+          {tab === "projects" && (
+            <ProjectsList q={q} programId={filters.programId} country={filters.country} />
+          )}
+          {tab === "organizations" && (
+            <OrganizationsList q={q} country={filters.country ?? ""} orgType={filters.orgType ?? ""} />
+          )}
+          {tab === "people" && <PeopleList q={q} specialization={filters.specialization} />}
+          {tab === "capabilities" && <CapabilitiesList q={q} category={filters.category} />}
+          {tab === "publications" && <PublicationsList q={q} />}
+        </div>
       </div>
-
-      {tab === "programmes" && <ProgrammesList q={q} />}
-      {tab === "projects" && <ProjectsList q={q} />}
-      {tab === "organizations" && (
-        <OrganizationsList q={q} country={country} orgType={orgType} />
-      )}
-      {tab === "people" && <PeopleList q={q} />}
-      {tab === "capabilities" && <CapabilitiesList q={q} />}
-      {tab === "publications" && <PublicationsList q={q} />}
     </div>
   );
 }
 
-function OrgFacetFilters({
-  country,
-  orgType,
-  onCountry,
-  onOrgType,
+function FilterRail({
+  tab,
+  filters,
+  setFilters,
 }: {
-  country: string;
-  orgType: string;
-  onCountry: (v: string) => void;
-  onOrgType: (v: string) => void;
+  tab: Tab;
+  filters: Filters;
+  setFilters: (f: Filters) => void;
 }) {
-  const facets = useOrganizationFacets();
-  const sel =
-    "rounded-lg border border-border bg-white px-2.5 py-2 text-sm text-ink";
+  const orgFacets = useOrganizationFacets();
+  const peopleFacets = usePeopleFacets();
+  const capFacets = useCapabilityFacets();
+  const programs = usePrograms();
+  const set = (k: string, v: string) => setFilters({ ...filters, [k]: v });
+  const active = Object.values(filters).some(Boolean);
+  const sel = "w-full rounded-lg border border-border bg-white px-2.5 py-2 text-sm text-ink";
+
   return (
-    <>
-      <select className={sel} value={country} onChange={(e) => onCountry(e.target.value)}>
-        <option value="">All countries</option>
-        {facets.data?.countries.map((c) => (
-          <option key={c}>{c}</option>
-        ))}
-      </select>
-      <select className={sel} value={orgType} onChange={(e) => onOrgType(e.target.value)}>
-        <option value="">All types</option>
-        {facets.data?.orgTypes.map((t) => (
-          <option key={t} value={t}>
-            {ORG_TYPE_LABELS[t as OrgType] ?? t}
-          </option>
-        ))}
-      </select>
-    </>
+    <div className="rounded-xl border border-border p-3">
+      <div className="mb-2 flex items-center justify-between">
+        <span className="text-xs font-semibold uppercase tracking-wide text-ink-secondary">Filters</span>
+        {active && (
+          <button type="button" onClick={() => setFilters({})} className="text-xs text-brand hover:underline">
+            Clear all
+          </button>
+        )}
+      </div>
+      <div className="space-y-3">
+        {tab === "organizations" && (
+          <>
+            <select className={sel} value={filters.country ?? ""} onChange={(e) => set("country", e.target.value)}>
+              <option value="">All countries</option>
+              {orgFacets.data?.countries.map((c) => <option key={c}>{c}</option>)}
+            </select>
+            <select className={sel} value={filters.orgType ?? ""} onChange={(e) => set("orgType", e.target.value)}>
+              <option value="">All types</option>
+              {orgFacets.data?.orgTypes.map((t) => (
+                <option key={t} value={t}>{ORG_TYPE_LABELS[t as OrgType] ?? t}</option>
+              ))}
+            </select>
+          </>
+        )}
+        {tab === "people" && (
+          <select className={sel} value={filters.specialization ?? ""} onChange={(e) => set("specialization", e.target.value)}>
+            <option value="">All specialisations</option>
+            {peopleFacets.data?.specializations.map((s) => <option key={s}>{s}</option>)}
+          </select>
+        )}
+        {tab === "capabilities" && (
+          <select className={sel} value={filters.category ?? ""} onChange={(e) => set("category", e.target.value)}>
+            <option value="">All categories</option>
+            {capFacets.data?.categories.map((c) => <option key={c}>{c}</option>)}
+          </select>
+        )}
+        {tab === "projects" && (
+          <select className={sel} value={filters.programId ?? ""} onChange={(e) => set("programId", e.target.value)}>
+            <option value="">All programmes</option>
+            {programs.data?.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
+          </select>
+        )}
+        {(tab === "programmes" || tab === "publications") && (
+          <p className="text-xs text-ink-secondary">No filters for this type yet.</p>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -209,8 +247,8 @@ function OrganizationsList({
   );
 }
 
-function PeopleList({ q }: { q: string }) {
-  const people = usePeople({ q });
+function PeopleList({ q, specialization }: { q: string; specialization?: string }) {
+  const people = usePeople({ q, specialization });
   if (people.isLoading) return <SkeletonRows />;
   if (!people.data?.length) return <Empty>No people match your search.</Empty>;
   return (
@@ -244,8 +282,8 @@ function PeopleList({ q }: { q: string }) {
   );
 }
 
-function CapabilitiesList({ q }: { q: string }) {
-  const caps = useCapabilitiesSearch(q);
+function CapabilitiesList({ q, category }: { q: string; category?: string }) {
+  const caps = useCapabilitiesSearch(q, category);
   if (caps.isLoading) return <SkeletonRows />;
   if (!caps.data?.length)
     return <Empty>No capabilities match your search.</Empty>;
@@ -302,8 +340,8 @@ function ProgrammesList({ q }: { q: string }) {
   );
 }
 
-function ProjectsList({ q }: { q: string }) {
-  const projects = useProjects({ q: q || undefined });
+function ProjectsList({ q, programId, country }: { q: string; programId?: string; country?: string }) {
+  const projects = useProjects({ q: q || undefined, programId, country });
   if (projects.isLoading) return <SkeletonRows />;
   if (!projects.data?.length) return <Empty>No projects match your search.</Empty>;
   return (
