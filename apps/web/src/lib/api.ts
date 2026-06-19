@@ -19,10 +19,13 @@ export type CentreCounts = Record<
 export type PersonProject = { role: string | null; project: Project };
 export type PersonPublication = {
   author_position: number | null;
+  match_confidence: number | null;
   publication: Publication;
 };
 export type ProjectMemberView = { role: string | null; person: Person };
 export type ProjectPartnerView = { role: string | null; organization: Organization };
+export type ProjectPublicationView = { publication: Publication };
+export type ProjectGrantView = { grant: Grant; funder: Organization | null };
 export type PublicationAuthorView = {
   author_position: number | null;
   person: Person;
@@ -36,8 +39,15 @@ function qs(params?: Record<string, string | undefined>): string {
   return s ? `?${s}` : "";
 }
 
+/**
+ * API origin. Dev leaves this unset → "/api" (Vite proxies to the local Express
+ * server). In production the SPA and the Express API are deployed separately, so
+ * set VITE_API_BASE to the API's public URL (e.g. https://api.example.com/api).
+ */
+const API_BASE = import.meta.env.VITE_API_BASE ?? "/api";
+
 async function req<T>(path: string): Promise<T> {
-  const res = await fetch(`/api${path}`);
+  const res = await fetch(`${API_BASE}${path}`);
   const data = await res.json().catch(() => null);
   if (!res.ok) {
     throw {
@@ -78,6 +88,10 @@ export const api = {
   projectMembers: (id: string) => req<ProjectMemberView[]>(`/projects/${id}/members`),
   projectPartners: (id: string) =>
     req<ProjectPartnerView[]>(`/projects/${id}/partners`),
+  projectPublications: (id: string) =>
+    req<ProjectPublicationView[]>(`/projects/${id}/publications`),
+  projectGrants: (id: string) =>
+    req<ProjectGrantView[]>(`/projects/${id}/grants`),
 
   // Programmes
   programs: () => req<Program[]>("/programs"),

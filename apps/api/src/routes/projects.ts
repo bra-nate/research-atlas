@@ -1,16 +1,26 @@
 import { Router } from "express";
-import { and, eq, sql } from "drizzle-orm";
+import { and, desc, eq, sql } from "drizzle-orm";
 import { db } from "../db/client.js";
 import {
+  grants,
   organizations,
   people,
+  projectGrants,
   projectMembers,
   projectPartners,
+  projectPublications,
   projects,
+  publications,
 } from "../db/schema.js";
 import { asyncHandler, HttpError } from "../http.js";
 import { prefixTsQuery, str } from "../lib/search.js";
-import { toOrganization, toPerson, toProject } from "../serializers.js";
+import {
+  toGrant,
+  toOrganization,
+  toPerson,
+  toProject,
+  toPublication,
+} from "../serializers.js";
 
 export const projectsRouter = Router();
 
@@ -74,5 +84,41 @@ projectsRouter.get(
       .innerJoin(organizations, eq(organizations.id, projectPartners.orgId))
       .where(eq(projectPartners.projectId, req.params.id));
     res.json(rows.map((r) => ({ role: r.role, organization: toOrganization(r.org) })));
+  }),
+);
+
+/** GET /projects/:id/publications — outputs linked to this project (newest first). */
+projectsRouter.get(
+  "/:id/publications",
+  asyncHandler(async (req, res) => {
+    const rows = await db
+      .select({ publication: publications })
+      .from(projectPublications)
+      .innerJoin(
+        publications,
+        eq(publications.id, projectPublications.publicationId),
+      )
+      .where(eq(projectPublications.projectId, req.params.id))
+      .orderBy(desc(publications.publicationDate));
+    res.json(rows.map((r) => ({ publication: toPublication(r.publication) })));
+  }),
+);
+
+/** GET /projects/:id/grants — grants funding this project, with funder org. */
+projectsRouter.get(
+  "/:id/grants",
+  asyncHandler(async (req, res) => {
+    const rows = await db
+      .select({ grant: grants, funder: organizations })
+      .from(projectGrants)
+      .innerJoin(grants, eq(grants.id, projectGrants.grantId))
+      .leftJoin(organizations, eq(organizations.id, grants.funderOrgId))
+      .where(eq(projectGrants.projectId, req.params.id));
+    res.json(
+      rows.map((r) => ({
+        grant: toGrant(r.grant),
+        funder: r.funder ? toOrganization(r.funder) : null,
+      })),
+    );
   }),
 );

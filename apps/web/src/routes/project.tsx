@@ -11,8 +11,10 @@ import {
   usePerson,
   useProgram,
   useProject,
+  useProjectGrants,
   useProjectMembers,
   useProjectPartners,
+  useProjectPublications,
 } from "../lib/hooks";
 import {
   Breadcrumbs,
@@ -22,6 +24,7 @@ import {
   ProvenanceLine,
   SectionCard,
   Tag,
+  UpdatedLine,
 } from "../components/ui";
 import { ProfileHeader, RailBlock, TwoColumn } from "../components/profile-layout";
 
@@ -31,6 +34,8 @@ export function ProjectPage() {
   const project = useProject(id);
   const members = useProjectMembers(id);
   const partners = useProjectPartners(id);
+  const pubs = useProjectPublications(id);
+  const projectGrants = useProjectGrants(id);
   const program = useProgram(project.data?.program_id ?? undefined);
   const leadOrg = useOrganization(project.data?.lead_org_id ?? undefined);
   const pi = usePerson(project.data?.pi_person_id ?? undefined);
@@ -112,12 +117,13 @@ export function ProjectPage() {
                 <p className="text-sm text-ink">{pr.funding_note}</p>
               </RailBlock>
             )}
-            <div className="px-1">
+            <div className="space-y-1 px-1">
               <ProvenanceLine
                 source={pr.source}
                 sourceUrl={pr.source_url}
                 status={pr.verification_status}
               />
+              <UpdatedLine ingestedAt={pr.ingested_at} />
             </div>
           </>
         }
@@ -187,7 +193,76 @@ export function ProjectPage() {
             </ul>
           )}
         </SectionCard>
+
+        <SectionCard title="Funding" count={projectGrants.data?.length ?? 0}>
+          {projectGrants.isLoading ? (
+            <p className="text-sm text-ink-secondary">Loading funding…</p>
+          ) : !projectGrants.data?.length ? (
+            <p className="text-sm text-ink-secondary">No grants linked yet.</p>
+          ) : (
+            <ul className="divide-y divide-border">
+              {projectGrants.data.map(({ grant, funder }) => (
+                <li
+                  key={grant.id}
+                  className="flex items-start justify-between gap-3 py-2"
+                >
+                  <div className="min-w-0">
+                    <EntityLink to={`/grants/${grant.id}`}>{grant.name}</EntityLink>
+                    {funder && (
+                      <div className="text-xs text-ink-secondary">
+                        <EntityLink to={`/organizations/${funder.id}`}>
+                          {funder.name}
+                        </EntityLink>
+                      </div>
+                    )}
+                  </div>
+                  {grant.amount != null && (
+                    <span className="shrink-0 text-sm tabular-nums text-ink">
+                      {formatAmount(grant.amount, grant.currency)}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </SectionCard>
+
+        <SectionCard title="Outputs" count={pubs.data?.length ?? 0}>
+          {pubs.isLoading ? (
+            <p className="text-sm text-ink-secondary">Loading publications…</p>
+          ) : !pubs.data?.length ? (
+            <p className="text-sm text-ink-secondary">No publications linked yet.</p>
+          ) : (
+            <ul className="divide-y divide-border">
+              {pubs.data.map(({ publication }) => (
+                <li key={publication.id} className="py-2">
+                  <EntityLink to={`/publications/${publication.id}`}>
+                    {publication.title}
+                  </EntityLink>
+                  <div className="text-xs text-ink-secondary">
+                    {[publication.journal, publication.publication_date]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </SectionCard>
       </TwoColumn>
     </div>
   );
+}
+
+/** Format a grant amount with its currency, falling back to a plain number. */
+function formatAmount(amount: number, currency: string | null): string {
+  try {
+    return new Intl.NumberFormat("en", {
+      style: "currency",
+      currency: currency ?? "USD",
+      maximumFractionDigits: 0,
+    }).format(amount);
+  } catch {
+    return `${amount.toLocaleString("en")}${currency ? ` ${currency}` : ""}`;
+  }
 }

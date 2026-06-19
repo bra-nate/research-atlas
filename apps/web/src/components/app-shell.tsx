@@ -34,6 +34,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
+              aria-label="Search organisations, people, and capabilities"
               placeholder="Search organisations, people, capabilities…"
               className="w-full rounded-lg border border-border bg-surface-alt py-2 pl-9 pr-3 text-sm text-ink outline-none placeholder:text-ink-secondary focus:border-brand focus:bg-white focus:ring-2 focus:ring-brand/20"
             />

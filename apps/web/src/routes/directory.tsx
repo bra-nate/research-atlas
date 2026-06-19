@@ -68,7 +68,9 @@ export function DirectoryPage() {
         {TABS.map((t) => (
           <button
             key={t.id}
+            type="button"
             onClick={() => setTab(t.id)}
+            aria-current={tab === t.id ? "page" : undefined}
             className={cn(
               "-mb-px border-b-2 px-3 py-2 text-sm font-medium transition-colors",
               tab === t.id
@@ -85,6 +87,7 @@ export function DirectoryPage() {
         <Input
           value={q}
           onChange={(e) => setQ(e.target.value)}
+          aria-label="Search the directory"
           placeholder="Search…"
           className="max-w-xs"
         />
