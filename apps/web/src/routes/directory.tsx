@@ -84,7 +84,7 @@ export function DirectoryPage() {
         </p>
       </div>
 
-      <div role="tablist" className="flex items-center gap-1 border-b border-border">
+      <div role="tablist" className="flex items-center gap-1 overflow-x-auto border-b border-border">
         {TABS.map((t) => (
           <button
             key={t.id}
