@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { and, arrayOverlaps, desc, eq, sql } from "drizzle-orm";
+import { and, arrayOverlaps, desc, eq, getTableColumns, sql } from "drizzle-orm";
 import { db } from "../db/client.js";
 import {
   projectMembers,
@@ -9,8 +9,8 @@ import {
   publications,
 } from "../db/schema.js";
 import { asyncHandler, HttpError } from "../http.js";
-import { prefixTsQuery, str, uniqSorted } from "../lib/search.js";
-import { toPerson, toProject, toPublication } from "../serializers.js";
+import { parseLimit, prefixTsQuery, str, uniqSorted } from "../lib/search.js";
+import { toPerson, toPersonListItem, toProject, toPublication } from "../serializers.js";
 
 export const peopleRouter = Router();
 
@@ -29,12 +29,24 @@ peopleRouter.get(
     if (specialization)
       filters.push(arrayOverlaps(people.specializations, [specialization]));
 
-    const rows = await db
-      .select()
+    const consortiaCount = sql<number>`(
+      select count(distinct p.program_id)::int
+      from project_members pm
+      join projects p on p.id = pm.project_id
+      where pm.person_id = people.id and p.program_id is not null
+    )`;
+
+    const sort = str(req.query.sort);
+    const limit = parseLimit(req.query.limit);
+    let qb = db
+      .select({ person: getTableColumns(people), consortiaCount })
       .from(people)
       .where(and(...filters))
-      .orderBy(people.fullName);
-    res.json(rows.map(toPerson));
+      .orderBy(sort === "recent" ? desc(people.ingestedAt) : people.fullName)
+      .$dynamic();
+    if (limit) qb = qb.limit(limit);
+    const rows = await qb;
+    res.json(rows.map((r) => toPersonListItem(r.person, r.consortiaCount ?? 0)));
   }),
 );
 
@@ -50,6 +62,31 @@ peopleRouter.get(
         rows.flatMap((r) => [...(r.specializations ?? []), ...(r.skills ?? [])]),
       ),
     });
+  }),
+);
+
+/**
+ * GET /people/featured — the cross-consortium hero set: people who span the most
+ * distinct programmes (>=2), highest first. Aggregates over project_members.
+ */
+peopleRouter.get(
+  "/featured",
+  asyncHandler(async (req, res) => {
+    const limitRaw = Number(str(req.query.limit) ?? "6");
+    const limit = Number.isFinite(limitRaw) ? Math.min(Math.max(limitRaw, 1), 24) : 6;
+
+    const consortiaCount = sql<number>`count(distinct ${projects.programId})::int`;
+    const rows = await db
+      .select({ person: getTableColumns(people), consortiaCount })
+      .from(people)
+      .innerJoin(projectMembers, eq(projectMembers.personId, people.id))
+      .innerJoin(projects, eq(projects.id, projectMembers.projectId))
+      .where(and(eq(people.visible, true), sql`${projects.programId} is not null`))
+      .groupBy(people.id)
+      .having(sql`count(distinct ${projects.programId}) >= 2`)
+      .orderBy(desc(consortiaCount))
+      .limit(limit);
+    res.json(rows.map((r) => toPersonListItem(r.person, r.consortiaCount ?? 0)));
   }),
 );
 

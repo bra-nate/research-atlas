@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { and, eq, inArray, sql } from "drizzle-orm";
+import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { ORG_TYPE_VALUES } from "@research-atlas/types";
 import { db } from "../db/client.js";
 import { capabilities, organizations, people } from "../db/schema.js";
 import { asyncHandler, HttpError } from "../http.js";
-import { prefixTsQuery, str, uniqSorted } from "../lib/search.js";
+import { parseLimit, prefixTsQuery, str, uniqSorted } from "../lib/search.js";
 import { toOrganization } from "../serializers.js";
 
 export const organizationsRouter = Router();
@@ -24,11 +24,16 @@ organizationsRouter.get(
     if (orgType && (ORG_TYPE_VALUES as readonly string[]).includes(orgType))
       filters.push(eq(organizations.orgType, orgType as (typeof ORG_TYPE_VALUES)[number]));
 
-    const rows = await db
+    const sort = str(req.query.sort);
+    const limit = parseLimit(req.query.limit);
+    let qb = db
       .select()
       .from(organizations)
       .where(filters.length ? and(...filters) : undefined)
-      .orderBy(organizations.name);
+      .orderBy(sort === "recent" ? desc(organizations.ingestedAt) : organizations.name)
+      .$dynamic();
+    if (limit) qb = qb.limit(limit);
+    const rows = await qb;
     res.json(rows.map(toOrganization));
   }),
 );

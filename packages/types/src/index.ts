@@ -17,3 +17,4 @@ export * from "./projects.js";
 export * from "./grants.js";
 export * from "./publications.js";
 export * from "./edges.js";
+export * from "./stats.js";

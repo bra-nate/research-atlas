@@ -24,3 +24,11 @@ export interface Person extends Provenance {
   works_count: number | null;
   last_active_year: number | null;
 }
+
+/**
+ * Person as returned by list/search endpoints — the base Person plus aggregate
+ * counts used for the "in N consortia" chip and the cross-consortium hero list.
+ */
+export interface PersonListItem extends Person {
+  consortia_count: number; // distinct programmes this person spans
+}

@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { db } from "../db/client.js";
 import { programs, projects } from "../db/schema.js";
 import { asyncHandler, HttpError } from "../http.js";
+import { parseLimit, str } from "../lib/search.js";
 import { toProgram, toProject } from "../serializers.js";
 
 export const programsRouter = Router();
@@ -10,8 +11,16 @@ export const programsRouter = Router();
 /** GET /programs — list all funding programmes / consortia. */
 programsRouter.get(
   "/",
-  asyncHandler(async (_req, res) => {
-    const rows = await db.select().from(programs).orderBy(programs.name);
+  asyncHandler(async (req, res) => {
+    const sort = str(req.query.sort);
+    const limit = parseLimit(req.query.limit);
+    let qb = db
+      .select()
+      .from(programs)
+      .orderBy(sort === "recent" ? desc(programs.ingestedAt) : programs.name)
+      .$dynamic();
+    if (limit) qb = qb.limit(limit);
+    const rows = await qb;
     res.json(rows.map(toProgram));
   }),
 );

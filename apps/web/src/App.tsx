@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AppShell } from "./components/app-shell";
+import { LandingPage } from "./routes/landing";
 import { DirectoryPage } from "./routes/directory";
 import { PersonPage } from "./routes/person";
 import { ProjectPage } from "./routes/project";
@@ -13,6 +14,7 @@ const shell = (node: ReactNode) => <AppShell>{node}</AppShell>;
 export default function App() {
   return (
     <Routes>
+      <Route path="/" element={shell(<LandingPage />)} />
       <Route path="/directory" element={shell(<DirectoryPage />)} />
       <Route path="/people/:id" element={shell(<PersonPage />)} />
       <Route path="/projects/:id" element={shell(<ProjectPage />)} />
@@ -21,7 +23,7 @@ export default function App() {
       <Route path="/publications/:id" element={shell(<PublicationPage />)} />
       <Route path="/grants/:id" element={shell(<GrantPage />)} />
       <Route path="/capabilities/:id" element={shell(<CapabilityPage />)} />
-      <Route path="*" element={<Navigate to="/directory" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

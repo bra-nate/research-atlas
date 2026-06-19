@@ -3,9 +3,11 @@ import type {
   Grant,
   Organization,
   Person,
+  PersonListItem,
   Program,
   Project,
   Publication,
+  StatsResponse,
 } from "@research-atlas/types";
 
 export type ApiError = { status: number; message: string };
@@ -73,8 +75,15 @@ export const api = {
     req<CentreCounts>(`/organizations/counts${qs({ ids: ids.join(",") })}`),
 
   // People
-  people: (p?: { q?: string; specialization?: string; organizationId?: string }) =>
-    req<Person[]>(`/people${qs(p)}`),
+  people: (p?: {
+    q?: string;
+    specialization?: string;
+    organizationId?: string;
+    sort?: string;
+    limit?: string;
+  }) => req<PersonListItem[]>(`/people${qs(p)}`),
+  peopleFeatured: (limit = 6) =>
+    req<PersonListItem[]>(`/people/featured${qs({ limit: String(limit) })}`),
   person: (id: string) => req<Person>(`/people/${id}`),
   personProjects: (id: string) => req<PersonProject[]>(`/people/${id}/projects`),
   personPublications: (id: string) =>
@@ -82,7 +91,7 @@ export const api = {
   peopleFacets: () => req<{ specializations: string[] }>("/people/facets"),
 
   // Projects / consortia
-  projects: (p?: { q?: string; programId?: string; country?: string }) =>
+  projects: (p?: { q?: string; programId?: string; country?: string; sort?: string; limit?: string }) =>
     req<Project[]>(`/projects${qs(p)}`),
   project: (id: string) => req<Project>(`/projects/${id}`),
   projectMembers: (id: string) => req<ProjectMemberView[]>(`/projects/${id}/members`),
@@ -94,16 +103,21 @@ export const api = {
     req<ProjectGrantView[]>(`/projects/${id}/grants`),
 
   // Programmes
-  programs: () => req<Program[]>("/programs"),
+  programs: (p?: { sort?: string; limit?: string }) => req<Program[]>(`/programs${qs(p)}`),
   program: (id: string) => req<Program>(`/programs/${id}`),
   programProjects: (id: string) => req<Project[]>(`/programs/${id}/projects`),
 
   // Capabilities
-  capabilities: (p?: { q?: string; organizationId?: string; kind?: string }) =>
+  capabilities: (p?: { q?: string; organizationId?: string; kind?: string; category?: string }) =>
     req<Capability[]>(`/capabilities${qs(p)}`),
   capability: (id: string) => req<Capability>(`/capabilities/${id}`),
+  capabilityFacets: () => req<{ categories: string[] }>("/capabilities/facets"),
+
+  // Stats
+  stats: () => req<StatsResponse>("/stats"),
 
   // Publications
+  publications: (p?: { q?: string }) => req<Publication[]>(`/publications${qs(p)}`),
   publication: (id: string) => req<Publication>(`/publications/${id}`),
   publicationAuthors: (id: string) =>
     req<PublicationAuthorView[]>(`/publications/${id}/authors`),

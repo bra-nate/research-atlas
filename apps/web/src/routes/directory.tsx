@@ -7,43 +7,63 @@ import {
 } from "@research-atlas/types";
 import {
   useCapabilitiesSearch,
+  useCapabilityFacets,
   useCentreCounts,
   useOrganizationFacets,
   useOrganizations,
   usePeople,
+  usePeopleFacets,
+  usePrograms,
+  useProjects,
+  usePublicationsSearch,
 } from "../lib/hooks";
 import {
   Card,
+  ConsortiaChip,
   EntityLink,
   IllustrativeBadge,
   Input,
   MonoCode,
+  SkeletonRows,
   Tag,
 } from "../components/ui";
 import { cn } from "../lib/cn";
 
-type Tab = "organizations" | "people" | "capabilities";
+type Tab =
+  | "programmes"
+  | "projects"
+  | "organizations"
+  | "people"
+  | "capabilities"
+  | "publications";
 
 const TABS: { id: Tab; label: string }[] = [
+  { id: "programmes", label: "Programmes" },
+  { id: "projects", label: "Projects" },
   { id: "organizations", label: "Organisations" },
   { id: "people", label: "People" },
   { id: "capabilities", label: "Capabilities" },
+  { id: "publications", label: "Publications" },
 ];
 
-const isTab = (v: string | null): v is Tab =>
-  v === "organizations" || v === "people" || v === "capabilities";
+const TAB_IDS = TABS.map((t) => t.id);
+const isTab = (v: string | null): v is Tab => !!v && (TAB_IDS as string[]).includes(v);
+
+type Filters = Record<string, string>;
 
 export function DirectoryPage() {
   const [params, setParams] = useSearchParams();
-  const tab: Tab = isTab(params.get("tab")) ? (params.get("tab") as Tab) : "organizations";
+  const rawTab = params.get("tab");
+  const tab: Tab = isTab(rawTab) ? rawTab : "organizations";
   const q = params.get("q") ?? "";
-  const [country, setCountry] = useState("");
-  const [orgType, setOrgType] = useState("");
+  const allMode = !rawTab && !!q;
+  const [filters, setFilters] = useState<Filters>({});
 
   const setTab = (t: Tab) => {
     const next = new URLSearchParams(params);
     next.set("tab", t);
     setParams(next, { replace: true });
+    setFilters({});
   };
   const setQ = (v: string) => {
     const next = new URLSearchParams(params);
@@ -64,16 +84,18 @@ export function DirectoryPage() {
         </p>
       </div>
 
-      <div className="flex items-center gap-1 border-b border-border">
+      <div role="tablist" className="flex items-center gap-1 overflow-x-auto border-b border-border">
         {TABS.map((t) => (
           <button
             key={t.id}
             type="button"
+            role="tab"
             onClick={() => setTab(t.id)}
-            aria-current={tab === t.id ? "page" : undefined}
+            aria-current={!allMode && tab === t.id ? "page" : undefined}
+            aria-selected={!allMode && tab === t.id}
             className={cn(
               "-mb-px border-b-2 px-3 py-2 text-sm font-medium transition-colors",
-              tab === t.id
+              !allMode && tab === t.id
                 ? "border-brand text-brand"
                 : "border-transparent text-ink-secondary hover:text-ink",
             )}
@@ -83,64 +105,118 @@ export function DirectoryPage() {
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <Input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          aria-label="Search the directory"
-          placeholder="Search…"
-          className="max-w-xs"
-        />
-        {tab === "organizations" && (
-          <OrgFacetFilters
-            country={country}
-            orgType={orgType}
-            onCountry={setCountry}
-            onOrgType={setOrgType}
-          />
-        )}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[220px_1fr]">
+        <aside className="space-y-4">
+          <FilterRail tab={tab} filters={filters} setFilters={setFilters} allMode={allMode} />
+        </aside>
+        <div>
+          <div className="mb-4">
+            <Input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              aria-label="Search the directory"
+              placeholder="Search…"
+              className="max-w-md"
+            />
+          </div>
+          {allMode ? (
+            <AllResults q={q} onTab={setTab} />
+          ) : (
+            <>
+              {tab === "programmes" && <ProgrammesList q={q} />}
+              {tab === "projects" && (
+                <ProjectsList q={q} programId={filters.programId} country={filters.country} />
+              )}
+              {tab === "organizations" && (
+                <OrganizationsList q={q} country={filters.country ?? ""} orgType={filters.orgType ?? ""} />
+              )}
+              {tab === "people" && <PeopleList q={q} specialization={filters.specialization} />}
+              {tab === "capabilities" && <CapabilitiesList q={q} category={filters.category} />}
+              {tab === "publications" && <PublicationsList q={q} />}
+            </>
+          )}
+        </div>
       </div>
-
-      {tab === "organizations" && (
-        <OrganizationsList q={q} country={country} orgType={orgType} />
-      )}
-      {tab === "people" && <PeopleList q={q} />}
-      {tab === "capabilities" && <CapabilitiesList q={q} />}
     </div>
   );
 }
 
-function OrgFacetFilters({
-  country,
-  orgType,
-  onCountry,
-  onOrgType,
+function FilterRail({
+  tab,
+  filters,
+  setFilters,
+  allMode,
 }: {
-  country: string;
-  orgType: string;
-  onCountry: (v: string) => void;
-  onOrgType: (v: string) => void;
+  tab: Tab;
+  filters: Filters;
+  setFilters: (f: Filters) => void;
+  allMode?: boolean;
 }) {
-  const facets = useOrganizationFacets();
-  const sel =
-    "rounded-lg border border-border bg-white px-2.5 py-2 text-sm text-ink";
+  const orgFacets = useOrganizationFacets();
+  const peopleFacets = usePeopleFacets();
+  const capFacets = useCapabilityFacets();
+  const programs = usePrograms();
+  const set = (k: string, v: string) => setFilters({ ...filters, [k]: v });
+  const active = Object.values(filters).some(Boolean);
+  const sel = "w-full rounded-lg border border-border bg-white px-2.5 py-2 text-sm text-ink";
+
+  if (allMode) {
+    return (
+      <div className="rounded-xl border border-border p-3">
+        <span className="text-xs font-semibold uppercase tracking-wide text-ink-secondary">Filters</span>
+        <p className="mt-2 text-xs text-ink-secondary">Select a category tab to filter results.</p>
+      </div>
+    );
+  }
+
   return (
-    <>
-      <select className={sel} value={country} onChange={(e) => onCountry(e.target.value)}>
-        <option value="">All countries</option>
-        {facets.data?.countries.map((c) => (
-          <option key={c}>{c}</option>
-        ))}
-      </select>
-      <select className={sel} value={orgType} onChange={(e) => onOrgType(e.target.value)}>
-        <option value="">All types</option>
-        {facets.data?.orgTypes.map((t) => (
-          <option key={t} value={t}>
-            {ORG_TYPE_LABELS[t as OrgType] ?? t}
-          </option>
-        ))}
-      </select>
-    </>
+    <div className="rounded-xl border border-border p-3">
+      <div className="mb-2 flex items-center justify-between">
+        <span className="text-xs font-semibold uppercase tracking-wide text-ink-secondary">Filters</span>
+        {active && (
+          <button type="button" onClick={() => setFilters({})} className="text-xs text-brand hover:underline">
+            Clear all
+          </button>
+        )}
+      </div>
+      <div className="space-y-3">
+        {tab === "organizations" && (
+          <>
+            <select className={sel} value={filters.country ?? ""} onChange={(e) => set("country", e.target.value)}>
+              <option value="">All countries</option>
+              {orgFacets.data?.countries.map((c) => <option key={c}>{c}</option>)}
+            </select>
+            <select className={sel} value={filters.orgType ?? ""} onChange={(e) => set("orgType", e.target.value)}>
+              <option value="">All types</option>
+              {orgFacets.data?.orgTypes.map((t) => (
+                <option key={t} value={t}>{ORG_TYPE_LABELS[t as OrgType] ?? t}</option>
+              ))}
+            </select>
+          </>
+        )}
+        {tab === "people" && (
+          <select className={sel} value={filters.specialization ?? ""} onChange={(e) => set("specialization", e.target.value)}>
+            <option value="">All specialisations</option>
+            {peopleFacets.data?.specializations.map((s) => <option key={s}>{s}</option>)}
+          </select>
+        )}
+        {tab === "capabilities" && (
+          <select className={sel} value={filters.category ?? ""} onChange={(e) => set("category", e.target.value)}>
+            <option value="">All categories</option>
+            {capFacets.data?.categories.map((c) => <option key={c}>{c}</option>)}
+          </select>
+        )}
+        {tab === "projects" && (
+          <select className={sel} value={filters.programId ?? ""} onChange={(e) => set("programId", e.target.value)}>
+            <option value="">All programmes</option>
+            {programs.data?.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
+          </select>
+        )}
+        {(tab === "programmes" || tab === "publications") && (
+          <p className="text-xs text-ink-secondary">No filters for this type yet.</p>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -157,7 +233,7 @@ function OrganizationsList({
   const ids = useMemo(() => (orgs.data ?? []).map((o) => o.id), [orgs.data]);
   const counts = useCentreCounts(ids);
 
-  if (orgs.isLoading) return <Empty>Loading organisations…</Empty>;
+  if (orgs.isLoading) return <SkeletonRows />;
   if (!orgs.data?.length) return <Empty>No organisations match your search.</Empty>;
 
   return (
@@ -193,9 +269,9 @@ function OrganizationsList({
   );
 }
 
-function PeopleList({ q }: { q: string }) {
-  const people = usePeople({ q });
-  if (people.isLoading) return <Empty>Loading people…</Empty>;
+function PeopleList({ q, specialization }: { q: string; specialization?: string }) {
+  const people = usePeople({ q, specialization });
+  if (people.isLoading) return <SkeletonRows />;
   if (!people.data?.length) return <Empty>No people match your search.</Empty>;
   return (
     <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
@@ -212,13 +288,12 @@ function PeopleList({ q }: { q: string }) {
             </div>
             <IllustrativeBadge status={p.verification_status} />
           </div>
-          {p.specializations.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-1">
-              {p.specializations.slice(0, 4).map((s) => (
-                <Tag key={s}>{s}</Tag>
-              ))}
-            </div>
-          )}
+          <div className="mt-2 flex flex-wrap items-center gap-1.5">
+            <ConsortiaChip count={p.consortia_count} />
+            {p.specializations.slice(0, 4).map((s) => (
+              <Tag key={s}>{s}</Tag>
+            ))}
+          </div>
           {p.bio && (
             <p className="mt-2 line-clamp-2 text-sm text-ink-secondary">{p.bio}</p>
           )}
@@ -228,9 +303,9 @@ function PeopleList({ q }: { q: string }) {
   );
 }
 
-function CapabilitiesList({ q }: { q: string }) {
-  const caps = useCapabilitiesSearch(q);
-  if (caps.isLoading) return <Empty>Loading capabilities…</Empty>;
+function CapabilitiesList({ q, category }: { q: string; category?: string }) {
+  const caps = useCapabilitiesSearch(q, category);
+  if (caps.isLoading) return <SkeletonRows />;
   if (!caps.data?.length)
     return <Empty>No capabilities match your search.</Empty>;
   return (
@@ -252,6 +327,125 @@ function CapabilitiesList({ q }: { q: string }) {
             <p className="mt-2 line-clamp-2 text-sm text-ink-secondary">{c.description}</p>
           )}
         </Card>
+      ))}
+    </div>
+  );
+}
+
+function ProgrammesList({ q }: { q: string }) {
+  const programs = usePrograms();
+  const ql = q.toLowerCase();
+  const rows = (programs.data ?? []).filter(
+    (p) => !ql || p.name.toLowerCase().includes(ql) || (p.short_name ?? "").toLowerCase().includes(ql),
+  );
+  if (programs.isLoading) return <SkeletonRows />;
+  if (!rows.length) return <Empty>No programmes match your search.</Empty>;
+  return (
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      {rows.map((p) => (
+        <Card key={p.id} className="p-4 transition-shadow hover:shadow-[0_1px_4px_rgba(16,24,40,.08)]">
+          <EntityLink to={`/programs/${p.id}`} className="text-[15px]">
+            {p.name}
+          </EntityLink>
+          {p.short_name && <span className="ml-2 text-xs text-ink-secondary">{p.short_name}</span>}
+          {p.focus_areas.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {p.focus_areas.slice(0, 4).map((f) => (
+                <Tag key={f}>{f}</Tag>
+              ))}
+            </div>
+          )}
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+function ProjectsList({ q, programId, country }: { q: string; programId?: string; country?: string }) {
+  const projects = useProjects({ q: q || undefined, programId, country });
+  if (projects.isLoading) return <SkeletonRows />;
+  if (!projects.data?.length) return <Empty>No projects match your search.</Empty>;
+  return (
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      {projects.data.map((pr) => (
+        <Card key={pr.id} className="p-4 transition-shadow hover:shadow-[0_1px_4px_rgba(16,24,40,.08)]">
+          <EntityLink to={`/projects/${pr.id}`} className="text-[15px]">
+            {pr.title}
+          </EntityLink>
+          <div className="mt-1 text-xs text-ink-secondary">
+            {[pr.status, pr.country].filter(Boolean).join(" · ")}
+          </div>
+          {pr.themes.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {pr.themes.slice(0, 4).map((t) => (
+                <Tag key={t}>{t}</Tag>
+              ))}
+            </div>
+          )}
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+function PublicationsList({ q }: { q: string }) {
+  const pubs = usePublicationsSearch(q);
+  if (pubs.isLoading) return <SkeletonRows />;
+  if (!pubs.data?.length) return <Empty>No publications match your search.</Empty>;
+  return (
+    <div className="grid grid-cols-1 gap-3">
+      {pubs.data.map((pub) => (
+        <Card key={pub.id} className="p-4">
+          <EntityLink to={`/publications/${pub.id}`} className="text-[15px]">
+            {pub.title}
+          </EntityLink>
+          <div className="mt-1 text-xs text-ink-secondary">
+            {[pub.journal, pub.publication_date].filter(Boolean).join(" · ")}
+          </div>
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+function AllResults({ q, onTab }: { q: string; onTab: (t: Tab) => void }) {
+  const people = usePeople({ q, limit: "4" });
+  const orgs = useOrganizations({ q });
+  const projects = useProjects({ q: q || undefined, limit: "4" });
+  const programs = usePrograms();
+  const caps = useCapabilitiesSearch(q);
+  const pubs = usePublicationsSearch(q);
+  const ql = q.toLowerCase();
+  const programRows = (programs.data ?? []).filter((p) => p.name.toLowerCase().includes(ql)).slice(0, 4);
+
+  const groups = [
+    { tab: "people" as Tab, title: "People", rows: (people.data ?? []).slice(0, 4).map((p) => ({ id: p.id, to: `/people/${p.id}`, label: p.full_name })) },
+    { tab: "organizations" as Tab, title: "Organisations", rows: (orgs.data ?? []).slice(0, 4).map((o) => ({ id: o.id, to: `/organizations/${o.id}`, label: o.name })) },
+    { tab: "projects" as Tab, title: "Projects", rows: (projects.data ?? []).slice(0, 4).map((pr) => ({ id: pr.id, to: `/projects/${pr.id}`, label: pr.title })) },
+    { tab: "programmes" as Tab, title: "Programmes", rows: programRows.map((p) => ({ id: p.id, to: `/programs/${p.id}`, label: p.name })) },
+    { tab: "capabilities" as Tab, title: "Capabilities", rows: (caps.data ?? []).slice(0, 4).map((c) => ({ id: c.id, to: `/capabilities/${c.id}`, label: c.name })) },
+    { tab: "publications" as Tab, title: "Publications", rows: (pubs.data ?? []).slice(0, 4).map((pub) => ({ id: pub.id, to: `/publications/${pub.id}`, label: pub.title })) },
+  ].filter((g) => g.rows.length > 0);
+
+  if (!groups.length) return <Empty>No results across the directory for "{q}".</Empty>;
+  return (
+    <div className="space-y-6">
+      {groups.map((g) => (
+        <div key={g.tab}>
+          <div className="mb-2 flex items-baseline justify-between">
+            <h2 className="text-[15px] font-semibold text-ink">{g.title}</h2>
+            <button type="button" onClick={() => onTab(g.tab)} className="text-sm text-brand hover:underline">
+              See all
+            </button>
+          </div>
+          <ul className="divide-y divide-border rounded-xl border border-border">
+            {g.rows.map((r) => (
+              <li key={r.id} className="px-3 py-2">
+                <EntityLink to={r.to}>{r.label}</EntityLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       ))}
     </div>
   );

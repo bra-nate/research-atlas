@@ -7,6 +7,7 @@ import type {
   Grant,
   Organization,
   Person,
+  PersonListItem,
   Program,
   Project,
   ProjectMember,
@@ -86,6 +87,14 @@ export function toPerson(r: typeof people.$inferSelect): Person {
     merged_into: r.mergedInto,
     ...prov(r),
   };
+}
+
+/** Person plus aggregate counts, for list/search/featured endpoints. */
+export function toPersonListItem(
+  r: typeof people.$inferSelect,
+  consortiaCount: number,
+): PersonListItem {
+  return { ...toPerson(r), consortia_count: consortiaCount };
 }
 
 export function toCapability(r: typeof capabilities.$inferSelect): Capability {

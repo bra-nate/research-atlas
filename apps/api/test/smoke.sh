@@ -65,6 +65,8 @@ ck "GET /projects" 200 "$(code "$BASE/projects")"
 ck "GET /capabilities" 200 "$(code "$BASE/capabilities")"
 ck "GET /grants" 200 "$(code "$BASE/grants")"
 ck "GET /publications" 200 "$(code "$BASE/publications")"
+ck "GET /stats" 200 "$(code "$BASE/stats")"
+ck "stats has people count >=1" 1 "$(curl -s "$BASE/stats" | grep -o '"people":[0-9]*' | grep -o '[0-9]*' | head -1 | awk '{print ($1>=1)?1:0}')"
 ck "GET /people/:id/publications" 200 "$(code "$BASE/people/$PERSON/publications")"
 # hero: person → projects (across programmes)
 HERO=$(curl -s "$BASE/people/$PERSON/projects")
@@ -77,6 +79,9 @@ HEROJSON=$(curl -s "$BASE/people/$HERO_ID/projects")
 ck "hero person spans WACCBIP" 1 "$(echo "$HEROJSON" | grep -c 'waccbip.org')"
 ck "hero person spans SickleGenAfrica" 1 "$(echo "$HEROJSON" | grep -c 'SickleGenAfrica')"
 ck "search people q=malaria finds 1" 1 "$(jqlen "$BASE/people?q=malaria")"
+ck "GET /people/featured" 200 "$(code "$BASE/people/featured")"
+ck "people list carries consortia_count" 1 "$(curl -s "$BASE/people" | grep -c 'consortia_count')"
+ck "featured returns only multi-consortium people" 1 "$(curl -s "$BASE/people/featured" | grep -o '"consortia_count":[0-9]*' | grep -o '[0-9]*' | awk 'BEGIN{ok=1} {if($1<2)ok=0} END{print ok}')"
 ck "provenance label present (ingested_unverified)" 1 "$(curl -s "$BASE/organizations" | grep -c 'ingested_unverified')"
 
 # --- P6: cross-source entity resolution on real data ---
@@ -128,6 +133,7 @@ ck "project→grants returns >=1 grant" 1 "$([ "$(curl -s "$BASE/projects/$GPROJ
 PPROJ=$(psql -h localhost -p 5432 -d $DB -tAc "select project_id from project_publications limit 1")
 ck "GET /projects/:id/publications" 200 "$(code "$BASE/projects/$PPROJ/publications")"
 ck "project→publications returns >=1 output" 1 "$([ "$(curl -s "$BASE/projects/$PPROJ/publications" | grep -c '"publication"')" -ge 1 ] && echo 1 || echo 0)"
+ck "GET /projects?sort=recent&limit=3 returns <=3" 1 "$([ "$(jqlen "$BASE/projects?sort=recent&limit=3")" -le 3 ] && echo 1 || echo 0)"
 
 echo "### Result: $pass passed, $fail failed"
 [ "$fail" = "0" ]

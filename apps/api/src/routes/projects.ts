@@ -13,7 +13,7 @@ import {
   publications,
 } from "../db/schema.js";
 import { asyncHandler, HttpError } from "../http.js";
-import { prefixTsQuery, str } from "../lib/search.js";
+import { parseLimit, prefixTsQuery, str } from "../lib/search.js";
 import {
   toGrant,
   toOrganization,
@@ -38,11 +38,16 @@ projectsRouter.get(
     if (programId) filters.push(eq(projects.programId, programId));
     if (country) filters.push(eq(projects.country, country));
 
-    const rows = await db
+    const sort = str(req.query.sort);
+    const limit = parseLimit(req.query.limit);
+    let qb = db
       .select()
       .from(projects)
       .where(filters.length ? and(...filters) : undefined)
-      .orderBy(projects.title);
+      .orderBy(sort === "recent" ? desc(projects.ingestedAt) : projects.title)
+      .$dynamic();
+    if (limit) qb = qb.limit(limit);
+    const rows = await qb;
     res.json(rows.map(toProject));
   }),
 );
