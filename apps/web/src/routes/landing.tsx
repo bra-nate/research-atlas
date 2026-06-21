@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState, type FormEvent, type ReactNode } from "react";
+import { lazy, Suspense, useState, type FormEvent, type ReactNode } from "react";
 import { usePeopleFeatured, useProjects, useStats } from "../lib/hooks";
 import type { StatsResponse } from "@research-atlas/types";
 import {
@@ -10,6 +10,8 @@ import {
   SkeletonRows,
   Tag,
 } from "../components/ui";
+
+const GraphField = lazy(() => import("../components/graph-field"));
 
 const SCOPES = [
   { value: "all", label: "All" },
@@ -180,8 +182,12 @@ function Hero() {
             </p>
           </div>
 
-          {/* connection-graph motif — reinforces the cross-consortium hero feature */}
-          <GraphMotif />
+          {/* live 3D knowledge graph — reinforces the cross-consortium hero feature */}
+          <div aria-hidden className="relative hidden aspect-square w-full max-w-sm lg:block">
+            <Suspense fallback={<GraphMotif />}>
+              <GraphField />
+            </Suspense>
+          </div>
         </div>
       </div>
     </section>
@@ -191,7 +197,7 @@ function Hero() {
 /** Decorative node-and-edge graph hinting at cross-consortium connections. */
 function GraphMotif() {
   return (
-    <div aria-hidden className="relative hidden lg:block">
+    <div aria-hidden className="absolute inset-0 grid place-items-center">
       <svg viewBox="0 0 320 300" className="h-auto w-full max-w-sm">
         <g
           stroke="rgba(21,160,107,0.55)"
