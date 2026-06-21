@@ -1,0 +1,2998 @@
+{
+  "centres": [
+    {
+      "name": "West African Genetic Medicine Centre",
+      "short_name": "WAGMC",
+      "host_university": "University of Ghana",
+      "country": "Ghana",
+      "ace_phase": "ace_2",
+      "website": "https://wagmc.ug.edu.gh",
+      "thematic_areas": [
+        "genomics",
+        "genetic medicine",
+        "bioinformatics",
+        "sickle cell disease",
+        "health"
+      ],
+      "experts": []
+    },
+    {
+      "name": "Centre for Dryland Agriculture",
+      "short_name": "CDA",
+      "host_university": "Bayero University, Kano",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cda-buk.edu.ng",
+      "thematic_areas": [
+        "natural resource management and climate change",
+        "dryland crops and cropping systems",
+        "livestock production and range management",
+        "livelihood and natural resource economics",
+        "agriculture"
+      ],
+      "experts": [
+        {
+          "full_name": "Sanusi Gaya Mohammed",
+          "title": "Professor",
+          "specializations": [
+            "plant breeding"
+          ]
+        },
+        {
+          "full_name": "Muhammad Auwal Hussaini",
+          "title": "Professor",
+          "specializations": [
+            "systems agronomy"
+          ]
+        },
+        {
+          "full_name": "Amina Mustapha",
+          "title": "Professor",
+          "specializations": [
+            "agricultural value chains analysis"
+          ]
+        },
+        {
+          "full_name": "Adamu Idris Tanko",
+          "title": "Professor",
+          "specializations": [
+            "development geographies"
+          ]
+        },
+        {
+          "full_name": "Aliyu Barau",
+          "title": "Dr.",
+          "specializations": [
+            "spatial planning and climate change"
+          ]
+        },
+        {
+          "full_name": "Murtala M. Badamasi",
+          "title": "Dr.",
+          "specializations": [
+            "remote sensing and environmental modeling"
+          ]
+        },
+        {
+          "full_name": "Abba Aminu",
+          "title": "Professor",
+          "specializations": [
+            "agricultural economics"
+          ]
+        },
+        {
+          "full_name": "Maharazu Alhaji Yusuf",
+          "title": "Professor",
+          "specializations": [
+            "soil geography"
+          ]
+        },
+        {
+          "full_name": "Ibrahim R. Mohammed",
+          "title": "Professor",
+          "specializations": [
+            "animal science"
+          ]
+        },
+        {
+          "full_name": "Mustapha M Bello",
+          "title": "Dr.",
+          "specializations": [
+            "water management"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Centre for Food Technology and Research",
+      "short_name": "CEFTER",
+      "host_university": "Benue State University, Makurdi",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cefterbsu.edu.ng",
+      "thematic_areas": [
+        "control of post-harvest losses",
+        "agriculture"
+      ],
+      "experts": [
+        {
+          "full_name": "Simon Terver Ubwa",
+          "title": "Prof.",
+          "specializations": [
+            "food chemistry"
+          ]
+        },
+        {
+          "full_name": "Godwin Oche Obochi",
+          "title": "Prof.",
+          "specializations": [
+            "toxicology"
+          ]
+        },
+        {
+          "full_name": "Emmanuel Hemen Agba",
+          "title": "Prof.",
+          "specializations": [
+            "radiation and medical physics"
+          ]
+        },
+        {
+          "full_name": "John Ogbaji Igoli",
+          "title": "Prof.",
+          "specializations": [
+            "natural product chemistry"
+          ]
+        },
+        {
+          "full_name": "Charles Chukwuma Ariahu",
+          "title": "Prof.",
+          "specializations": [
+            "food engineering"
+          ]
+        },
+        {
+          "full_name": "Vange Terkimbir",
+          "title": "Prof.",
+          "specializations": [
+            "biostatistics"
+          ]
+        },
+        {
+          "full_name": "Benjamin Asen Anhwange",
+          "title": "Dr.",
+          "specializations": [
+            "analytical chemistry"
+          ]
+        },
+        {
+          "full_name": "Peter Agorye Adie",
+          "title": "Dr.",
+          "specializations": [
+            "analytical chemistry"
+          ]
+        },
+        {
+          "full_name": "Benedict Labe",
+          "title": "Dr.",
+          "specializations": [
+            "mechanical production technology"
+          ]
+        },
+        {
+          "full_name": "Ogo Agbor Ogo",
+          "title": "Dr.",
+          "specializations": [
+            "nutritional biochemistry"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "West Africa Centre for Crop Improvement",
+      "short_name": "WACCI",
+      "host_university": "University of Ghana",
+      "country": "Ghana",
+      "ace_phase": "ace_impact",
+      "website": "https://wacci.ug.edu.gh",
+      "thematic_areas": [
+        "plant breeding",
+        "seed science",
+        "agricultural innovation and entrepreneurship",
+        "agriculture"
+      ],
+      "experts": [
+        {
+          "full_name": "Kwadwo Ofori",
+          "title": "Prof.",
+          "specializations": [
+            "plant breeding"
+          ]
+        },
+        {
+          "full_name": "Irene Egyir",
+          "title": "Prof.",
+          "specializations": [
+            "agricultural trade",
+            "marketing & agribusinesses"
+          ]
+        },
+        {
+          "full_name": "Tongoona Pangirayi",
+          "title": "Prof.",
+          "specializations": [
+            "plant breeding"
+          ]
+        },
+        {
+          "full_name": "Samuel Kwame Offei",
+          "title": "Prof.",
+          "specializations": [
+            "plant virology"
+          ]
+        },
+        {
+          "full_name": "Seloame Tatu Nyaku",
+          "title": "Dr.",
+          "specializations": [
+            "plant pathology and nematology"
+          ]
+        },
+        {
+          "full_name": "Gloria Essilfie",
+          "title": "Dr.",
+          "specializations": [
+            "post-harvest technology and food safety"
+          ]
+        },
+        {
+          "full_name": "Naalamle Amissah",
+          "title": "Dr.",
+          "specializations": [
+            "cell and tissue culture / horticulture"
+          ]
+        },
+        {
+          "full_name": "Agyemang Danquah",
+          "title": "Dr.",
+          "specializations": [
+            "plant molecular genetics"
+          ]
+        },
+        {
+          "full_name": "Beatrice Ifie",
+          "title": "Dr.",
+          "specializations": [
+            "plant breeding"
+          ]
+        },
+        {
+          "full_name": "John Eleblu",
+          "title": "Dr.",
+          "specializations": [
+            "plant molecular genetics & plant breeding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regional Centre of Excellence on Pastoral Productions: Milk, Meat, Hides and Skins",
+      "short_name": "CERPP",
+      "host_university": "Université Abdou Moumouni de Niamey",
+      "country": "Niger",
+      "ace_phase": "ace_impact",
+      "website": "http://www.cerppniger.org",
+      "thematic_areas": [
+        "training and research in pastoral productions",
+        "valorization of pastoral products (meat",
+        "milk",
+        "hides and skins)",
+        "agriculture"
+      ],
+      "experts": [
+        {
+          "full_name": "Abdoulaye Soumana Gouro",
+          "title": null,
+          "specializations": [
+            "animal feed"
+          ]
+        },
+        {
+          "full_name": "Maxime Banoin",
+          "title": null,
+          "specializations": [
+            "pastoralism"
+          ]
+        },
+        {
+          "full_name": "Tankari Dan Badjo Abdourahamane",
+          "title": null,
+          "specializations": [
+            "environmental pollution"
+          ]
+        },
+        {
+          "full_name": "Balla Abdourahamane",
+          "title": null,
+          "specializations": [
+            "food industry"
+          ]
+        },
+        {
+          "full_name": "Adamou Amoukou Ibrahim",
+          "title": null,
+          "specializations": [
+            "plant genetics"
+          ]
+        },
+        {
+          "full_name": "Soumana Boubacar",
+          "title": null,
+          "specializations": [
+            "agro-economics"
+          ]
+        },
+        {
+          "full_name": "Moumouni Issa",
+          "title": null,
+          "specializations": [
+            "physiology of production"
+          ]
+        },
+        {
+          "full_name": "Ambouta Karimou",
+          "title": null,
+          "specializations": [
+            "soil science"
+          ]
+        },
+        {
+          "full_name": "Alhassoumi Hadizatou",
+          "title": null,
+          "specializations": [
+            "socio-economics"
+          ]
+        },
+        {
+          "full_name": "Adam Toudou",
+          "title": null,
+          "specializations": [
+            "phytopathology"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regional Centre of Excellence in Poultry Sciences",
+      "short_name": "CERSA",
+      "host_university": "Université de Lomé",
+      "country": "Togo",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cersa-togo.org",
+      "thematic_areas": [
+        "poultry product processing processes",
+        "biosecurity in the poultry sector",
+        "poultry biotechnology and genetics",
+        "marketing and socio-economics of the poultry industry",
+        "agriculture"
+      ],
+      "experts": [
+        {
+          "full_name": "Messanvi Gbeassor",
+          "title": "Prof.",
+          "specializations": [
+            "animal physiology"
+          ]
+        },
+        {
+          "full_name": "Germain Sayo Elolo Osseyi",
+          "title": "Prof.",
+          "specializations": [
+            "food technology and process engineering"
+          ]
+        },
+        {
+          "full_name": "Amivi Tete-Benissan",
+          "title": "Prof.",
+          "specializations": [
+            "molecular biology"
+          ]
+        },
+        {
+          "full_name": "Yaovi Ameyapoh",
+          "title": "Prof.",
+          "specializations": [
+            "microbiology - biochemistry"
+          ]
+        },
+        {
+          "full_name": "Christophe Chrysostome",
+          "title": "Prof.",
+          "specializations": [
+            "genetics and animal breeding"
+          ]
+        },
+        {
+          "full_name": "Decuypere Eddy",
+          "title": "Prof.",
+          "specializations": [
+            "animal physiology"
+          ]
+        },
+        {
+          "full_name": "Karou Simplice",
+          "title": "Prof.",
+          "specializations": [
+            "biochemistry"
+          ]
+        },
+        {
+          "full_name": "Okanlawon Onagbesan",
+          "title": "Prof.",
+          "specializations": [
+            "animal physiology"
+          ]
+        },
+        {
+          "full_name": "Koffi Yovo",
+          "title": "Dr.",
+          "specializations": [
+            "rural socio-economy"
+          ]
+        },
+        {
+          "full_name": "Komi Agboka",
+          "title": "Dr.",
+          "specializations": [
+            "entomology"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "African Center of Excellence on Climate Change, Biodiversity and Sustainable Agriculture",
+      "short_name": "WASCAL/CEA-CCBAD",
+      "host_university": "Université Félix Houphouët-Boigny d'Abidjan",
+      "country": "Côte d'Ivoire",
+      "ace_phase": "ace_impact",
+      "website": "https://www.wascal-ci.org",
+      "thematic_areas": [
+        "climate change in relation to climate systems",
+        "climate change",
+        "biodiversity and ecosystem services",
+        "climate change and sustainable agriculture",
+        "agriculture"
+      ],
+      "experts": [
+        {
+          "full_name": "KOUAMELAN Essetchi",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "FATOGOMA Sorho",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "BIDI Alain",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "CHERIF Mamadou",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "ABO Kouabenan",
+          "title": "Dr.",
+          "specializations": [
+            "agrobiodiversity - ecosystem services"
+          ]
+        },
+        {
+          "full_name": "YEBOUE Véronique",
+          "title": "Prof.",
+          "specializations": [
+            "climate services and modelling"
+          ]
+        },
+        {
+          "full_name": "CAMARA Brahima",
+          "title": "Dr.",
+          "specializations": [
+            "diagnostic methods and biopesticide"
+          ]
+        },
+        {
+          "full_name": "ALABI Taofic",
+          "title": null,
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "African Centre of Excellence in Agriculture for Food and Nutritional Security",
+      "short_name": "AGRISAN",
+      "host_university": "Université Cheikh Anta Diop (UCAD)",
+      "country": "Senegal",
+      "ace_phase": "ace_impact",
+      "website": null,
+      "thematic_areas": [
+        "agrobiosciences",
+        "biotechnologies",
+        "plant and animal production",
+        "food processing",
+        "nutrition",
+        "biodiversity and conservation",
+        "socio-economics",
+        "agriculture"
+      ],
+      "experts": [
+        {
+          "full_name": "Mady Cisse",
+          "title": null,
+          "specializations": [
+            "food technology"
+          ]
+        },
+        {
+          "full_name": "Papa Madialacké Diedhiou",
+          "title": null,
+          "specializations": [
+            "phytopathology"
+          ]
+        },
+        {
+          "full_name": "Ibrahima Diedhiou",
+          "title": null,
+          "specializations": [
+            "agroecology"
+          ]
+        },
+        {
+          "full_name": "Nicole Dossou",
+          "title": null,
+          "specializations": [
+            "nutrition"
+          ]
+        },
+        {
+          "full_name": "Fatou Ndoye",
+          "title": null,
+          "specializations": [
+            "soil microbiology"
+          ]
+        },
+        {
+          "full_name": "Mame Samba Mbaye",
+          "title": null,
+          "specializations": [
+            "botany",
+            "biodiversity"
+          ]
+        },
+        {
+          "full_name": "Abdoulaye Diagne",
+          "title": null,
+          "specializations": [
+            "economics"
+          ]
+        },
+        {
+          "full_name": "Modou Dieng",
+          "title": null,
+          "specializations": [
+            "food technology"
+          ]
+        },
+        {
+          "full_name": "Abdala Gamby Diedhiou",
+          "title": null,
+          "specializations": [
+            "microbiology"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regional Centre for Energy and Environmental Sustainability",
+      "short_name": "RCEES",
+      "host_university": "University of Energy and Natural Resources (UENR)",
+      "country": "Ghana",
+      "ace_phase": "ace_impact",
+      "website": "https://www.rcees.uenr.edu.gh",
+      "thematic_areas": [
+        "energy and environmental sustainability",
+        "environment"
+      ],
+      "experts": [
+        {
+          "full_name": "Nana Sarfo Agyemang Derkyi",
+          "title": "Prof. Ing.",
+          "specializations": []
+        },
+        {
+          "full_name": "Samuel Gyamfi",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Francis K. Attiogbe",
+          "title": "Dr. Ing.",
+          "specializations": []
+        },
+        {
+          "full_name": "Amos Tiereyangn Kabo-bah",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Prince Antwi-Agyei",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Eric Effah-Donyina",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Emmanuel Nyantakyi",
+          "title": "Dr. Ing.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mark Amo Boateng",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Francis Atta Kuranchie",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Felix Amankwah Diawuo",
+          "title": "Mr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "West African Centre for Water, Irrigation and Sustainable Agriculture",
+      "short_name": "WACWISA",
+      "host_university": "University for Development Studies (UDS), Tamale",
+      "country": "Ghana",
+      "ace_phase": "ace_impact",
+      "website": "https://www.wacwisa.edu.gh",
+      "thematic_areas": [
+        "integrated water resources management",
+        "irrigation and drainage engineering",
+        "sustainable agricultural and food systems",
+        "climate change",
+        "food and nutrition security",
+        "environment"
+      ],
+      "experts": [
+        {
+          "full_name": "Saa Dittoh",
+          "title": "Prof.",
+          "specializations": [
+            "irrigation systems economics",
+            "natural resources management"
+          ]
+        },
+        {
+          "full_name": "Abdul-Ganiyu Shaibu",
+          "title": "Prof.",
+          "specializations": [
+            "hydrology",
+            "soil-crop-water relations",
+            "irrigation infrastructure and management",
+            "water resources management"
+          ]
+        },
+        {
+          "full_name": "Samuel J. Cobbina",
+          "title": "Dr.",
+          "specializations": [
+            "water quality monitoring and assessment",
+            "environmental health risk assessment"
+          ]
+        },
+        {
+          "full_name": "Sylvester N. Ayimbila",
+          "title": "Dr.",
+          "specializations": [
+            "irrigation innovation management"
+          ]
+        },
+        {
+          "full_name": "Mammud A. Akudugu",
+          "title": "Dr.",
+          "specializations": [
+            "design and implementation of monitoring and evaluation (m&e) frameworks"
+          ]
+        },
+        {
+          "full_name": "Abdul-Halim Abubakari",
+          "title": "Prof.",
+          "specializations": [
+            "climate smart agriculture"
+          ]
+        },
+        {
+          "full_name": "Dzigbodi A. Doke",
+          "title": "Dr.",
+          "specializations": [
+            "climate change",
+            "water resources and gender conversations"
+          ]
+        },
+        {
+          "full_name": "Israel K. Dzomeku",
+          "title": "Prof.",
+          "specializations": [
+            "irrigation agronomy",
+            "weed science and management",
+            "crop science"
+          ]
+        },
+        {
+          "full_name": "Bernard N. Baatuuwie",
+          "title": "Dr.",
+          "specializations": [
+            "gis modelling and remote sensing"
+          ]
+        },
+        {
+          "full_name": "Raymond A. Kasei",
+          "title": "Dr.",
+          "specializations": [
+            "hydrology",
+            "climate change",
+            "gender",
+            "gis modelling and surveying"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Africa Centre of Excellence in Coastal Resilience",
+      "short_name": "ACECoR",
+      "host_university": "University of Cape Coast",
+      "country": "Ghana",
+      "ace_phase": "ace_impact",
+      "website": "https://acecor.ucc.edu.gh",
+      "thematic_areas": [
+        "coastal geomorphology and engineering",
+        "climate change adaptation and mitigation",
+        "blue economy",
+        "governance and social resilience",
+        "disaster risk management and migration",
+        "ecosystems and biodiversity",
+        "environment"
+      ],
+      "experts": [
+        {
+          "full_name": "Precious A. D. Mattah",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Noble K. Asare",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Isaac Okyere",
+          "title": "Dr.",
+          "specializations": [
+            "fisheries science",
+            "coastal management"
+          ]
+        },
+        {
+          "full_name": "Donatus Angnuureng",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Michael Miyittah",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Samuel K. Tulashie",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Samuel K. M. Agblorti",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Emmanuel Acheampong",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Elizabeth Effah",
+          "title": "Ms.",
+          "specializations": [
+            "climate change and adaptation"
+          ]
+        },
+        {
+          "full_name": "Ivy Gyimah Akouko",
+          "title": "Ms.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Centre of Excellence in Agriculture, Environment and Health",
+      "short_name": "CEA-AGIR",
+      "host_university": "Cheikh Anta Diop University, Dakar",
+      "country": "Senegal",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cea-agir.ucad.sn",
+      "thematic_areas": [
+        "air quality and human health",
+        "resources",
+        "water quality and human health",
+        "transitions and new health challenges",
+        "restoration of degraded environments for well-being and health",
+        "environment"
+      ],
+      "experts": [
+        {
+          "full_name": "Aboubacry Kane",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mouhamadou F Kébé",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mamadou Fall",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Abdoulaye Samb",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Sidy Mohamed Seck",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Lamine Ndiaye",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Adama Faye",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Enguerran Macia",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mouhamadou Mawloud Diakhate",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Fatou Bintou Sarr",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Lamine Gueye",
+          "title": "Prof.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Centre of Excellence in Environment and Mining",
+      "short_name": "CEA-EMIG",
+      "host_university": "School of Mines, Industry and Geology (EMIG)",
+      "country": "Niger",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cea-emig.ne",
+      "thematic_areas": [
+        "mining",
+        "geology",
+        "environment"
+      ],
+      "experts": []
+    },
+    {
+      "name": "Center for Studies, Training and Research in Social Risk Management",
+      "short_name": "CEFORGRIS",
+      "host_university": "Joseph KI-ZERBO University (UJKZ)",
+      "country": "Burkina Faso",
+      "ace_phase": "ace_impact",
+      "website": "http://www.ceforgris-ujkz.org",
+      "thematic_areas": [
+        "management and assessment of risks and social impacts",
+        "environmental and social safeguard",
+        "research methods in social sciences",
+        "health and safety at work",
+        "natural resources",
+        "societies and risk",
+        "educational engineering",
+        "expropriations",
+        "resettlement and rehabilitation",
+        "community health",
+        "social and gender risk assessment",
+        "environment"
+      ],
+      "experts": [
+        {
+          "full_name": "André Soubéïga",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Valérie Rouamba/Ouédraogo",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Jean Marie DIPAMA",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Fatoumata BADINI/KINDA",
+          "title": null,
+          "specializations": [
+            "gender and social protection"
+          ]
+        },
+        {
+          "full_name": "Oumarou OUEDRAOGO",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Yacouba BANHORO",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Alexis KABORE",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Augustin PALE",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Ousséni OUEDRAOGO",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Ramané KABORE",
+          "title": null,
+          "specializations": [
+            "development policies"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "African Center of Excellence for Genomics of Infectious Diseases",
+      "short_name": "ACEGID",
+      "host_university": "Redeemer's University",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.acegid.org",
+      "thematic_areas": [
+        "genomics of infectious diseases",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Peter Okokhere",
+          "title": "Prof.",
+          "specializations": [
+            "clinical sciences"
+          ]
+        },
+        {
+          "full_name": "Donald Grant",
+          "title": "Dr.",
+          "specializations": [
+            "clinical sciences"
+          ]
+        },
+        {
+          "full_name": "I.O.O Komolafe",
+          "title": "Prof.",
+          "specializations": [
+            "virology"
+          ]
+        },
+        {
+          "full_name": "Daouda Ndiaye",
+          "title": "Prof.",
+          "specializations": [
+            "clinical sciences / parasitology"
+          ]
+        },
+        {
+          "full_name": "Pardis Sabeti",
+          "title": "Prof.",
+          "specializations": [
+            "bioinformatics"
+          ]
+        },
+        {
+          "full_name": "Robert Garry",
+          "title": "Prof.",
+          "specializations": [
+            "immunology"
+          ]
+        },
+        {
+          "full_name": "Jonathan Heeney",
+          "title": "Prof.",
+          "specializations": [
+            "pathology"
+          ]
+        },
+        {
+          "full_name": "Kayvon Modjarrad",
+          "title": "Dr.",
+          "specializations": [
+            "clinical virology"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Africa Centre of Excellence for Neglected Tropical Diseases and Forensic Biotechnology",
+      "short_name": "ACENTDFB",
+      "host_university": "Ahmadu Bello University, Zaria",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://acentdfb.abu.edu.ng",
+      "thematic_areas": [
+        "molecular epidemiology and drug management of neglected tropical diseases",
+        "biotechnology application in forensic issues",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Yakubu KE Ibrahim",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mohammed Mamman",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Junaid Kabir",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "J.K.P. Kwaga",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "H.M. Inuwa",
+          "title": "Prof.",
+          "specializations": [
+            "plant genetics"
+          ]
+        },
+        {
+          "full_name": "Sani Ibrahim",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "I.S. Ndams",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "A. B. Sallau",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "M.N. Shuaibu",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Hussaina Makun",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Emmanuel Balogun",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Salihu Aliyu",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Centre of Excellence in Reproductive Health Innovation",
+      "short_name": "CERHI",
+      "host_university": "University of Benin, Edo State",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cerhi.uniben.edu.ng",
+      "thematic_areas": [
+        "reproductive health",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Alphonsus Isara",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "James Osaikhuwuonmwan",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Kenneth Toby Maduako",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Michael Aziken",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Vincent Adam",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Kehinde Osazee",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "A. O. Aisien",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Nkoli Aniekwu",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Kokunre Eghafuna",
+          "title": "Prof.",
+          "specializations": [
+            "gender and social standards"
+          ]
+        },
+        {
+          "full_name": "Lorretta Ntoimo",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "African Centre of Excellence for Mother and Child Health",
+      "short_name": "CEA-SAMEF",
+      "host_university": "Université Cheikh Anta Diop de Dakar (UCAD)",
+      "country": "Senegal",
+      "ace_phase": "ace_impact",
+      "website": "https://www.ceasamef.sn",
+      "thematic_areas": [
+        "maternal and child health",
+        "nutrition",
+        "public health (mother and child)",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Alassane Diouf",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Marie Edouard Faye Diémé",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Mamadou Lamine Cissé",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Maguette Mbaye",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Serigne Modou Kane Guèye",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Assane Sylla",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Boubacar Camara",
+          "title": "Professor",
+          "specializations": [
+            "pediatrics"
+          ]
+        },
+        {
+          "full_name": "Saliou Diouf",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Papa Moctar Faye",
+          "title": "Professor",
+          "specializations": [
+            "pediatrics"
+          ]
+        },
+        {
+          "full_name": "Adama Faye",
+          "title": "Professor",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "African Centre of Excellence for Training, Research and Expertise in Medicinal Sciences",
+      "short_name": "CEA-CFOREM",
+      "host_university": "Université Joseph KI-ZERBO",
+      "country": "Burkina Faso",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cforem-univ-ouaga.org",
+      "thematic_areas": [
+        "improving pharmaceutical management and practice in hospitals",
+        "research and development of herbal medicines",
+        "development of innovative pharmaceutical forms",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Adama TRAORE",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Jean SAKANDE",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Maxime DRABO",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Estelle Noëla Hoho YOUL",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Josias B. G. YAMEOGO",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Salimata TRAORE",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Hermine ZIME/DIAWARA",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Salfo OUEDRAOGO",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Charles Bavouma SOMBIE",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Abdoul Karim SAKIRA",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Daniel DORI",
+          "title": null,
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "African Centre of Excellence in Biotechnological Innovations for the Elimination of Vector-borne Diseases",
+      "short_name": "ACE/ITECH-MTV",
+      "host_university": "Université Nazi BONI",
+      "country": "Burkina Faso",
+      "ace_phase": "ace_impact",
+      "website": "http://cea-itech.u-naziboni.bf",
+      "thematic_areas": [
+        "medical and veterinary entomology",
+        "ecosystems - health - societies",
+        "molecular biology & genetic engineering",
+        "biosecurity - biosafety - quality management",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Ibrahim SANGARE",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Roch K. DABIRE",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Patrice TOE",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Adrien Marie Gaston BELEM",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Sanata BAMBA",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Jacques SIMPORE",
+          "title": "Prof.",
+          "specializations": [
+            "molecular genetics"
+          ]
+        },
+        {
+          "full_name": "Austin BURT",
+          "title": "Prof.",
+          "specializations": [
+            "genetic engineering"
+          ]
+        },
+        {
+          "full_name": "Frédéric TRIPET",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Hilary RANSON",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Steven SINKINS",
+          "title": "Prof.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "African Center of Excellence for the Prevention and Control of Communicable Diseases",
+      "short_name": "CEA-PCMT",
+      "host_university": "Gamal Abdel Nasser University of Conakry",
+      "country": "Guinea",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cea-pcmt.org",
+      "thematic_areas": [
+        "public health and microbiology",
+        "communicable disease research",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Abdoulaye SOW",
+          "title": "Dr.",
+          "specializations": [
+            "public health",
+            "mental health"
+          ]
+        },
+        {
+          "full_name": "Alpha Kabinet KEITA",
+          "title": "Dr.",
+          "specializations": [
+            "microbiology"
+          ]
+        },
+        {
+          "full_name": "Alioune CAMARA",
+          "title": "Prof.",
+          "specializations": [
+            "public health - epidemiology"
+          ]
+        },
+        {
+          "full_name": "Mahmoud Sama CHERIF",
+          "title": "Dr.",
+          "specializations": [
+            "clinical research"
+          ]
+        },
+        {
+          "full_name": "Thierno Mamadou TOUNKARA",
+          "title": "Prof.",
+          "specializations": [
+            "dermatology",
+            "venereology"
+          ]
+        },
+        {
+          "full_name": "Mohamed Sahar TRAORE",
+          "title": "Prof.",
+          "specializations": [
+            "pharmacognosy"
+          ]
+        },
+        {
+          "full_name": "Mamadou Saliou SOW",
+          "title": "Prof.",
+          "specializations": [
+            "infectious diseases"
+          ]
+        },
+        {
+          "full_name": "Abdoulaye TOURE",
+          "title": "Prof.",
+          "specializations": [
+            "public health",
+            "epidemiology"
+          ]
+        },
+        {
+          "full_name": "Sidikiba SIDIBE",
+          "title": "Dr.",
+          "specializations": [
+            "public health and epidemiology"
+          ]
+        },
+        {
+          "full_name": "Abdoul Habib BEAVOGUI",
+          "title": "Dr.",
+          "specializations": [
+            "parasitology"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Africa Centre of Excellence in Public Health and Toxicological Research",
+      "short_name": "ACE-PUTOR",
+      "host_university": "University of Port Harcourt",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.aceputoruniport.edu.ng",
+      "thematic_areas": [
+        "public health",
+        "environmental toxicology",
+        "nutritional biochemistry / toxicology",
+        "midwifery and child health nursing",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Onyewuchi Akaranta",
+          "title": "Prof.",
+          "specializations": [
+            "toxicology"
+          ]
+        },
+        {
+          "full_name": "Eugene Onyeike",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Best Ordinioha",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Charles Tobin-West",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "K. Patrick-Iwuanyanwu",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Anthonet Ezejiofor",
+          "title": "Dr.",
+          "specializations": [
+            "toxicology"
+          ]
+        },
+        {
+          "full_name": "Catherine Ikewuchi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Francis Anacletus",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Oluseye Babatunde",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Faith Diorgu",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Africa Center of Excellence for Population Health and Policy",
+      "short_name": "ACEPHAP",
+      "host_university": "Bayero University Kano (BUK)",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.acephap.buk.edu.ng",
+      "thematic_areas": [
+        "population health",
+        "global health",
+        "maternal and child health",
+        "nutrition",
+        "mental health",
+        "infectious diseases",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Habib Galadanci",
+          "title": "Prof.",
+          "specializations": [
+            "infectious diseases / tropical medicine"
+          ]
+        },
+        {
+          "full_name": "Fatima Hassan Hanga",
+          "title": "Dr.",
+          "specializations": [
+            "child health / paediatric infectious disease"
+          ]
+        },
+        {
+          "full_name": "Zubairu Iliyasu",
+          "title": "Prof.",
+          "specializations": [
+            "public health"
+          ]
+        },
+        {
+          "full_name": "Baba Maiyaki Musa",
+          "title": "Dr.",
+          "specializations": [
+            "pulmonology / infectious diseases"
+          ]
+        },
+        {
+          "full_name": "Baba Isa",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Taiwo Amole",
+          "title": "Dr.",
+          "specializations": [
+            "public health / epidemiology"
+          ]
+        },
+        {
+          "full_name": "Saisu Maiwada",
+          "title": "Dr.",
+          "specializations": [
+            "biochemistry / nutrition"
+          ]
+        },
+        {
+          "full_name": "Mansurat Abdulazeez",
+          "title": null,
+          "specializations": [
+            "molecular science"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Africa Centre of Excellence for Mycotoxin and Food Safety",
+      "short_name": "ACEMFS",
+      "host_university": "Federal University of Technology, Minna",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://acemfs.futminna.edu.ng",
+      "thematic_areas": [
+        "food safety",
+        "toxicology",
+        "molecular biology and bioinformatics",
+        "health"
+      ],
+      "experts": [
+        {
+          "full_name": "Hussaini Anthony Makun",
+          "title": "Professor",
+          "specializations": [
+            "biochemistry",
+            "food safety and mycotoxicology"
+          ]
+        },
+        {
+          "full_name": "Hadiza Lami Muhammad",
+          "title": "Dr.",
+          "specializations": [
+            "biochemistry",
+            "heavy metals in foods",
+            "food toxicology"
+          ]
+        },
+        {
+          "full_name": "Emmanuel Ogbadoyi",
+          "title": "Professor",
+          "specializations": [
+            "biochemistry",
+            "drug discovery"
+          ]
+        },
+        {
+          "full_name": "Abdulkareem Ambali Saka",
+          "title": "Professor",
+          "specializations": [
+            "chemical engineering",
+            "nanotechnology"
+          ]
+        },
+        {
+          "full_name": "Chiemela Enyinnaya Chinma",
+          "title": "Professor",
+          "specializations": [
+            "food science and technology"
+          ]
+        },
+        {
+          "full_name": "Israel Olayemi",
+          "title": "Professor",
+          "specializations": [
+            "zoology",
+            "medical entomology"
+          ]
+        },
+        {
+          "full_name": "Oluwatosin Kudirat Shittu",
+          "title": "Dr.",
+          "specializations": [
+            "biochemistry",
+            "molecular biology and bioinformatics"
+          ]
+        },
+        {
+          "full_name": "John Adama",
+          "title": "Dr.",
+          "specializations": [
+            "veterinary medicine",
+            "animal parasitology",
+            "milk microbiology"
+          ]
+        },
+        {
+          "full_name": "Alexander Ikechukwu Ajai",
+          "title": "Dr.",
+          "specializations": [
+            "analytical chemistry",
+            "heavy metals and pesticides residues"
+          ]
+        },
+        {
+          "full_name": "Mercy Temitope Bankole",
+          "title": "Dr.",
+          "specializations": [
+            "analytical chemistry",
+            "nanotechnology"
+          ]
+        },
+        {
+          "full_name": "David Jeremiah Bala",
+          "title": "Dr.",
+          "specializations": [
+            "microbiology",
+            "environmental technology"
+          ]
+        },
+        {
+          "full_name": "Daudu Oladipupo A. Y.",
+          "title": "Dr.",
+          "specializations": [
+            "botany",
+            "plant breeding and genetics"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "African Centre of Excellence in Mathematical Sciences, Computer Science and Applications",
+      "short_name": "CEA-SMIA",
+      "host_university": "University of Abomey-Calavi",
+      "country": "Benin",
+      "ace_phase": "ace_impact",
+      "website": "https://www.ceasma-benin.org",
+      "thematic_areas": [
+        "fundamental mathematics",
+        "applied mathematics",
+        "operational research",
+        "statistics-probability",
+        "informatics",
+        "data sciences",
+        "signal processing",
+        "artificial intelligence",
+        "iot",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Jean Bio Chabi Orou",
+          "title": null,
+          "specializations": [
+            "fluid mechanics"
+          ]
+        },
+        {
+          "full_name": "Leonard Todjihounde",
+          "title": null,
+          "specializations": [
+            "mathematics"
+          ]
+        },
+        {
+          "full_name": "Cyriac Atindogbe",
+          "title": null,
+          "specializations": [
+            "mathematics"
+          ]
+        },
+        {
+          "full_name": "Eugene Ezin",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Gabriel Avossevou",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Aboubacar Marcos",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Guy A. Degla",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Liamidi Leadi",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Franck D. Houenou",
+          "title": null,
+          "specializations": [
+            "mathematics"
+          ]
+        },
+        {
+          "full_name": "Jules Degila",
+          "title": null,
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Regional Water and Environmental Sanitation Centre Kumasi",
+      "short_name": "RWESCK",
+      "host_university": "Kwame Nkrumah University of Science and Technology, Kumasi",
+      "country": "Ghana",
+      "ace_phase": "ace_impact",
+      "website": "https://rwesck.org",
+      "thematic_areas": [
+        "water and environmental sanitation engineering",
+        "technology",
+        "resilience systems and management",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Samuel Nii Odai",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Esi Awuah",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Geophrey K. Anornu",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Kwabena Biritwum Nyarko",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Richard A. Buamah",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Emmanuel A. Donkor",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Frederick O.K. Anyemedu",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Helen M.K. Essandoh",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Kwaku Amaning Adjei",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Eugene Appiah-Effah",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Obafemi Awolowo University ICT-Driven Knowledge Park",
+      "short_name": "OAK-Park",
+      "host_university": "Obafemi Awolowo University, Ile-Ife",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://ace.oauife.edu.ng",
+      "thematic_areas": [
+        "science",
+        "technology",
+        "engineering and mathematics (stem)",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "H. A. Soriyan",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "O. A. Odejobi",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "A. I. Oluwaranti",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "A. O. Oluwatope",
+          "title": "Professor",
+          "specializations": [
+            "computer/data communications and embedded systems"
+          ]
+        },
+        {
+          "full_name": "B. S. Afolabi",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "T. A. Kuku",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "S. A. Adeniran",
+          "title": "Professor",
+          "specializations": [
+            "communications"
+          ]
+        },
+        {
+          "full_name": "J. A. Osunbitan",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "M.O. Faborode",
+          "title": "Professor",
+          "specializations": [
+            "bioprocess engineering and machine design"
+          ]
+        },
+        {
+          "full_name": "O. A. Koya",
+          "title": "Professor",
+          "specializations": [
+            "machine design"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Africa Center of Excellence in Oilfield Chemicals Research",
+      "short_name": "ACE-CEFOR",
+      "host_university": "University of Port Harcourt",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.aceceforuniport.edu.ng",
+      "thematic_areas": [
+        "oilfield chemicals research",
+        "petroleum engineering",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Joseph A. Ajienka",
+          "title": "Prof.",
+          "specializations": [
+            "production enhancement & flow assurance"
+          ]
+        },
+        {
+          "full_name": "Onyewuchi Akaranta",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mike O. Onyekonwu",
+          "title": "Prof.",
+          "specializations": [
+            "well testing",
+            "reservoir study & development"
+          ]
+        },
+        {
+          "full_name": "Leo Osuji",
+          "title": "Prof.",
+          "specializations": [
+            "petroleum & environmental chemistry"
+          ]
+        },
+        {
+          "full_name": "S. S. Ikiensikimama",
+          "title": "Prof.",
+          "specializations": [
+            "pressure-volume-temperature (pvt) analysis"
+          ]
+        },
+        {
+          "full_name": "G. C. Okpokwasili",
+          "title": "Prof.",
+          "specializations": [
+            "bioremediation",
+            "microbial ecology & bioconversion"
+          ]
+        },
+        {
+          "full_name": "A. Dosunmu",
+          "title": "Prof.",
+          "specializations": [
+            "well engineering",
+            "wellbore stability",
+            "well design & construction"
+          ]
+        },
+        {
+          "full_name": "A. Kuye",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "F. D. Sikoki",
+          "title": "Prof.",
+          "specializations": [
+            "environmental assessment & management"
+          ]
+        },
+        {
+          "full_name": "I. L. Nwaogazie",
+          "title": "Prof.",
+          "specializations": [
+            "water resources",
+            "environmental & mathematical modeling of engineering systems"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Centre of Excellence in Mathematics, Informatics and ICT",
+      "short_name": "CEA-MITIC",
+      "host_university": "Gaston Berger University of Saint-Louis",
+      "country": "Senegal",
+      "ace_phase": "ace_impact",
+      "website": "http://www.ceamitic.sn",
+      "thematic_areas": [
+        "secure networks and systems with mobility (internet of things)",
+        "modeling of complex systems",
+        "mathematics and modeling",
+        "materials-components-systems",
+        "computer systems and knowledge (artificial intelligence)",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Ousmane Thiaré",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Jean Marie DEMBELE",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Mamadou SY",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Diaraf SECK",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Cheikh Talibouya",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Cheikh SARR",
+          "title": null,
+          "specializations": [
+            "cloud computing",
+            "ad hoc mobile networks and wireless sensor networks",
+            "internet protocol"
+          ]
+        },
+        {
+          "full_name": "Ahmadou Bamba SOW",
+          "title": null,
+          "specializations": [
+            "retrograde differential stochastic equations and applications",
+            "random trees and applications",
+            "probabilistic interpretation and homogenization of partial differential equations"
+          ]
+        },
+        {
+          "full_name": "Aliou DIOP",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Amadou Saidou Maiga",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Ngalla DJITTE",
+          "title": null,
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "African Center of Excellence for Water and Sanitation",
+      "short_name": "C2EA",
+      "host_university": "University of Abomey-Calavi (UAC)",
+      "country": "Benin",
+      "ace_phase": "ace_impact",
+      "website": "https://c2ea.ine-uac.net",
+      "thematic_areas": [
+        "water",
+        "sanitation",
+        "climate change",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Sintondji Ollivier Luc Crépin",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Lawin Agnidé Emmanuel",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Aina Martin Pépin",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Yalo Nicaise Euloge",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Alassane Abdoukarim",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Elegbede Manou Bernadin",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Dovonou Flavien Edi",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Hounsou Mathieu",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Bossa Yaovi Aymar",
+          "title": null,
+          "specializations": []
+        },
+        {
+          "full_name": "Akowanou Virgile Onésime",
+          "title": null,
+          "specializations": [
+            "process engineering"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Africa Centre of Excellence on Technology Enhanced Learning",
+      "short_name": "ACETEL",
+      "host_university": "National Open University of Nigeria (NOUN)",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://acetel.nou.edu.ng",
+      "thematic_areas": [
+        "technology enhanced learning",
+        "ict tools and solutions",
+        "innovative learning technologies",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Christine Ofulue",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Adewale Adesina",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Vivian Nwaocha",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Juliana Ndunagu",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Greg Nwodi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Juliet Inegbedion",
+          "title": "Dr.",
+          "specializations": [
+            "instructional design"
+          ]
+        },
+        {
+          "full_name": "Lukman Bello",
+          "title": "Dr.",
+          "specializations": [
+            "instructional design"
+          ]
+        },
+        {
+          "full_name": "Johnson Opateye",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Covenant Applied Informatics and Communication Africa Centre of Excellence",
+      "short_name": "CApIC-ACE",
+      "host_university": "Covenant University",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://ace.covenantuniversity.edu.ng",
+      "thematic_areas": [
+        "computer science",
+        "bioinformatics",
+        "biochemistry",
+        "electrical & electronics engineering",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Victor C. Osamor",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Abiodun Adebayo",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Solomon O. Rotimi",
+          "title": "Associate Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Olubanke O. Ogunlana",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Jelili O. Oyelade",
+          "title": "Associate Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Grace I. Olasehinde",
+          "title": "Associate Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Olayinka O. Ajani",
+          "title": "Professor",
+          "specializations": []
+        },
+        {
+          "full_name": "Joke A. Badejo",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Titilope M. Dokunmu",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Marion O. Adebiyi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Itunuoluwa M. Isewon",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Africa Centre of Excellence for Sustainable Power and Energy Development",
+      "short_name": "ACESPED",
+      "host_university": "University of Nigeria, Nsukka",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.acespedunn.edu.ng",
+      "thematic_areas": [
+        "electric power systems engineering",
+        "renewable energy and energy conservation",
+        "energy forecasting and assessment",
+        "sustainable energy materials",
+        "energy policy and management",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Godwin O. Unachukwu",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Sylvester O. Edelugo",
+          "title": "Engr. Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Victor S. Aigbodion",
+          "title": "Engr. Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Cajethan M. Nwosu",
+          "title": "Engr. Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Cosmas U. Ogbuka",
+          "title": "Engr. Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "O.U. Oparaku",
+          "title": "Engr. Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "A.O. Ekwue",
+          "title": "Engr. Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Anthony O. Ani",
+          "title": "Assoc. Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Wilfred Okonkwo",
+          "title": "Engr. Prof.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Africa Centre of Excellence in Future Energies and Electrochemical Systems",
+      "short_name": "ACE-FUELS",
+      "host_university": "Federal University of Technology Owerri",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://www.acefuels-futo.org",
+      "thematic_areas": [
+        "future energies",
+        "electrochemical systems",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "G. A. Chukwudebe",
+          "title": "Engr. Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "N. V. Ogueke",
+          "title": "Engr. Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "O. T. Ebiringa",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "C. S. Alisi",
+          "title": "Prof.",
+          "specializations": [
+            "biofuels"
+          ]
+        },
+        {
+          "full_name": "T. E. Ogbulie",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "N.P. Ohia",
+          "title": "Engr. Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Innocent O. Arukalam",
+          "title": "Engr. Dr.",
+          "specializations": [
+            "functional anticorrosion coatings"
+          ]
+        },
+        {
+          "full_name": "N. C. Nwogu",
+          "title": "Engr. Dr.",
+          "specializations": [
+            "carbon capture and sequestration",
+            "membranes"
+          ]
+        },
+        {
+          "full_name": "C. O. Akalezi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "S. C. Nwanonenyi",
+          "title": "Engr. Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Regional Centre of Excellence for Electricity Control",
+      "short_name": "CERME",
+      "host_university": "University of Lomé",
+      "country": "Togo",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cerme-togo.org",
+      "thematic_areas": [
+        "conventional and renewable electricity",
+        "electrical energy production",
+        "energy transmission and distribution",
+        "electrical machines",
+        "power electronics",
+        "high voltage technology",
+        "energy efficiency",
+        "advanced materials for electricity",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "BANNA Magolmèèna",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "MOHOU Agbeko",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "AGBOSSOU Komla",
+          "title": null,
+          "specializations": [
+            "automatism"
+          ]
+        },
+        {
+          "full_name": "Adekunlé Akim SALAMI",
+          "title": "Dr.",
+          "specializations": [
+            "electrical engineering"
+          ]
+        },
+        {
+          "full_name": "Eyouleki Tchéyi G. PALANGA",
+          "title": "Dr.",
+          "specializations": [
+            "applied computing"
+          ]
+        },
+        {
+          "full_name": "Yao BOKOVI",
+          "title": "Dr.",
+          "specializations": [
+            "electrical engineering"
+          ]
+        },
+        {
+          "full_name": "Comlanvi ADJAMAGBO",
+          "title": "Dr.",
+          "specializations": [
+            "electromechanics"
+          ]
+        },
+        {
+          "full_name": "ATCHONOUGLO Kossi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "OURO-DJOBO Sanoussi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "LARE Yendoubé",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "African Centre of Excellence for Logistics and Transport",
+      "short_name": "CEALT",
+      "host_university": "University of Djibouti",
+      "country": "Djibouti",
+      "ace_phase": "ace_impact",
+      "website": "http://www.univ.edu.dj",
+      "thematic_areas": [
+        "logistics and transport",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Sadat Saleh Said",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Deka",
+          "title": "Dr.",
+          "specializations": [
+            "stem"
+          ]
+        },
+        {
+          "full_name": "Abdou Idriss",
+          "title": "Mr.",
+          "specializations": [
+            "stem"
+          ]
+        },
+        {
+          "full_name": "Elsy Wahbe",
+          "title": "Mrs.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mohamed Youssouf",
+          "title": "Mr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mahmoud Mourad",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Souleiman Omar",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Fathiya Abdi Ibrahim",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Achaa Abdillahi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Ismael Abdillahi",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "KNUST Engineering Education Project",
+      "short_name": "KEEP",
+      "host_university": "Kwame Nkrumah University of Science and Technology (KNUST), Kumasi",
+      "country": "Ghana",
+      "ace_phase": "ace_impact",
+      "website": "https://keep.knust.edu.gh",
+      "thematic_areas": [
+        "engineering",
+        "energy",
+        "digital development",
+        "stem"
+      ],
+      "experts": [
+        {
+          "full_name": "Emmanuel Frimpong",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Francis Kemausuor",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "David Quansah",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Emmanuel Gikunoo",
+          "title": "Dr.",
+          "specializations": [
+            "composite and biomaterials"
+          ]
+        },
+        {
+          "full_name": "Peter Amoako Yirenkyi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "James Dzisi Gadze",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Emmanuel Akowuah",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Henry Nunoo Mensah",
+          "title": "Dr.",
+          "specializations": [
+            "intelligent agents",
+            "algorithm design and optimization"
+          ]
+        },
+        {
+          "full_name": "Ahmed Abdul-Rahman",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Eunice Akyereko Adjei",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "National School of Statistics and Applied Economics",
+      "short_name": "ENSEA",
+      "host_university": "National School of Statistics and Applied Economics (ENSEA)",
+      "country": "Côte d'Ivoire",
+      "ace_phase": "ace_impact",
+      "website": "https://www.ensea.ed.ci",
+      "thematic_areas": [
+        "statistics - applied economy",
+        "data science and policy evaluation",
+        "micro and macroeconomic modelling",
+        "applied social sciences"
+      ],
+      "experts": [
+        {
+          "full_name": "KEHO Yaya",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "ESSO Loesse",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "FE Doukouré Charles",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "MOUSSA Kouamé Richard",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "FASSASSI Raimi",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "MOSSO Rosine Addy",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "SIKA Glebelho Lazarus",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "SORO Nahoua",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "GAKPA Lewis",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "GBENRO Nathaniel",
+          "title": null,
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Africa Centre of Excellence for Innovative and Transformative STEM Education",
+      "short_name": "ACEITSE",
+      "host_university": "Lagos State University",
+      "country": "Nigeria",
+      "ace_phase": "ace_impact",
+      "website": "https://acenpee.abu.edu.ng",
+      "thematic_areas": [
+        "stem education",
+        "applied social sciences"
+      ],
+      "experts": [
+        {
+          "full_name": "Tunde Owolabi",
+          "title": "Prof.",
+          "specializations": [
+            "ctc approach to science teaching and teacher education"
+          ]
+        },
+        {
+          "full_name": "Shehu Akintola",
+          "title": "Prof.",
+          "specializations": [
+            "immigrant stem teacher education"
+          ]
+        },
+        {
+          "full_name": "Nwabuno Nwaboku",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Saliu Okuneye",
+          "title": "Prof.",
+          "specializations": [
+            "stem teacher training"
+          ]
+        },
+        {
+          "full_name": "Benjamin Aribisala",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Silas Egbowon",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Rasheed Sanni",
+          "title": "Dr.",
+          "specializations": [
+            "teacher knowledge and teacher learning in mathematics education"
+          ]
+        },
+        {
+          "full_name": "Michael Ahove",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Hakeem Akintoye",
+          "title": "Dr.",
+          "specializations": [
+            "ctc approach to science teaching"
+          ]
+        },
+        {
+          "full_name": "Yemisi Oludipe",
+          "title": "Dr.",
+          "specializations": [
+            "stem teachers' knowledge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Centre of Excellence in Sustainable Cities in Africa",
+      "short_name": "CERViDA-DOUNEDON",
+      "host_university": "University of Lomé",
+      "country": "Togo",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cervida-togo.org",
+      "thematic_areas": [
+        "sustainable urban management",
+        "environment",
+        "sanitation",
+        "mobility",
+        "urban economics and marketing",
+        "applied social sciences"
+      ],
+      "experts": [
+        {
+          "full_name": "Gnon BABA",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Kssao GNANDI",
+          "title": "Prof.",
+          "specializations": []
+        },
+        {
+          "full_name": "Cyprien AHOLOU",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Komlan AVOUGLA",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Mafobatchie NANTOB",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Edem KOLEDZI",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Madjouma KANDA",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Bassai Bodjona",
+          "title": "Dr.",
+          "specializations": []
+        },
+        {
+          "full_name": "Koko Zébéto HOUEDAKOR",
+          "title": "Dr.",
+          "specializations": []
+        }
+      ]
+    },
+    {
+      "name": "Centre of Excellence in Innovative Teaching / Learning of Mathematics and Sciences for Sub-Saharan Africa",
+      "short_name": "CEA/IEA-MS4SSA",
+      "host_university": "Abdou Moumouni University (École Normale Supérieure)",
+      "country": "Niger",
+      "ace_phase": "ace_impact",
+      "website": "https://www.cea-ms4ssa.org",
+      "thematic_areas": [
+        "stem education",
+        "teacher training in mathematics and sciences",
+        "applied social sciences"
+      ],
+      "experts": [
+        {
+          "full_name": "ALHOU Bassirou",
+          "title": null,
+          "specializations": [
+            "hydrobiology and didactics svt"
+          ]
+        },
+        {
+          "full_name": "GOZA Nana Aïcha",
+          "title": null,
+          "specializations": [
+            "psychopedagogy and general didactics"
+          ]
+        },
+        {
+          "full_name": "KAKA Mohamadou",
+          "title": null,
+          "specializations": [
+            "physics"
+          ]
+        },
+        {
+          "full_name": "BOUKARY M. Sani",
+          "title": null,
+          "specializations": [
+            "physics / didactics of physical sciences"
+          ]
+        },
+        {
+          "full_name": "BOUKARI Issiaka",
+          "title": null,
+          "specializations": [
+            "chemistry"
+          ]
+        },
+        {
+          "full_name": "MAHAMAN KABIR M.",
+          "title": null,
+          "specializations": [
+            "mathematics"
+          ]
+        },
+        {
+          "full_name": "RABIOU Ousman",
+          "title": null,
+          "specializations": [
+            "mathematics didactics"
+          ]
+        },
+        {
+          "full_name": "GAZIBO K. Mohamed",
+          "title": null,
+          "specializations": [
+            "mathematics"
+          ]
+        },
+        {
+          "full_name": "HALILOU Oumarou",
+          "title": null,
+          "specializations": [
+            "biology / svt"
+          ]
+        },
+        {
+          "full_name": "ALMOU Mamane",
+          "title": null,
+          "specializations": [
+            "chemistry"
+          ]
+        }
+      ]
+    }
+  ]
+}

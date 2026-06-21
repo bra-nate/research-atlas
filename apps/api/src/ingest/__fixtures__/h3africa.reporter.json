@@ -1,0 +1,5411 @@
+{
+  "meta": {
+    "total": 251
+  },
+  "results": [
+    {
+      "appl_id": 10206218,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2022,
+      "project_title": "AWI-Gen Phase 2: Genomic and environmental risk factors for cardiometabolic disease in Africans",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1017000,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2024-04-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10206225,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2022,
+      "project_title": "Project 3: Aging, body fat distribution and cardiometabolic disease risk factors in menopausal African women.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 72293,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2024-04-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10206219,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2022,
+      "project_title": "Administrative and Leadership Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 589192,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2024-04-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10206224,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2022,
+      "project_title": "Project 2: Genetics and Population Structure",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 7202,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2024-04-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10206223,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2022,
+      "project_title": "Project 1: Longitudinal",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 126121,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2024-04-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10206226,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2022,
+      "project_title": "Project 4:  Understanding the relationship between the gut microbiome, and cardiometabolic disease and aging in African populations.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 111024,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2024-04-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10206221,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2022,
+      "project_title": "Shared Core: Biobanking, Bioinformatics and Data Management",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 111168,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2024-04-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10228555,
+      "core_project_num": "U01HD094658",
+      "fiscal_year": 2021,
+      "project_title": "Breast Milk Microbiota Influence on Infant Immunity and Growth (BEAMING)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 249999,
+      "project_start_date": "2017-09-11T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10247055,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2021,
+      "project_title": "CAfGEN Administrative Centre",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 298761,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10247059,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2021,
+      "project_title": "Genomics Training and Career Development for African Scientists",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 100668,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10205130,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2021,
+      "project_title": "Project 2 _Nsuka",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 39272,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Chimdi  Chuka-okosa",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10205132,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2021,
+      "project_title": "Project 3_The Gambia",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 50846,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "ABBA  HYDARA",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10207709,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2021,
+      "project_title": "Education and Outreach Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 114480,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Pardis Christine Sabeti",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10207711,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2021,
+      "project_title": "Field Diagnostics for Pathogen Identification and Surveillance",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 284250,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "DONALD SAMUEL GRANT",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10207712,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2021,
+      "project_title": "Use Clinical, Genomic, and Immunological Data for Studying Viral and Host Biology",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 100513,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Peter  Okokhore",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10213939,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2021,
+      "project_title": "Community Engagement in Biobanking and Genomics (CEBioGen).    Admin-Core",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 257023,
+      "project_start_date": "2018-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10240496,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2021,
+      "project_title": "DNA sequencing and Bioinformatics",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 104216,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Dietrich A Stephan",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10205129,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2021,
+      "project_title": "Project 1 _IBADAN",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 404558,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10247057,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2021,
+      "project_title": "Host Genetic Factors in Pediatric HIV Disease Progression",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 198481,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10240502,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2021,
+      "project_title": "Genomics of cardiovascular phenotypes in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 158968,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mahmoud Umar Sani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10207707,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2021,
+      "project_title": "Genomic Characterization and Surveillance of Microbial Threats in West Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 700000,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10246374,
+      "core_project_num": "U01MH115485",
+      "fiscal_year": 2021,
+      "project_title": "Transgenerational Epigenomics of Trauma and PTSD in Rwanda",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 258581,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "STEFAN  JANSEN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "LEON  MUTESA",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Monica  Uddin",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Derek  Wildman",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NATIONAL UNIVERSITY OF RWANDA",
+        "org_country": "RWANDA"
+      }
+    },
+    {
+      "appl_id": 10213796,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2021,
+      "project_title": "Center for Research on the Respiratory Microbiota of African Children (ReMAC)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 450000,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Heather Joy Zar",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10226240,
+      "core_project_num": "U01AI136677",
+      "fiscal_year": 2021,
+      "project_title": "Immunoglobulin gene diversity in an African population and impact on antibody function in HIV infection",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 246383,
+      "project_start_date": "2017-08-18T00:00:00",
+      "project_end_date": "2023-07-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Lynn  Morris",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10206220,
+      "core_project_num": "U01HG009784",
+      "fiscal_year": 2021,
+      "project_title": "AFRICAN FEMALE BREAST CANCER EPIDERMIOLOGY (AFBRECANE) STUDY",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 238222,
+      "project_start_date": "2017-09-05T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Clement Adebayo Adebamowo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10197183,
+      "core_project_num": "U01HG010273",
+      "fiscal_year": 2021,
+      "project_title": "African Neurobiobank for Precision Stroke Medicine - (ELSI) Project",
+      "opportunity_number": "RFA-RM-17-021",
+      "award_amount": 100267,
+      "project_start_date": "2018-09-21T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "OYEDUNNI SOLA ARULOGUN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Rufus  Olusola Akinyemi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10213797,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2021,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 450000,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10240495,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2021,
+      "project_title": "Molecular hematology and sickle mouse core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 156399,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Phyllis G Addo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10247058,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2021,
+      "project_title": "Molecular mechanisms of TB exposure outcomes among HIV-infected children",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 206481,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10240498,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2021,
+      "project_title": "Genetic determinants of hemolysis modifying defense in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 229377,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10207710,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2021,
+      "project_title": "Utilize Microbial Metagenomics for Viral Pathogen Characterization",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 147345,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10468418,
+      "core_project_num": "U54DK116913",
+      "fiscal_year": 2021,
+      "project_title": "H3Africa Kidney Disease Research Network- Collaborative Centers",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 229856,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Dwomoa  Adu",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Akinlolu Oluseun Ojo",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Babatunde  salako",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF HEALTH SCIENCES, UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10217224,
+      "core_project_num": "U01HG009822",
+      "fiscal_year": 2021,
+      "project_title": "Genetics and genomic research in Uganda: Towards context specific ethics guidelines",
+      "opportunity_number": "RFA-RM-17-021",
+      "award_amount": 105861,
+      "project_start_date": "2018-09-13T00:00:00",
+      "project_end_date": "2023-12-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Joseph  Ochieng",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "MAKERERE UNIVERSITY COLLEGE OF HEALTH SCIENCES",
+        "org_country": "UGANDA"
+      }
+    },
+    {
+      "appl_id": 10262924,
+      "core_project_num": "U54DK116913",
+      "fiscal_year": 2021,
+      "project_title": "H3Africa Kidney Disease Research Network- Collaborative Centers",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 781594,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Dwomoa  Adu",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Akinlolu Oluseun Ojo",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Babatunde  salako",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF HEALTH SCIENCES, UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10213938,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2021,
+      "project_title": "Developing Best Practices of Community Engagement for Genomics and Biobanking in Africa - CEBioGEN",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 415001,
+      "project_start_date": "2018-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10240493,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2021,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 152922,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10240500,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2021,
+      "project_title": "Genomics of severe malaria complications in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 226105,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10213941,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2021,
+      "project_title": "Project-004",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 108682,
+      "project_start_date": "2018-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10247054,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2021,
+      "project_title": "Collaborative African Genomics Network (CAfGEN)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1000000,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Moses Lutaakome Joloba",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "ADEODATA RUKYALEKERE KEKITIINWA",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Graeme  Mardon",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Sununguko Wata Mpoloka",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10220707,
+      "core_project_num": "U01MH115483",
+      "fiscal_year": 2021,
+      "project_title": "Deciphering Developmental Disorders in Africa (DDD-Africa) - Evaluating Clinical Exome Sequencing in an African Setting",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 178804,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2025-02-28T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Zane  Lombard",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10222520,
+      "core_project_num": "U01MH115484",
+      "fiscal_year": 2021,
+      "project_title": "Transgenerational Effects of Maternal Stressors: Investigating the Role of Infant Gene Expression",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 226298,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Nastassja    Koen ",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "KERRY J. RESSLER",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Dan Joseph Stein",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Aliza Pham Wingo",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10205127,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2021,
+      "project_title": "EYES OF AFRICA : THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 716442,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10240492,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2021,
+      "project_title": "SickleGenAfrica:Sickle Cell Disease Genomics Network of Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1088120,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Gordon Akanzuwine Awandare",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10204072,
+      "core_project_num": "U01HG009716",
+      "fiscal_year": 2021,
+      "project_title": "Hearing Impairment Genetics Studies in Africa (HI-GENES Africa)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 261989,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "AMBROISE  WONKAM",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10208922,
+      "core_project_num": "U01HG007044",
+      "fiscal_year": 2021,
+      "project_title": "Clinical and genetic studies of hereditary neurological disorders in Mali",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 249912,
+      "project_start_date": "2013-09-27T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "GUIDA  LANDOURE",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIV OF SCIENCES, TECH & TECH OF BAMAKO",
+        "org_country": "MALI"
+      }
+    },
+    {
+      "appl_id": 10213940,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2021,
+      "project_title": "Core-002",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 131057,
+      "project_start_date": "2018-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10213943,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2021,
+      "project_title": "Project-005",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 93420,
+      "project_start_date": "2018-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10247056,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2021,
+      "project_title": "Clinical Phenotyping: Pediatric HIV and TB Cohort",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 195609,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10240497,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2021,
+      "project_title": "Biorepository core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 60133,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10205128,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2021,
+      "project_title": "EYES OF AFRICA: THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 221766,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2024-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10207708,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2021,
+      "project_title": "Administration and Management Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 53412,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9949745,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2020,
+      "project_title": "AWI-Gen Phase 2: Genomic and environmental risk factors for cardiometabolic disease in Africans",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 938911,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9985182,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2020,
+      "project_title": "Genomic Characterization and Surveillance of Microbial Threats in West Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 700000,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9978934,
+      "core_project_num": "U01MH115484",
+      "fiscal_year": 2020,
+      "project_title": "Transgenerational Effects of Maternal Stressors: Investigating the Role of Infant Gene Expression",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 237496,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Nastassja    Koen ",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "KERRY J. RESSLER",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Dan Joseph Stein",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Aliza Pham Wingo",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9961637,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2020,
+      "project_title": "Project 3_The Gambia",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 49921,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "ABBA  HYDARA",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9985184,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2020,
+      "project_title": "Administration and Management Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 53084,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9985185,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2020,
+      "project_title": "Education and Outreach Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 113778,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Pardis Christine Sabeti",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9985187,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2020,
+      "project_title": "Utilize Microbial Metagenomics for Viral Pathogen Characterization",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 150733,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9996476,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2020,
+      "project_title": "Molecular mechanisms of TB exposure outcomes among HIV-infected children",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 194367,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9949765,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2020,
+      "project_title": "Project 4:  Understanding the relationship between the gut microbiome, and cardiometabolic disease and aging in African populations.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 32330,
+      "project_start_date": null,
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9985188,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2020,
+      "project_title": "Field Diagnostics for Pathogen Identification and Surveillance",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 282510,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "DONALD SAMUEL GRANT",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9996473,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2020,
+      "project_title": "CAfGEN Administrative Centre",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 711099,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9996477,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2020,
+      "project_title": "Genomics Training and Career Development for African Scientists",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 212925,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10000992,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2020,
+      "project_title": "Molecular hematology and sickle mouse core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 93733,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Phyllis G Addo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9961633,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2020,
+      "project_title": "EYES OF AFRICA : THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 722255,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9961638,
+      "core_project_num": "U01HG010273",
+      "fiscal_year": 2020,
+      "project_title": "African Neurobiobank for Precision Stroke Medicine - (ELSI) Project",
+      "opportunity_number": "RFA-RM-17-021",
+      "award_amount": 105648,
+      "project_start_date": "2018-09-21T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "OYEDUNNI SOLA ARULOGUN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Rufus  Olusola Akinyemi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10006046,
+      "core_project_num": "U01MH115485",
+      "fiscal_year": 2020,
+      "project_title": "Transgenerational Epigenomics of Trauma and PTSD in Rwanda",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 257614,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "STEFAN  JANSEN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "LEON  MUTESA",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Monica  Uddin",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Derek  Wildman",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NATIONAL UNIVERSITY OF RWANDA",
+        "org_country": "RWANDA"
+      }
+    },
+    {
+      "appl_id": 9955054,
+      "core_project_num": "U01HD094658",
+      "fiscal_year": 2020,
+      "project_title": "Breast Milk Microbiota Influence on Infant Immunity and Growth (BEAMING)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 249999,
+      "project_start_date": "2017-09-11T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9986858,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2020,
+      "project_title": "Center for Research on the Respiratory Microbiota of African Children (ReMAC)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 450000,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Heather Joy Zar",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9955286,
+      "core_project_num": "U01HG009716",
+      "fiscal_year": 2020,
+      "project_title": "Hearing Impairment Genetics Studies in Africa (HI-GENES Africa)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 226775,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "AMBROISE  WONKAM",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10000986,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2020,
+      "project_title": "SickleGenAfrica:Sickle Cell Disease Genomics Network of Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1094400,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Gordon Akanzuwine Awandare",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9968429,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2020,
+      "project_title": "Project-005",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 40564,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9985190,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2020,
+      "project_title": "Use Clinical, Genomic, and Immunological Data for Studying Viral and Host Biology",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 99895,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Peter  Okokhore",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9949763,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2020,
+      "project_title": "Project 2: Genetics and Population Structure",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 29809,
+      "project_start_date": null,
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9968428,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2020,
+      "project_title": "Project-004",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 93878,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9996475,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2020,
+      "project_title": "Host Genetic Factors in Pediatric HIV Disease Progression",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 176359,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10000993,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2020,
+      "project_title": "DNA sequencing and Bioinformatics",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 104481,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Dietrich A Stephan",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9949758,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2020,
+      "project_title": "Administrative and Leadership Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 303762,
+      "project_start_date": null,
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9961636,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2020,
+      "project_title": "Project 2 _Nsuka",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 39519,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Chimdi  Chuka-okosa",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9996471,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2020,
+      "project_title": "Collaborative African Genomics Network (CAfGEN)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 996996,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Moses Lutaakome Joloba",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "ADEODATA RUKYALEKERE KEKITIINWA",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Graeme  Mardon",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Sununguko Wata Mpoloka",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 10000207,
+      "core_project_num": "U01HG009784",
+      "fiscal_year": 2020,
+      "project_title": "AFRICAN FEMALE BREAST CANCER EPIDERMIOLOGY (AFBRECANE) STUDY",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 241022,
+      "project_start_date": "2017-09-05T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Clement Adebayo Adebamowo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9984249,
+      "core_project_num": "U01AI136677",
+      "fiscal_year": 2020,
+      "project_title": "Immunoglobulin gene diversity in an African population and impact on antibody function in HIV infection",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 246466,
+      "project_start_date": "2017-08-18T00:00:00",
+      "project_end_date": "2022-07-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Lynn  Morris",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9978951,
+      "core_project_num": "U01MH115483",
+      "fiscal_year": 2020,
+      "project_title": "Deciphering Developmental Disorders in Africa (DDD-Africa) - Evaluating Clinical Exome Sequencing in an African Setting",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 335134,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Zane  Lombard",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9949764,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2020,
+      "project_title": "Project 3: Aging, body fat distribution and cardiometabolic disease risk factors in menopausal African women.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 26945,
+      "project_start_date": null,
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9961635,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2020,
+      "project_title": "Project 1 _IBADAN",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 412528,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10000995,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2020,
+      "project_title": "Biorepository core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 96609,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9968426,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2020,
+      "project_title": "Core-002",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 97620,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9966005,
+      "core_project_num": "U01HG009822",
+      "fiscal_year": 2020,
+      "project_title": "Genetics and genomic research in Uganda: Towards context specific ethics guidelines",
+      "opportunity_number": "RFA-RM-17-021",
+      "award_amount": 106259,
+      "project_start_date": "2018-09-13T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Joseph  Ochieng",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "MAKERERE UNIVERSITY COLLEGE OF HEALTH SCIENCES",
+        "org_country": "UGANDA"
+      }
+    },
+    {
+      "appl_id": 9968305,
+      "core_project_num": "U01HG007044",
+      "fiscal_year": 2020,
+      "project_title": "Clinical and genetic studies of hereditary neurological disorders in Mali",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 249912,
+      "project_start_date": "2013-09-27T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "GUIDA  LANDOURE",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIV OF SCIENCES, TECH & TECH OF BAMAKO",
+        "org_country": "MALI"
+      }
+    },
+    {
+      "appl_id": 9968421,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2020,
+      "project_title": "Developing Best Practices of Community Engagement for Genomics and Biobanking in Africa - CEBioGEN",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 421174,
+      "project_start_date": "2018-09-23T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9997913,
+      "core_project_num": "U54DK116913",
+      "fiscal_year": 2020,
+      "project_title": "H3Africa Kidney Disease Research Network- Collaborative Centers",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 781594,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Dwomoa  Adu",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Akinlolu Oluseun Ojo",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Babatunde  salako",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF HEALTH SCIENCES, UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9968423,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2020,
+      "project_title": "Community Engagement in Biobanking and Genomics (CEBioGen).    Admin-Core",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 148548,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10000990,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2020,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 135144,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9961634,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2020,
+      "project_title": "EYES OF AFRICA: THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 220287,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 10000996,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2020,
+      "project_title": "Genetic determinants of hemolysis modifying defense in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 256187,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9949762,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2020,
+      "project_title": "Project 1: Longitudinal",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1651121,
+      "project_start_date": null,
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9968431,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2020,
+      "project_title": "Project-005",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 40564,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9996474,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2020,
+      "project_title": "Clinical Phenotyping: Pediatric HIV and TB Cohort",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 186958,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9949759,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2020,
+      "project_title": "Shared Core: Biobanking, Bioinformatics and Data Management",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 241753,
+      "project_start_date": null,
+      "project_end_date": "2023-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9986861,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2020,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 450000,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 10000997,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2020,
+      "project_title": "Genomics of severe malaria complications in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 233740,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 10000999,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2020,
+      "project_title": "Genomics of cardiovascular phenotypes in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 174506,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mahmoud Umar Sani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9741771,
+      "core_project_num": "U01HG007044",
+      "fiscal_year": 2019,
+      "project_title": "Clinical and genetic studies of hereditary neurological disorders in Mali",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 249912,
+      "project_start_date": "2013-09-27T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "GUIDA  LANDOURE",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIV OF SCIENCES, TECH & TECH OF BAMAKO",
+        "org_country": "MALI"
+      }
+    },
+    {
+      "appl_id": 9782839,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2019,
+      "project_title": "Collaborative African Genomics Network (CAfGEN)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1000000,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Moses Lutaakome Joloba",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "ADEODATA RUKYALEKERE KEKITIINWA",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Graeme  Mardon",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Sununguko Wata Mpoloka",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9769135,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2019,
+      "project_title": "EYES OF AFRICA : THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 750000,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9769138,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2019,
+      "project_title": "EYES OF AFRICA: THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 217733,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9769139,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2019,
+      "project_title": "Project 1 _IBADAN",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 444822,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9736476,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2019,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 137116,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9741742,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2019,
+      "project_title": "Utilize Microbial Metagenomics for Viral Pathogen Characterization",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 150733,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9782846,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2019,
+      "project_title": "Genomics Training and Career Development for African Scientists",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 173077,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9736482,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2019,
+      "project_title": "Genetic determinants of hemolysis modifying defense in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 253007,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9782845,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2019,
+      "project_title": "Molecular mechanisms of TB exposure outcomes among HIV-infected children",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 187905,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9739395,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2019,
+      "project_title": "Shared Core: Biobanking, Bioinformatics and Data Management",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 193598,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9741738,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2019,
+      "project_title": "Genomic Characterization and Surveillance of Microbial Threats in West Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 700000,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9754773,
+      "core_project_num": "U01AI136677",
+      "fiscal_year": 2019,
+      "project_title": "Immunoglobulin gene diversity in an African population and impact on antibody function in HIV infection",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 247623,
+      "project_start_date": "2017-08-18T00:00:00",
+      "project_end_date": "2022-07-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Lynn  Morris",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9784887,
+      "core_project_num": "U01HG009822",
+      "fiscal_year": 2019,
+      "project_title": "Genetics and genomic research in Uganda: Towards context specific ethics guidelines",
+      "opportunity_number": "RFA-RM-17-021",
+      "award_amount": 106645,
+      "project_start_date": "2018-09-13T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Joseph  Ochieng",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "MAKERERE UNIVERSITY COLLEGE OF HEALTH SCIENCES",
+        "org_country": "UGANDA"
+      }
+    },
+    {
+      "appl_id": 9792262,
+      "core_project_num": "U54DK116913",
+      "fiscal_year": 2019,
+      "project_title": "H3Africa Kidney Disease Research Network- Collaborative Centers",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 754068,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Dwomoa  Adu",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Akinlolu Oluseun Ojo",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Babatunde  salako",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF HEALTH SCIENCES, UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9741137,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2019,
+      "project_title": "Center for Research on the Respiratory Microbiota of African Children (ReMAC)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 450000,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Heather Joy Zar",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9979083,
+      "core_project_num": "U01HG007044",
+      "fiscal_year": 2019,
+      "project_title": "Clinical and genetic studies of hereditary neurological disorders in Mali",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 134837,
+      "project_start_date": "2013-09-27T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "GUIDA  LANDOURE",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIV OF SCIENCES, TECH & TECH OF BAMAKO",
+        "org_country": "MALI"
+      }
+    },
+    {
+      "appl_id": 9791359,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2019,
+      "project_title": "Community Engagement in Biobanking and Genomics (CEBioGen).    Admin-Core",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 142822,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9736479,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2019,
+      "project_title": "DNA sequencing and Bioinformatics",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 150051,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Dietrich A Stephan",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9736484,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2019,
+      "project_title": "Genomics of cardiovascular phenotypes in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 149105,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mahmoud Umar Sani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9741740,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2019,
+      "project_title": "Administration and Management Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 53084,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9741741,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2019,
+      "project_title": "Education and Outreach Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 113778,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Pardis Christine Sabeti",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9782843,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2019,
+      "project_title": "Clinical Phenotyping: Pediatric HIV and TB Cohort",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 163041,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9782844,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2019,
+      "project_title": "Host Genetic Factors in Pediatric HIV Disease Progression",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 190246,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9736477,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2019,
+      "project_title": "Molecular hematology and sickle mouse core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 80520,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Phyllis G Addo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9736483,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2019,
+      "project_title": "Genomics of severe malaria complications in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 236419,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9741744,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2019,
+      "project_title": "Use Clinical, Genomic, and Immunological Data for Studying Viral and Host Biology",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 99895,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Peter  Okokhore",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9782842,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2019,
+      "project_title": "CAfGEN Administrative Centre",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 743827,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9739393,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2019,
+      "project_title": "AWI-Gen Phase 2: Genomic and environmental risk factors for cardiometabolic disease in Africans",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 999112,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9791358,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2019,
+      "project_title": "Developing Best Practices of Community Engagement for Genomics and Biobanking in Africa - CEBioGEN",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 420215,
+      "project_start_date": "2018-09-23T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9733337,
+      "core_project_num": "U01MH115483",
+      "fiscal_year": 2019,
+      "project_title": "Deciphering Developmental Disorders in Africa (DDD-Africa) - Evaluating Clinical Exome Sequencing in an African Setting",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 342603,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Zane  Lombard",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9782995,
+      "core_project_num": "U01MH115485",
+      "fiscal_year": 2019,
+      "project_title": "Transgenerational Epigenomics of Trauma and PTSD in Rwanda",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 259811,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "STEFAN  JANSEN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "LEON  MUTESA",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Monica  Uddin",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Derek  Wildman",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NATIONAL UNIVERSITY OF RWANDA",
+        "org_country": "RWANDA"
+      }
+    },
+    {
+      "appl_id": 9791360,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2019,
+      "project_title": "Core-002",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 98512,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9791362,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2019,
+      "project_title": "Project-005",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 82094,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9739398,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2019,
+      "project_title": "Project 3: Aging, body fat distribution and cardiometabolic disease risk factors in menopausal African women.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 2238,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9769140,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2019,
+      "project_title": "Project 2 _Nsuka",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 38647,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Chimdi  Chuka-okosa",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9769141,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2019,
+      "project_title": "Project 3_The Gambia",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 48798,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "ABBA  HYDARA",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9739397,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2019,
+      "project_title": "Project 2: Genetics and Population Structure",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 12545,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9735422,
+      "core_project_num": "U01HG009784",
+      "fiscal_year": 2019,
+      "project_title": "AFRICAN FEMALE BREAST CANCER EPIDERMIOLOGY (AFBRECANE) STUDY",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 243667,
+      "project_start_date": "2017-09-05T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Clement Adebayo Adebamowo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9736473,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2019,
+      "project_title": "SickleGenAfrica:Sickle Cell Disease Genomics Network of Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1103323,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Gordon Akanzuwine Awandare",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9746746,
+      "core_project_num": "U01HG009716",
+      "fiscal_year": 2019,
+      "project_title": "Hearing Impairment Genetics Studies in Africa (HI-GENES Africa)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 301009,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "AMBROISE  WONKAM",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9747987,
+      "core_project_num": "U01MH115484",
+      "fiscal_year": 2019,
+      "project_title": "Transgenerational Effects of Maternal Stressors: Investigating the Role of Infant Gene Expression",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 240108,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Nastassja    Koen ",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "KERRY J. RESSLER",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Dan Joseph Stein",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Aliza Pham Wingo",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9754667,
+      "core_project_num": "U01HD094658",
+      "fiscal_year": 2019,
+      "project_title": "Breast Milk Microbiota Influence on Infant Immunity and Growth (BEAMING)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 250000,
+      "project_start_date": "2017-09-11T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9789916,
+      "core_project_num": "U01HG010273",
+      "fiscal_year": 2019,
+      "project_title": "African Neurobiobank for Precision Stroke Medicine - (ELSI) Project",
+      "opportunity_number": "RFA-RM-17-021",
+      "award_amount": 105871,
+      "project_start_date": "2018-09-21T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "OYEDUNNI SOLA ARULOGUN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Rufus  Olusola Akinyemi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9739396,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2019,
+      "project_title": "Project 1: Longitudinal",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 531994,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9739399,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2019,
+      "project_title": "Project 4:  Understanding the relationship between the gut microbiome, and cardiometabolic disease and aging in African populations.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 2238,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9791361,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2019,
+      "project_title": "Project-004",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 96787,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9741743,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2019,
+      "project_title": "Field Diagnostics for Pathogen Identification and Surveillance",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 282510,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "DONALD SAMUEL GRANT",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9739394,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2019,
+      "project_title": "Administrative and Leadership Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 256499,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9741140,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2019,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 450000,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9736480,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2019,
+      "project_title": "Biorepository core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 97105,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9555927,
+      "core_project_num": "U01HG009784",
+      "fiscal_year": 2018,
+      "project_title": "AFRICAN FEMALE BREAST CANCER EPIDERMIOLOGY (AFBRECANE) STUDY",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 246227,
+      "project_start_date": "2017-09-05T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Clement Adebayo Adebamowo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9568021,
+      "core_project_num": "U01MH115485",
+      "fiscal_year": 2018,
+      "project_title": "Transgenerational Epigenomics of Trauma and PTSD in Rwanda",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 261769,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "STEFAN  JANSEN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "LEON  MUTESA",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Monica  Uddin",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Derek  Wildman",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NATIONAL UNIVERSITY OF RWANDA",
+        "org_country": "RWANDA"
+      }
+    },
+    {
+      "appl_id": 9609395,
+      "core_project_num": "U01HG010273",
+      "fiscal_year": 2018,
+      "project_title": "African Neurobiobank for Precision Stroke Medicine - (ELSI) Project",
+      "opportunity_number": "RFA-RM-17-021",
+      "award_amount": 100802,
+      "project_start_date": "2018-09-21T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "OYEDUNNI SOLA ARULOGUN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Rufus  Olusola Akinyemi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9563310,
+      "core_project_num": "U01HD094658",
+      "fiscal_year": 2018,
+      "project_title": "Breast Milk Microbiota Influence on Infant Immunity and Growth (BEAMING)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 250000,
+      "project_start_date": "2017-09-11T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9567473,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2018,
+      "project_title": "SickleGenAfrica:Sickle Cell Disease Genomics Network of Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1081887,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Gordon Akanzuwine Awandare",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9553475,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2018,
+      "project_title": "Host Genetic Factors in Pediatric HIV Disease Progression",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 217549,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9565624,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2018,
+      "project_title": "Project 1: Longitudinal",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 279105,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9567476,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2018,
+      "project_title": "DNA sequencing and Bioinformatics",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 103792,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Dietrich A Stephan",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9568797,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2018,
+      "project_title": "Project 1 _IBADAN",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 629212,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9568799,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2018,
+      "project_title": "Project 3_The Gambia",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 48131,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "ABBA  HYDARA",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9571116,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2018,
+      "project_title": "Education and Outreach Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 106303,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Pardis Christine Sabeti",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9567062,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2018,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 34415,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9553463,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2018,
+      "project_title": "CAfGEN Administrative Centre",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 237346,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9571115,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2018,
+      "project_title": "Administration and Management Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 49597,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9565627,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2018,
+      "project_title": "Project 4:  Understanding the relationship between the gut microbiome, and cardiometabolic disease and aging in African populations.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1545,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9567478,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2018,
+      "project_title": "Genetic determinants of hemolysis modifying defense in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 256465,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9565626,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2018,
+      "project_title": "Project 3: Aging, body fat distribution and cardiometabolic disease risk factors in menopausal African women.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 62249,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9567061,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2018,
+      "project_title": "Center for Research on the Respiratory Microbiota of African Children (ReMAC)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 450000,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9571114,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2018,
+      "project_title": "Genomic Characterization and Surveillance of Microbial Threats in West Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 650000,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9643876,
+      "core_project_num": "U54DK116913",
+      "fiscal_year": 2018,
+      "project_title": "H3Africa Kidney Disease Research Network- Collaborative Centers",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 781594,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Dwomoa  Adu",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Akinlolu Oluseun Ojo",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Babatunde  salako",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF HEALTH SCIENCES, UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9710508,
+      "core_project_num": "U01HG007044",
+      "fiscal_year": 2018,
+      "project_title": "Clinical and genetic studies of hereditary neurological disorders in Mali",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 120296,
+      "project_start_date": "2013-09-27T00:00:00",
+      "project_end_date": "2019-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "GUIDA  LANDOURE",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIV OF SCIENCES, TECH & TECH OF BAMAKO",
+        "org_country": "MALI"
+      }
+    },
+    {
+      "appl_id": 9568794,
+      "core_project_num": "U01HG007044",
+      "fiscal_year": 2018,
+      "project_title": "Clinical and genetic studies of hereditary neurological disorders in Mali",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 249912,
+      "project_start_date": "2013-09-27T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "GUIDA  LANDOURE",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIV OF SCIENCES, TECH & TECH OF BAMAKO",
+        "org_country": "MALI"
+      }
+    },
+    {
+      "appl_id": 9566268,
+      "core_project_num": "U01HG009716",
+      "fiscal_year": 2018,
+      "project_title": "Hearing Impairment Genetics Studies in Africa (HI-GENES Africa)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 248352,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "AMBROISE  WONKAM",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9567475,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2018,
+      "project_title": "Molecular hematology and sickle mouse core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 118665,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Phyllis G Addo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9553476,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2018,
+      "project_title": "Molecular mechanisms of TB exposure outcomes among HIV-infected children",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 219140,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9565622,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2018,
+      "project_title": "Administrative and Leadership Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 497209,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9567477,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2018,
+      "project_title": "Biorepository core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 95363,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9567063,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2018,
+      "project_title": "The nasopharyngeal microbiota of African children and lower respiratory tract infection",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 272629,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9565621,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2018,
+      "project_title": "AWI-Gen Phase 2: Genomic and environmental risk factors for cardiometabolic disease in Africans",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 996178,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9565685,
+      "core_project_num": "U01MH115484",
+      "fiscal_year": 2018,
+      "project_title": "Transgenerational Effects of Maternal Stressors: Investigating the Role of Infant Gene Expression",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 245760,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Nastassja    Koen ",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "KERRY J. RESSLER",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Dan Joseph Stein",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Aliza Pham Wingo",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9564207,
+      "core_project_num": "U01MH115483",
+      "fiscal_year": 2018,
+      "project_title": "Deciphering Developmental Disorders in Africa (DDD-Africa) - Evaluating Clinical Exome Sequencing in an African Setting",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 204013,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Zane  Lombard",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9568795,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2018,
+      "project_title": "EYES OF AFRICA : THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 748588,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9565625,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2018,
+      "project_title": "Project 2: Genetics and Population Structure",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 8661,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9567474,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2018,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 139493,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9565623,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2018,
+      "project_title": "Shared Core: Biobanking, Bioinformatics and Data Management",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 147409,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9608972,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2018,
+      "project_title": "Community Engagement in Biobanking and Genomics (CEBioGen).    Admin-Core",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 143368,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9553477,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2018,
+      "project_title": "Genomics Training and Career Development for African Scientists",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 532804,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9547266,
+      "core_project_num": "U01AI136677",
+      "fiscal_year": 2018,
+      "project_title": "Immunoglobulin gene diversity in an African population and impact on antibody function in HIV infection",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 248838,
+      "project_start_date": "2017-08-18T00:00:00",
+      "project_end_date": "2022-07-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Lynn  Morris",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9553456,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2018,
+      "project_title": "Collaborative African Genomics Network (CAfGEN)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1000000,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Moses Lutaakome Joloba",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "ADEODATA RUKYALEKERE KEKITIINWA",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Graeme  Mardon",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Sununguko Wata Mpoloka",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9608808,
+      "core_project_num": "U01HG009822",
+      "fiscal_year": 2018,
+      "project_title": "Genetics and genomic research in Uganda: Towards context specific ethics guidelines",
+      "opportunity_number": "RFA-RM-17-021",
+      "award_amount": 107020,
+      "project_start_date": "2018-09-13T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Joseph  Ochieng",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "MAKERERE UNIVERSITY COLLEGE OF HEALTH SCIENCES",
+        "org_country": "UGANDA"
+      }
+    },
+    {
+      "appl_id": 9608971,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2018,
+      "project_title": "Developing Best Practices of Community Engagement for Genomics and Biobanking in Africa - CEBioGEN",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 439115,
+      "project_start_date": "2018-09-23T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9567064,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2018,
+      "project_title": "The impact of inhaled environmental exposures on the microbiota of the upper airways of African children",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 142956,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9567479,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2018,
+      "project_title": "Genomics of severe malaria complications in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 233996,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9567480,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2018,
+      "project_title": "Genomics of cardiovascular phenotypes in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 134113,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mahmoud Umar Sani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9568796,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2018,
+      "project_title": "EYES OF AFRICA: THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 262629,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9568798,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2018,
+      "project_title": "Project 2 _Nsuka",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 38135,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Chimdi  Chuka-okosa",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9785033,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2018,
+      "project_title": "Core-002",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 94344,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9785039,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2018,
+      "project_title": "Project-004",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 111082,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9790629,
+      "core_project_num": "U54HG010275",
+      "fiscal_year": 2018,
+      "project_title": "Project-005",
+      "opportunity_number": "RFA-RM-17-020",
+      "award_amount": 90321,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Anita  Ghansah",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "PAULINA  TINDANA",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NOGUCHI MEMORIAL INSTITUTE / MEDICAL RES",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9571119,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2018,
+      "project_title": "Use Clinical, Genomic, and Immunological Data for Studying Viral and Host Biology",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 93333,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Peter  Okokhore",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9571118,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2018,
+      "project_title": "Field Diagnostics for Pathogen Identification and Surveillance",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 263947,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "DONALD SAMUEL GRANT",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9553473,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2018,
+      "project_title": "Clinical Phenotyping: Pediatric HIV and TB Cohort",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 232868,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9571117,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2018,
+      "project_title": "Utilize Microbial Metagenomics for Viral Pathogen Characterization",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 136820,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9376067,
+      "core_project_num": "U01HG009716",
+      "fiscal_year": 2017,
+      "project_title": "Hearing Impairment Genetics Studies in Africa (HI-GENES Africa)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 210972,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "AMBROISE  WONKAM",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386341,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2017,
+      "project_title": "SickleGenAfrica:Sickle Cell Disease Genomics Network of Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1180073,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Gordon Akanzuwine Awandare",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386832,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2017,
+      "project_title": "Collaborative African Genomics Network (CAfGEN)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1065022,
+      "project_start_date": "2014-01-01T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Moses Lutaakome Joloba",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "ADEODATA RUKYALEKERE KEKITIINWA",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Graeme  Mardon",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Mogomotsi Sandy Matshaba",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Sununguko Wata Mpoloka",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9386343,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2017,
+      "project_title": "Molecular hematology and sickle mouse core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 175984,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Phyllis G Addo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386872,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2017,
+      "project_title": "Project 4:  Understanding the relationship between the gut microbiome, and cardiometabolic disease and aging in African populations.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 8707,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386950,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2017,
+      "project_title": "EYES OF AFRICA: THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 170397,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9386951,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2017,
+      "project_title": "Project 1 _IBADAN",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 488300,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9386834,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2017,
+      "project_title": "Clinical Phenotyping: Pediatric HIV and TB Cohort",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 171653,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9386869,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2017,
+      "project_title": "Project 1: Longitudinal",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 517061,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386289,
+      "core_project_num": "U01HG009784",
+      "fiscal_year": 2017,
+      "project_title": "AFRICAN FEMALE BREAST CANCER EPIDERMIOLOGY (AFBRECANE) STUDY",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 248716,
+      "project_start_date": "2017-09-05T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Clement Adebayo Adebamowo",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9390157,
+      "core_project_num": "U01HG007044",
+      "fiscal_year": 2017,
+      "project_title": "Clinical and genetic studies of hereditary neurological disorders in Mali",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 250000,
+      "project_start_date": "2013-09-27T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "GUIDA  LANDOURE",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIV OF SCIENCES, TECH & TECH OF BAMAKO",
+        "org_country": "MALI"
+      }
+    },
+    {
+      "appl_id": 9386836,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2017,
+      "project_title": "Molecular mechanisms of TB exposure outcomes among HIV-infected children",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 171653,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9387011,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2017,
+      "project_title": "Field Diagnostics for Pathogen Identification and Surveillance",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 377080,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "DONALD SAMUEL GRANT",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9387007,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2017,
+      "project_title": "Education and Outreach Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 104610,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Pardis Christine Sabeti",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9386868,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2017,
+      "project_title": "Shared Core: Biobanking, Bioinformatics and Data Management",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 385014,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386342,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2017,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 205752,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386346,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2017,
+      "project_title": "Genetic determinants of hemolysis modifying defense in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 246953,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Solomon Fiifi Ofori-Acquah",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386952,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2017,
+      "project_title": "Project 2 _Nsuka",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 84283,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Chimdi  Chuka-okosa",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9386867,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2017,
+      "project_title": "Administrative and Leadership Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1453639,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386871,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2017,
+      "project_title": "Project 3: Aging, body fat distribution and cardiometabolic disease risk factors in menopausal African women.",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 54798,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386783,
+      "core_project_num": "U01MH115483",
+      "fiscal_year": 2017,
+      "project_title": "Deciphering Developmental Disorders in Africa (DDD-Africa) - Evaluating Clinical Exome Sequencing in an African Setting",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 212048,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Zane  Lombard",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9387004,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2017,
+      "project_title": "Genomic Characterization and Surveillance of Microbial Threats in West Africa",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 953032,
+      "project_start_date": "2013-09-23T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9386805,
+      "core_project_num": "U01MH115484",
+      "fiscal_year": 2017,
+      "project_title": "Transgenerational Effects of Maternal Stressors: Investigating the Role of Infant Gene Expression",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 246694,
+      "project_start_date": "2017-09-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Nastassja    Koen ",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "KERRY J. RESSLER",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Dan Joseph Stein",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Aliza Pham Wingo",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386866,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2017,
+      "project_title": "AWI-Gen Phase 2: Genomic and environmental risk factors for cardiometabolic disease in Africans",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 1179963,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386895,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2017,
+      "project_title": "Center for Research on the Respiratory Microbiota of African Children (ReMAC)",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 700000,
+      "project_start_date": "2017-09-18T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386835,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2017,
+      "project_title": "Host Genetic Factors in Pediatric HIV Disease Progression",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 389941,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9386344,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2017,
+      "project_title": "DNA sequencing and Bioinformatics",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 112333,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Dietrich A Stephan",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386347,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2017,
+      "project_title": "Genomics of severe malaria complications in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 240708,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Julie  Makani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386899,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2017,
+      "project_title": "The impact of inhaled environmental exposures on the microbiota of the upper airways of African children",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 233333,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386345,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2017,
+      "project_title": "Biorepository core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 85724,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386898,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2017,
+      "project_title": "The nasopharyngeal microbiota of African children and lower respiratory tract infection",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 233333,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386833,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2017,
+      "project_title": "CAfGEN Administrative Centre",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 133718,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9386837,
+      "core_project_num": "U54AI110398",
+      "fiscal_year": 2017,
+      "project_title": "Genomics Training and Career Development for African Scientists",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 198057,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Gabriel  Anabwani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "BOTSWANA BAYLOR CHILD/CLINCAL CTR/EXCELL",
+        "org_country": "BOTSWANA"
+      }
+    },
+    {
+      "appl_id": 9386263,
+      "core_project_num": "U01HD094658",
+      "fiscal_year": 2017,
+      "project_title": "Breast Milk Microbiota Influence on Infant Immunity and Growth (BEAMING)",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 250000,
+      "project_start_date": "2017-09-11T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Alash'le G. Abimiku",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "INSTITUTE OF HUMAN VIROLOGY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9386793,
+      "core_project_num": "U01MH115485",
+      "fiscal_year": 2017,
+      "project_title": "Transgenerational Epigenomics of Trauma and PTSD in Rwanda",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 262132,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "STEFAN  JANSEN",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "LEON  MUTESA",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Monica  Uddin",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Derek  Wildman",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "NATIONAL UNIVERSITY OF RWANDA",
+        "org_country": "RWANDA"
+      }
+    },
+    {
+      "appl_id": 9386949,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2017,
+      "project_title": "EYES OF AFRICA : THE GENETICS OF BLINDNESS",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 819625,
+      "project_start_date": "2017-09-20T00:00:00",
+      "project_end_date": "2022-06-30T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Adeyinka O Ashaye",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9386817,
+      "core_project_num": "U01AI136677",
+      "fiscal_year": 2017,
+      "project_title": "Immunoglobulin gene diversity in an African population and impact on antibody function in HIV infection",
+      "opportunity_number": "RFA-RM-16-015",
+      "award_amount": 249992,
+      "project_start_date": "2017-08-18T00:00:00",
+      "project_end_date": "2022-07-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Lynn  Morris",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9789517,
+      "core_project_num": "U54DK116913",
+      "fiscal_year": 2017,
+      "project_title": "H3Africa Kidney Disease Research Network- Collaborative Centers",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 781594,
+      "project_start_date": "2012-08-15T00:00:00",
+      "project_end_date": "2022-08-31T00:00:00",
+      "principal_investigators": [
+        {
+          "full_name": "Dwomoa  Adu",
+          "is_contact_pi": true
+        },
+        {
+          "full_name": "Akinlolu Oluseun Ojo",
+          "is_contact_pi": false
+        },
+        {
+          "full_name": "Babatunde  salako",
+          "is_contact_pi": false
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF HEALTH SCIENCES, UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386870,
+      "core_project_num": "U54HG006938",
+      "fiscal_year": 2017,
+      "project_title": "Project 2: Genetics and Population Structure",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 76083,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Michele Michele Ramsay",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "WITS HEALTH CONSORTIUM (PTY), LTD",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9387005,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2017,
+      "project_title": "Administration and Management Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 94162,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9387009,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2017,
+      "project_title": "Utilize Microbial Metagenomics for Viral Pathogen Characterization",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 224724,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Christian T. Happi",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9387012,
+      "core_project_num": "U54HG007480",
+      "fiscal_year": 2017,
+      "project_title": "Use Clinical, Genomic, and Immunological Data for Studying Viral and Host Biology",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 152456,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Peter  Okokhore",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "REDEEMER'S UNIVERSITY",
+        "org_country": "NIGERIA"
+      }
+    },
+    {
+      "appl_id": 9386348,
+      "core_project_num": "U54HL141011",
+      "fiscal_year": 2017,
+      "project_title": "Genomics of cardiovascular phenotypes in sickle cell disease",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 112619,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mahmoud Umar Sani",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF GHANA",
+        "org_country": "GHANA"
+      }
+    },
+    {
+      "appl_id": 9386896,
+      "core_project_num": "U54HG009824",
+      "fiscal_year": 2017,
+      "project_title": "Administrative Core",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 233334,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "Mark Patrick Nicol",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "UNIVERSITY OF CAPE TOWN",
+        "org_country": "SOUTH AFRICA"
+      }
+    },
+    {
+      "appl_id": 9386953,
+      "core_project_num": "U54HG009826",
+      "fiscal_year": 2017,
+      "project_title": "Project 3_The Gambia",
+      "opportunity_number": "RFA-RM-16-016",
+      "award_amount": 76645,
+      "project_start_date": null,
+      "project_end_date": null,
+      "principal_investigators": [
+        {
+          "full_name": "ABBA  HYDARA",
+          "is_contact_pi": true
+        }
+      ],
+      "organization": {
+        "org_name": "COLLEGE OF MEDICINE, UNIVERSITY OF IBADAN",
+        "org_country": "NIGERIA"
+      }
+    }
+  ]
+}
