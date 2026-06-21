@@ -66,4 +66,58 @@ the reason the product exists — make it sing. It depends on entity resolution
 - Server components by default; Postgres full-text + array-overlap for search.
 - Every ingested row carries provenance columns (see DATA.md).
 - Entity resolution is a first-class concern, not an afterthought.
+
+## Design Context
+
+> Captured via `/teach-impeccable` (2026-06-20). This is the live design direction
+> and **supersedes the strict "plain Crunchbase" framing in `DESIGN.md`** where they
+> conflict: keep DESIGN.md's *structure* (dense entity profiles, bidirectional links,
+> section-card stacks, provenance), but reject its "utilitarian / almost no decoration /
+> resist a second accent" mandate. The current build was judged **too raw** — generic
+> blue-and-white with system fonts and no identity. We are deliberately moving beyond that.
+
+### Users
+Researchers, funders, programme officers, journalists, and the curious public exploring
+the African research ecosystem — programmes, consortia, organisations, people, capabilities,
+grants, publications. They arrive to *discover and trace connections* (the hero: one person
+across every consortium they appear in). Read-only, no accounts, no contact. Context is
+exploratory and reference-grade: they trust this as a source of truth and follow links deeply.
+
+### Brand Personality
+Three words: **credible, modern, effortless.** Voice is confident and editorial — an
+authoritative reference that feels alive and current, never a dusty government database.
+Emotional goals: confidence/trust in the data, a sense of craft and momentum, and calm
+legibility so the *data graph* is always the hero. Professional and global in tone — not
+culturally themed (African-pride motifs were explicitly not requested).
+
+### Aesthetic Direction
+**Bold & expressive, disciplined by clarity.** Synthesis of three references:
+- **Crunchbase / data tools** — the structural bones: dense, cross-linked entity profiles,
+  sortable tables, compact result rows, key-facts bands, section-card stacks.
+- **Editorial / institutional** (Wellcome, OpenAlex, foundation sites) — serious, branded,
+  content-rich confidence; strong headlines and a real point of view, especially on the
+  landing and directory.
+- **Linear / Stripe / Vercel** — premium-minimal craft: refined type scale, intentional
+  spacing, subtle depth, crisp focus states, tasteful micro-interactions.
+
+Concretely this means: a real **typographic identity** (a distinctive display/headline face
+paired with a clean text face — replace the bare system-font stack), a **palette with more
+range than one blue** (a confident primary plus a signature accent and supporting tones; an
+`accent` orange already exists in the Tailwind config — use it intentionally or replace it),
+**depth and polish** (considered elevation on hover, not flat-everything), an **expressive
+landing hero** while keeping interior/profile pages dense and scannable. **Dark mode is in
+scope** (not light-only) — design tokens should be theme-ready. Anti-reference: generic
+AI-default SaaS, raw blue-on-white with no identity, decoration that competes with the data.
+
+### Design Principles
+1. **Data is the hero; chrome is quiet.** Every expressive choice must improve scanning and
+   navigation, never compete with the entity graph. Bold on the landing, calm in the tables.
+2. **Earn trust through craft.** Credibility comes from typographic rhythm, alignment,
+   consistent spacing, and provenance always visible — polish *is* the authority signal.
+3. **One confident voice, not a rainbow.** A primary + one signature accent + disciplined
+   neutrals. Expressive ≠ loud; range is purposeful, not scattered.
+4. **Everything links; make links sing.** Bidirectional navigation is the product — entity
+   links, hover affordances, and the "in N consortia" hero teaser should feel inviting.
+5. **Theme-ready and accessible.** Build tokens for light + dark, honour
+   `prefers-reduced-motion`, maintain AA contrast, and keep dense layouts legible.
 EOF

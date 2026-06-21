@@ -9,7 +9,38 @@ body,
 }
 
 body {
-  @apply bg-canvas text-gray-900 antialiased;
+  @apply bg-canvas font-sans text-ink antialiased;
+  font-feature-settings: "ss01", "cv01";
+}
+
+/* Display headings use the Space Mono editorial face with tight tracking. */
+.font-display {
+  letter-spacing: -0.01em;
+}
+
+/* Tabular figures for all data/counts. */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Selection picks up the brand green rather than the OS default. */
+::selection {
+  background: #c9e6db;
+  color: #0a2e29;
+}
+
+@layer components {
+  /* Escape the AppShell's centred container for full-bleed colour bands.
+     overflow-x is clipped on the shell root so the 100vw width never scrolls. */
+  .full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  /* Re-centre contained content inside a full-bleed band. */
+  .shell-inner {
+    @apply mx-auto w-full max-w-shell px-4 sm:px-6;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
