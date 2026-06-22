@@ -28,6 +28,7 @@ import {
   Tag,
 } from "../components/ui";
 import { cn } from "../lib/cn";
+import { formatField } from "../lib/format";
 
 type Tab =
   | "programmes"
@@ -351,7 +352,7 @@ function ProgrammesList({ q }: { q: string }) {
           {p.focus_areas.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-1">
               {p.focus_areas.slice(0, 4).map((f) => (
-                <Tag key={f}>{f}</Tag>
+                <Tag key={f}>{formatField(f)}</Tag>
               ))}
             </div>
           )}

@@ -9,6 +9,7 @@ import {
   usePrograms,
 } from "../lib/hooks";
 import type { PersonProject } from "../lib/api";
+import { formatField } from "../lib/format";
 import {
   Breadcrumbs,
   ClaimStub,
@@ -136,7 +137,7 @@ export function PersonPage() {
               <RailBlock title="Specialisations & skills">
                 <div className="flex flex-wrap gap-1.5">
                   {[...new Set([...p.specializations, ...p.skills])].map((s) => (
-                    <Tag key={s}>{s}</Tag>
+                    <Tag key={s}>{formatField(s)}</Tag>
                   ))}
                 </div>
               </RailBlock>

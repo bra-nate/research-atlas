@@ -121,14 +121,21 @@ export function StatusPill({
   );
 }
 
-/** Provenance badge — every ingested, not-yet-claimed record shows "unverified". */
+/**
+ * Provenance badge. The "unverified" label is intentionally hidden on the FE — we
+ * still keep provenance via {@link ProvenanceLine} (source + link-back), but no
+ * longer surface an "Unverified" pill. A positive "Verified"/"Claimed" signal is
+ * worth showing once records reach that state.
+ */
 export function IllustrativeBadge({
   status,
 }: {
   status: string | null | undefined;
 }) {
-  if (status === "verified" || status === "claimed") return null;
-  return <StatusPill tone="amber">Unverified</StatusPill>;
+  if (status === "verified" || status === "claimed") {
+    return <StatusPill tone="green">Verified</StatusPill>;
+  }
+  return null;
 }
 
 export function MonoCode({ children }: { children: ReactNode }) {
@@ -291,7 +298,8 @@ export function KeyFacts({
   );
 }
 
-/** Provenance line — "Sourced from [X] · unverified", with link-back. */
+/** Provenance line — "Sourced from [X]", with link-back. A "· verified" suffix is
+ *  shown only once a record reaches that state; we no longer surface "unverified". */
 export function ProvenanceLine({
   source,
   sourceUrl,
@@ -316,8 +324,8 @@ export function ProvenanceLine({
         </a>
       ) : (
         <span className="text-ink">{source || "public data"}</span>
-      )}{" "}
-      · {verified ? "verified" : "unverified"}
+      )}
+      {verified ? " · verified" : ""}
     </p>
   );
 }

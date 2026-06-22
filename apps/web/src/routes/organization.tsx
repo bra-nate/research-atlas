@@ -20,6 +20,7 @@ import {
   Tag,
 } from "../components/ui";
 import { ProfileHeader, RailBlock, TwoColumn } from "../components/profile-layout";
+import { formatField } from "../lib/format";
 
 /** Organisation profile — its people and capabilities. */
 export function OrganizationPage() {
@@ -110,7 +111,7 @@ export function OrganizationPage() {
                   <EntityLink to={`/people/${p.id}`}>{p.full_name}</EntityLink>
                   {(p.title || p.specializations.length > 0) && (
                     <div className="text-xs text-ink-secondary">
-                      {[p.title, p.specializations.slice(0, 3).join(", ")]
+                      {[p.title, p.specializations.slice(0, 3).map(formatField).join(", ")]
                         .filter(Boolean)
                         .join(" · ")}
                     </div>

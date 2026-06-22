@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useProgram, useProgramProjects } from "../lib/hooks";
+import { formatField } from "../lib/format";
 import {
   Breadcrumbs,
   EntityLink,
@@ -61,7 +62,7 @@ export function ProgramPage() {
               <RailBlock title="Focus areas">
                 <div className="flex flex-wrap gap-1.5">
                   {pg.focus_areas.map((f) => (
-                    <Tag key={f}>{f}</Tag>
+                    <Tag key={f}>{formatField(f)}</Tag>
                   ))}
                 </div>
               </RailBlock>

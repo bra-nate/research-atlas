@@ -13,3 +13,16 @@ export function formatUpdated(iso: string | null | undefined): string | null {
   if (Number.isNaN(d.getTime())) return null;
   return `Updated ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }
+
+/**
+ * Title-case a taxonomy value (field of study, specialisation, skill) for display
+ * — e.g. "plant breeding" → "Plant Breeding". Source data arrives lower-cased; we
+ * capitalise the first letter of each word while preserving any existing intra-word
+ * casing so acronyms ("mRNA", "PCR") survive intact.
+ */
+export function formatField(value: string): string {
+  return value
+    .split(/\s+/)
+    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+    .join(" ");
+}
